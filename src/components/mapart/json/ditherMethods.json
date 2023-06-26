@@ -1,18 +1,78 @@
 {
-  "None": {
-    "uniqueId": 0,
-    "name": "None",
-    "localeKey": "MAP-SETTINGS/DITHERING/NONE"
+  "Atkinson": {
+    "uniqueId": 9,
+    "name": "Atkinson Default (/8 sharpen)",
+    "ditherMatrix": [
+      [0, 0, 0, 1.0, 1.0],
+      [0, 1.0, 1.0, 1.0, 0],
+      [0, 0, 1.0, 0, 0]
+    ],
+    "ditherDivisor": 8.0
+  },
+  "Atkinson_10": {
+    "uniqueId": 10,
+    "name": "Atkinson Custom (/10 sharpen)",
+    "ditherMatrix": [
+      [0, 0, 0, 1.0, 1.0],
+      [0, 1.0, 1.0, 1.0, 0],
+      [0, 0, 1.0, 0, 0]
+    ],
+    "ditherDivisor": 12.0
+  },
+  "Atkinson_12": {
+    "uniqueId": 11,
+    "name": "Atkinson Custom (/12 sharpen)",
+    "ditherMatrix": [
+      [0, 0, 0, 1.0, 1.0],
+      [0, 1.0, 1.0, 1.0, 0],
+      [0, 0, 1.0, 0, 0]
+    ],
+    "ditherDivisor": 12.0
+  },
+  "Atkinson_6": {
+    "uniqueId": 12,
+    "name": "Atkinson Custom (/6 sharpen)",
+    "ditherMatrix": [
+      [0, 0, 0, 1.0, 1.0],
+      [0, 1.0, 1.0, 1.0, 0],
+      [0, 0, 1.0, 0, 0]
+    ],
+    "ditherDivisor": 6.0
   },
   "FloydSteinberg": {
     "uniqueId": 1,
-    "name": "Floyd-Steinberg",
+    "name": "Floyd-Steinberg Default (/16 sharpen)",
     "ditherMatrix": [
       [0, 0, 0, 7.0, 0],
       [0, 3.0, 5.0, 1.0, 0],
       [0, 0, 0, 0, 0]
     ],
     "ditherDivisor": 16.0
+  },
+  "FloydSteinberg_20": {
+    "uniqueId": 13,
+    "name": "Floyd-Steinberg Custom (/20 sharpen)",
+    "ditherMatrix": [
+      [0, 0, 0, 7.0, 0],
+      [0, 3.0, 5.0, 1.0, 0],
+      [0, 0, 0, 0, 0]
+    ],
+    "ditherDivisor": 20.0
+  },
+  "FloydSteinberg_24": {
+    "uniqueId": 14,
+    "name": "Floyd-Steinberg Custom (/24 sharpen)",
+    "ditherMatrix": [
+      [0, 0, 0, 7.0, 0],
+      [0, 3.0, 5.0, 1.0, 0],
+      [0, 0, 0, 0, 0]
+    ],
+    "ditherDivisor": 24.0
+  },
+  "None": {
+    "uniqueId": 0,
+    "name": "None",
+    "localeKey": "MAP-SETTINGS/DITHERING/NONE"
   },
   "Bayer44": {
     "uniqueId": 2,
@@ -80,15 +140,5 @@
       [1.0, 2.0, 4.0, 2.0, 1.0]
     ],
     "ditherDivisor": 42.0
-  },
-  "Atkinson": {
-    "uniqueId": 9,
-    "name": "Atkinson",
-    "ditherMatrix": [
-      [0, 0, 0, 1.0, 1.0],
-      [0, 1.0, 1.0, 1.0, 0],
-      [0, 0, 1.0, 0, 0]
-    ],
-    "ditherDivisor": 8.0
   }
 }

@@ -221,11 +221,16 @@ function getMapartImageDataAndMaterials() {
   if (
     [
       DitherMethods.FloydSteinberg.uniqueId,
+      DitherMethods.FloydSteinberg_20.uniqueId,
+      DitherMethods.FloydSteinberg_24.uniqueId,
       DitherMethods.MinAvgErr.uniqueId,
       DitherMethods.Burkes.uniqueId,
       DitherMethods.SierraLite.uniqueId,
       DitherMethods.Stucki.uniqueId,
       DitherMethods.Atkinson.uniqueId,
+      DitherMethods.Atkinson_6.uniqueId,
+      DitherMethods.Atkinson_10.uniqueId,
+      DitherMethods.Atkinson_12.uniqueId,
     ].includes(chosenDitherMethod.uniqueId)
   ) {
     divisor = chosenDitherMethod.ditherDivisor;
@@ -295,11 +300,17 @@ function getMapartImageDataAndMaterials() {
         }
         //Error diffusion algorithms
         case DitherMethods.FloydSteinberg.uniqueId:
+        case DitherMethods.FloydSteinberg_20.uniqueId:
+        case DitherMethods.FloydSteinberg_24.uniqueId:
         case DitherMethods.MinAvgErr.uniqueId:
         case DitherMethods.Burkes.uniqueId:
         case DitherMethods.SierraLite.uniqueId:
         case DitherMethods.Stucki.uniqueId:
-        case DitherMethods.Atkinson.uniqueId: {
+        case DitherMethods.Atkinson.uniqueId:
+        case DitherMethods.Atkinson_6.uniqueId:
+        case DitherMethods.Atkinson_10.uniqueId:
+        case DitherMethods.Atkinson_12.uniqueId:
+        {
           closestColourSetIdAndTone = findClosestColourSetIdAndToneAndRGBTo(oldPixel);
           const closestColour = colourSetIdAndToneToRGB(closestColourSetIdAndTone.colourSetId, closestColourSetIdAndTone.tone);
           canvasImageData.data[indexR] = closestColour[0];
