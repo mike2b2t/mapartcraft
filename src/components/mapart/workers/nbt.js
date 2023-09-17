@@ -19,6 +19,7 @@ var currentSelectedBlocks;
 var exactColourCache = new Map(); // for mapping RGB that exactly matches in coloursJSON to colourSetId and tone
 
 var progressReportHead;
+let alphaColorIdx = 61;
 
 /*
   A mapping from type names to NBT type numbers.
@@ -397,8 +398,12 @@ class Map_NBT {
       }
     }
 
-    // initialize noobline
-    physicalColumn.push(this.returnPhysicalBlock(columnNumber, currentHeight, 0, "NOOBLINE_SCAFFOLD"));
+    // initialize noobline; if block after noobline is transparent, there is no need for the noobline block for shading
+    if (mapColoursLayoutColumn[0].colourSetId !== alphaColorIdx) {
+      physicalColumn.push(this.returnPhysicalBlock(columnNumber, currentHeight, 0, "NOOBLINE_SCAFFOLD"));
+    } else {
+      physicalColumn.push(this.returnPhysicalBlock(columnNumber, currentHeight, 0, alphaColorIdx));
+    }
 
     for (let rowNumber = 0; rowNumber < mapColoursLayoutColumn.length; rowNumber++) {
       const coloursLayoutBlock = mapColoursLayoutColumn[rowNumber];
@@ -657,6 +662,29 @@ class Map_NBT {
 
     // console.log(NBT_json);
 
+    // This is an ugly hack, but getPhysicalLayout_individualColumn() has the block array tightly coupled to plateau math
+    // making even small changes break the calculations.
+    // since the original coloursJSON block ids are not in the NBT, we need to find the air block's NBT id
+    let paletteIDs = this.NBT_json.value.palette.value.value;
+    let airID = -1;
+    for (let i = 0; i < paletteIDs.length; i++) {
+      if (paletteIDs[i].Name.value === "minecraft:air") airID = i;
+    }
+
+    // Now simply change all blocks at the same coords as an air block to air as well
+    let airPosX = -1;
+    let airPosZ = -1;
+    let blockArray = this.NBT_json.value.blocks.value.value;
+    for (let i = 0; i < blockArray.length; i++) {
+      if (blockArray[i].state.value === airID) {
+        airPosX = blockArray[i].pos.value.value[0];
+        airPosZ = blockArray[i].pos.value.value[2];
+      }
+      if ((blockArray[i].pos.value.value[0] === airPosX) && (blockArray[i].pos.value.value[2] === airPosZ)) {
+        blockArray[i].state.value = airID;
+      }
+    }
+
     let nbtWriter = new NBTWriter();
     nbtWriter.writeTopLevelCompound(this.NBT_json);
     return nbtWriter.getData();
@@ -701,7 +729,7 @@ class Map_Mapdat {
         const pixel = this.coloursLayout[x][z];
         const arrayOffset = z * 128 + x;
         let mapdatId; // coloursJSON contains the base mapdatId that is multiplied by 4 and added to by one of 0,1,2,3
-        if (pixel.colourSetId === "-1") {
+        if (pixel.colourSetId === alphaColorIdx.toString()) {
           // special colourSetId for transparent maps
           mapdatId = 1;
         } else {
@@ -761,14 +789,18 @@ function setupExactColourCache() {
   }
   exactColourCache.set(0, {
     // special transparent for mapdat
-    colourSetId: "-1",
+    colourSetId: alphaColorIdx.toString(),
     tone: "normal",
   });
 }
 
 function exactRGBToColourSetIdAndTone(pixelRGB) {
-  const RGBBinary = (pixelRGB[0] << 16) + (pixelRGB[1] << 8) + pixelRGB[2];
-  return exactColourCache.get(RGBBinary);
+  if (pixelRGB[3] !== 0) {
+    const RGBBinary = (pixelRGB[0] << 16) + (pixelRGB[1] << 8) + pixelRGB[2];
+    return exactColourCache.get(RGBBinary);
+  } else {
+    return exactColourCache.get(0); // transparent
+  }
 }
 
 function isSupportBlockMandatoryForColourSetIdAndTone(colourSetIdAndTone) {
@@ -819,6 +851,7 @@ function setupColoursLayoutsFromPixelsData() {
             pixelsData[pixelsData_offset],
             pixelsData[pixelsData_offset + 1],
             pixelsData[pixelsData_offset + 2],
+            pixelsData[pixelsData_offset + 3]
           ]);
           coloursLayout_columnToPush.push(colourSetIdAndTone);
         }

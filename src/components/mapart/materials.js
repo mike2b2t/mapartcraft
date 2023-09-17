@@ -9,6 +9,8 @@ import "./materials.css";
 class Materials extends Component {
   state = { onlyMaxPerSplit: false };
 
+  alphaColorIdx = 61;
+
   onOnlyMaxPerSplitChange = () => {
     this.setState((currentState) => ({
       // nb this method of passing currentState instead of using this.state... is prefered; TODO neaten up controller uses
@@ -26,10 +28,12 @@ class Materials extends Component {
     for (const row of currentMaterialsData.maps) {
       for (const map of row) {
         for (const [colourSetId, materialCount] of Object.entries(map.materials)) {
-          if (onlyMaxPerSplit) {
-            materialsCount[colourSetId] = Math.max(materialsCount[colourSetId], materialCount);
-          } else {
-            materialsCount[colourSetId] += materialCount;
+          if (colourSetId !== this.alphaColorIdx) {
+            if (onlyMaxPerSplit) {
+              materialsCount[colourSetId] = Math.max(materialsCount[colourSetId], materialCount);
+            } else {
+              materialsCount[colourSetId] += materialCount;
+            }
           }
         }
       }
