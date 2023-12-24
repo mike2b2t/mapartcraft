@@ -59,16 +59,19 @@ class Materials extends Component {
   }
 
   formatMaterialCount = (count) => {
-    const numberOfStacks = Math.floor(count / 64);
+    if (count < 64) return count;
+
+    const numberOfShulkers = Math.floor(count / 1728);
+    const numberOfStacks = Math.floor((count % 1728) / 64);
     const remainder = count % 64;
-    const numberOfShulkers = count / 1728;
-    return `${count.toString()}${
-      numberOfStacks !== 0
-        ? ` (${numberOfStacks.toString()}x64${remainder !== 0 ? ` + ${remainder.toString()}` : ""}${
-            numberOfShulkers >= 1 ? `, ${numberOfShulkers.toFixed(2)} SB` : ""
-          })`
-        : ""
-    }`;
+
+    const sb = numberOfShulkers > 0 ? `${numberOfShulkers} SB` : "";
+    const stacks = numberOfStacks > 0 ? `${numberOfStacks}x64` : "";
+    const items = remainder > 0 ? remainder : "";
+
+    const split = [sb, stacks, items].filter(n => n).join(' + ');
+
+    return `${count.toString()} (${split})`;
   };
 
   colourSetIdAndBlockIdFromNBTName(blockName) {
