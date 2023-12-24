@@ -95,7 +95,7 @@ class Materials extends Component {
   }
 
   render() {
-    const { getLocaleString, coloursJSON, optionValue_supportBlock, currentMaterialsData } = this.props;
+    const { getLocaleString, coloursJSON, optionValue_supportBlock, currentMaterialsData, onChangeColourSetBlock } = this.props;
     const { onlyMaxPerSplit } = this.state;
     const nonZeroMaterialsItems = this.getMaterialsCount_nonZeroMaterialsItems();
     const supportBlockCount = this.getMaterialsCount_supportBlock();
@@ -139,6 +139,18 @@ class Materials extends Component {
                   <th>
                     <Tooltip tooltipText={coloursJSON[colourSetId].blocks[blockId].displayName}>
                       <BlockImage coloursJSON={coloursJSON} colourSetId={colourSetId} blockId={blockId} />
+                    </Tooltip>
+                    <Tooltip tooltipText={getLocaleString("NONE")}>
+                      <BlockImage
+                        getLocaleString={getLocaleString}
+                        coloursJSON={coloursJSON}
+                        colourSetId={colourSetId}
+                        blockId={"-1"}
+                        onClick={() => onChangeColourSetBlock(colourSetId, "-1")}
+                        style={{
+                          cursor: "pointer"
+                        }}
+                      />
                     </Tooltip>
                   </th>
                   <th>{this.formatMaterialCount(materialCount)}</th>
