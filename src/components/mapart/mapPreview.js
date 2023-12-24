@@ -76,6 +76,9 @@ class MapPreview extends Component {
       prevProps.optionValue_transparencyTolerance === newProps.optionValue_transparencyTolerance,
       prevProps.optionValue_betterColour === newProps.optionValue_betterColour,
       prevProps.optionValue_dithering === newProps.optionValue_dithering,
+      prevProps.optionValue_dithering_propagation_red === newProps.optionValue_dithering_propagation_red,
+      prevProps.optionValue_dithering_propagation_green === newProps.optionValue_dithering_propagation_green,
+      prevProps.optionValue_dithering_propagation_blue === newProps.optionValue_dithering_propagation_blue,
       prevProps.optionValue_preprocessingEnabled === newProps.optionValue_preprocessingEnabled,
       prevProps.preProcessingValue_brightness === newProps.preProcessingValue_brightness,
       prevProps.preProcessingValue_contrast === newProps.preProcessingValue_contrast,
@@ -273,6 +276,9 @@ class MapPreview extends Component {
       optionValue_transparencyTolerance,
       optionValue_betterColour,
       optionValue_dithering,
+      optionValue_dithering_propagation_red,
+      optionValue_dithering_propagation_green,
+      optionValue_dithering_propagation_blue,
       onGetMapMaterials,
       onMapPreviewWorker_begin,
     } = this.props;
@@ -315,6 +321,9 @@ class MapPreview extends Component {
         optionValue_transparencyTolerance: optionValue_transparencyTolerance,
         optionValue_betterColour: optionValue_betterColour,
         optionValue_dithering: optionValue_dithering,
+        optionValue_dithering_propagation_red: optionValue_dithering_propagation_red,
+        optionValue_dithering_propagation_green: optionValue_dithering_propagation_green,
+        optionValue_dithering_propagation_blue: optionValue_dithering_propagation_blue,
       },
     });
   }

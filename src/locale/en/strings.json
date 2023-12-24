@@ -128,7 +128,10 @@
     "DITHERING": {
       "TITLE": "Dithering",
       "TITLE-TT": "Adds seemingly random pixels for the illusion of more colors",
-      "NONE": "None"
+      "NONE": "None",
+      "PROPAGATION-RED": "Red propagation",
+      "PROPAGATION-GREEN": "Green propagation",
+      "PROPAGATION-BLUE": "Blue propagation"
     },
     "PREPROCESSING": {
       "TITLE": "Image preprocessing",

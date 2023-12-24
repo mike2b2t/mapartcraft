@@ -56,6 +56,12 @@ class MapSettings extends Component {
       onOptionChange_BetterColour,
       optionValue_dithering,
       onOptionChange_dithering,
+      optionValue_dithering_propagation_red,
+      onOptionChange_dithering_propagation_red,
+      optionValue_dithering_propagation_green,
+      onOptionChange_dithering_propagation_green,
+      optionValue_dithering_propagation_blue,
+      onOptionChange_dithering_propagation_blue,
       optionValue_preprocessingEnabled,
       onOptionChange_PreProcessingEnabled,
       preProcessingValue_brightness,
@@ -470,6 +476,107 @@ class MapSettings extends Component {
         <br />
       </React.Fragment>
     );
+    const setting_dithering_propagation_red = (
+      <tr>
+        <th>
+          <b>
+            {getLocaleString("MAP-SETTINGS/DITHERING/PROPAGATION-RED")}
+            {":"}
+          </b>{" "}
+        </th>
+        <td>
+          <input
+            type="range"
+            min="0"
+            max="200"
+            value={optionValue_dithering_propagation_red}
+            onChange={(e) => onOptionChange_dithering_propagation_red(parseInt(e.target.value))}
+          />
+        </td>
+        <td>
+          <BufferedNumberInput
+            min="0"
+            max="200"
+            step="1"
+            value={optionValue_dithering_propagation_red}
+            validators={[(t) => !isNaN(t), (t) => t >= 0, (t) => t <= 200]}
+            onValidInput={onOptionChange_dithering_propagation_red}
+            style={{ width: "3em" }}
+          />
+        </td>
+      </tr>
+    );
+    const setting_dithering_propagation_green = (
+      <tr>
+        <th>
+          <b>
+            {getLocaleString("MAP-SETTINGS/DITHERING/PROPAGATION-GREEN")}
+            {":"}
+          </b>{" "}
+        </th>
+        <td>
+          <input
+            type="range"
+            min="0"
+            max="200"
+            value={optionValue_dithering_propagation_green}
+            onChange={(e) => onOptionChange_dithering_propagation_green(parseInt(e.target.value))}
+          />
+        </td>
+        <td>
+          <BufferedNumberInput
+            min="0"
+            max="200"
+            step="1"
+            value={optionValue_dithering_propagation_green}
+            validators={[(t) => !isNaN(t), (t) => t >= 0, (t) => t <= 200]}
+            onValidInput={onOptionChange_dithering_propagation_green}
+            style={{ width: "3em" }}
+          />
+        </td>
+      </tr>
+    );
+    const setting_dithering_propagation_blue = (
+      <tr>
+        <th>
+          <b>
+            {getLocaleString("MAP-SETTINGS/DITHERING/PROPAGATION-BLUE")}
+            {":"}
+          </b>{" "}
+        </th>
+        <td>
+          <input
+            type="range"
+            min="0"
+            max="200"
+            value={optionValue_dithering_propagation_blue}
+            onChange={(e) => onOptionChange_dithering_propagation_blue(parseInt(e.target.value))}
+          />
+        </td>
+        <td>
+          <BufferedNumberInput
+            min="0"
+            max="200"
+            step="1"
+            value={optionValue_dithering_propagation_blue}
+            validators={[(t) => !isNaN(t), (t) => t >= 0, (t) => t <= 200]}
+            onValidInput={onOptionChange_dithering_propagation_blue}
+            style={{ width: "3em" }}
+          />
+        </td>
+      </tr>
+    );
+    const setting_dithering_propagation = (
+      <div>
+        <table>
+          <tbody>
+            {setting_dithering_propagation_red}
+            {setting_dithering_propagation_green}
+            {setting_dithering_propagation_blue}
+          </tbody>
+        </table>
+      </div>
+    );
     const setting_preprocessing = (
       <tr>
         <th>
@@ -678,6 +785,7 @@ class MapSettings extends Component {
         {settings_mapModeConditional}
         {setting_betterColour}
         {setting_dithering}
+        {setting_dithering_propagation}
         {settingGroup_preprocessing}
         {settingGroup_extras}
       </div>

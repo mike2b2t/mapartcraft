@@ -13,6 +13,9 @@ var optionValue_transparency;
 var optionValue_transparencyTolerance;
 var optionValue_betterColour;
 var optionValue_dithering;
+var optionValue_dithering_propagation_red;
+var optionValue_dithering_propagation_green;
+var optionValue_dithering_propagation_blue;
 
 var colourSetsToUse = []; // colourSetIds and shades to use in map
 var exactColourCache = new Map(); // for mapping RGB that exactly matches in coloursJSON to colourSetId and tone
@@ -316,7 +319,12 @@ function getMapartImageDataAndMaterials() {
           canvasImageData.data[indexR] = closestColour[0];
           canvasImageData.data[indexG] = closestColour[1];
           canvasImageData.data[indexB] = closestColour[2];
-          const quant_error = [oldPixel[0] - closestColour[0], oldPixel[1] - closestColour[1], oldPixel[2] - closestColour[2]];
+
+          const quant_error = [
+            (oldPixel[0] - closestColour[0]) * optionValue_dithering_propagation_red / 100.0,
+            (oldPixel[1] - closestColour[1]) * optionValue_dithering_propagation_green / 100.0,
+            (oldPixel[2] - closestColour[2]) * optionValue_dithering_propagation_blue / 100.0
+          ];
 
           try {
             // ditherMatrix [0][0...2] should always be zero, and can thus be skipped
@@ -587,6 +595,9 @@ onmessage = (e) => {
   optionValue_transparencyTolerance = e.data.body.optionValue_transparencyTolerance;
   optionValue_betterColour = e.data.body.optionValue_betterColour;
   optionValue_dithering = e.data.body.optionValue_dithering;
+  optionValue_dithering_propagation_red = e.data.body.optionValue_dithering_propagation_red;
+  optionValue_dithering_propagation_green = e.data.body.optionValue_dithering_propagation_green;
+  optionValue_dithering_propagation_blue = e.data.body.optionValue_dithering_propagation_blue;
 
   setupColourSetsToUse();
   setupExactColourCache();
