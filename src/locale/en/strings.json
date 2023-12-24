@@ -176,7 +176,8 @@
     "SHOW-PER-SPLIT": "Only show max mats per split",
     "SHOW-PER-SPLIT-TT": "For material reuse with locked maps",
     "REFRESH-MATERIALS": "REFRESH MATERIALS",
-    "REFRESH-MATERIALS-TT": "Refresh materials list"
+    "REFRESH-MATERIALS-TT": "Refresh materials list",
+    "COPY-CLIPBOARD": "Copy to clipboard"
   },
   "VIEW-ONLINE": {
     "TITLE": "VIEW ONLINE",
