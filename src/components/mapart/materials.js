@@ -98,22 +98,24 @@ class Materials extends Component {
   }
 
   nbtNameToColourSetId(colourSetId) {
-    const { coloursJSON, optionValue_version } = this.props;
+    const { coloursJSON, optionValue_version, currentMaterialsData } = this.props;
     const colourSet = coloursJSON[colourSetId];
+    const selection = currentMaterialsData.currentSelectedBlocks[colourSetId];
 
-    for (const block of Object.values(colourSet.blocks)) {
-      if (!(optionValue_version.MCVersion in block.validVersions)) {
-        continue;
-      }
-      let blockNBTData = block.validVersions[optionValue_version.MCVersion];
-      if (typeof blockNBTData === "string") {
-        // this is of the form eg "&1.12.2"
-        blockNBTData = block.validVersions[blockNBTData.slice(1)];
-      }
+    if (selection < 0) return null;
 
-      return blockNBTData.NBTName.toLowerCase();
+    const block = colourSet.blocks[selection];
+    if (!(optionValue_version.MCVersion in block.validVersions)) {
+      return null;
     }
-    return null; // if block not found
+    let blockNBTData = block.validVersions[optionValue_version.MCVersion];
+
+    if (typeof blockNBTData === "string") {
+      // this is of the form eg "&1.12.2"
+      blockNBTData = block.validVersions[blockNBTData.slice(1)];
+    }
+
+    return blockNBTData.NBTName.toLowerCase();
   }
 
   copyToClipboard(nonZeroMaterialsItems, supportBlockCount) {
