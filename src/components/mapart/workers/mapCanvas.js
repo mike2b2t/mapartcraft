@@ -426,14 +426,14 @@ function getMapartImageDataAndMaterials() {
       DitherMethods.FloydSteinberg.uniqueId,
       DitherMethods.FloydSteinberg_20.uniqueId,
       DitherMethods.FloydSteinberg_24.uniqueId,
-      DitherMethods.JarvisJudiceNinke.uniqueId,
-      DitherMethods.Burkes.uniqueId,
-      DitherMethods.SierraFilterLite.uniqueId,
-      DitherMethods.Stucki.uniqueId,
       DitherMethods.Atkinson.uniqueId,
       DitherMethods.Atkinson_6.uniqueId,
       DitherMethods.Atkinson_10.uniqueId,
       DitherMethods.Atkinson_12.uniqueId,
+      DitherMethods.SierraFilterLite.uniqueId,
+      DitherMethods.JarvisJudiceNinke.uniqueId,
+      DitherMethods.Stucki.uniqueId,
+      DitherMethods.Burkes.uniqueId,
     ].includes(chosenDitherMethod.uniqueId)
   ) {
     divisor = chosenDitherMethod.ditherDivisor;
@@ -482,8 +482,8 @@ function getMapartImageDataAndMaterials() {
           canvasImageData.data[indexB] = closestColour[2];
           break;
         }
-        case DitherMethods.Bayer44.uniqueId:
         case DitherMethods.Bayer22.uniqueId:
+        case DitherMethods.Bayer44.uniqueId:
         case DitherMethods.Ordered33.uniqueId: {
           const newPixels = findClosest2ColourSetIdAndToneAndRGBTo(oldPixel);
           // newPixels = [shortestDistance1, shortestDistance2, newPixel1, newPixel2]
@@ -505,14 +505,14 @@ function getMapartImageDataAndMaterials() {
         case DitherMethods.FloydSteinberg.uniqueId:
         case DitherMethods.FloydSteinberg_20.uniqueId:
         case DitherMethods.FloydSteinberg_24.uniqueId:
-        case DitherMethods.JarvisJudiceNinke.uniqueId:
-        case DitherMethods.Burkes.uniqueId:
-        case DitherMethods.SierraFilterLite.uniqueId:
-        case DitherMethods.Stucki.uniqueId:
         case DitherMethods.Atkinson.uniqueId:
         case DitherMethods.Atkinson_6.uniqueId:
         case DitherMethods.Atkinson_10.uniqueId:
         case DitherMethods.Atkinson_12.uniqueId:
+        case DitherMethods.SierraFilterLite.uniqueId:
+        case DitherMethods.JarvisJudiceNinke.uniqueId:
+        case DitherMethods.Stucki.uniqueId:
+        case DitherMethods.Burkes.uniqueId:
         {
           closestColourSetIdAndTone = findClosestColourSetIdAndToneAndRGBTo(oldPixel);
           const closestColour = colourSetIdAndToneToRGB(closestColourSetIdAndTone.colourSetId, closestColourSetIdAndTone.tone);
