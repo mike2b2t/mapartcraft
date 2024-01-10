@@ -431,9 +431,14 @@ function getMapartImageDataAndMaterials() {
       DitherMethods.Atkinson_10.uniqueId,
       DitherMethods.Atkinson_12.uniqueId,
       DitherMethods.SierraFilterLite.uniqueId,
+      DitherMethods.Fan.uniqueId,
+      DitherMethods.ShiauFan.uniqueId,
+      DitherMethods.ShiauFan2.uniqueId,
       DitherMethods.JarvisJudiceNinke.uniqueId,
       DitherMethods.Stucki.uniqueId,
       DitherMethods.Burkes.uniqueId,
+      DitherMethods.Sierra.uniqueId,
+      DitherMethods.SierraTworow.uniqueId,
     ].includes(chosenDitherMethod.uniqueId)
   ) {
     divisor = chosenDitherMethod.ditherDivisor;
@@ -483,8 +488,13 @@ function getMapartImageDataAndMaterials() {
           break;
         }
         case DitherMethods.Bayer22.uniqueId:
+        case DitherMethods.Bayer33.uniqueId:
         case DitherMethods.Bayer44.uniqueId:
-        case DitherMethods.Ordered33.uniqueId: {
+        case DitherMethods.Bayer88.uniqueId:
+        case DitherMethods.Ordered33.uniqueId:
+        case DitherMethods.ClusterDot44.uniqueId:
+        case DitherMethods.Halftone88.uniqueId:
+        case DitherMethods.VoidAndCluster1414.uniqueId: {
           const newPixels = findClosest2ColourSetIdAndToneAndRGBTo(oldPixel);
           // newPixels = [shortestDistance1, shortestDistance2, newPixel1, newPixel2]
           if (
@@ -510,9 +520,14 @@ function getMapartImageDataAndMaterials() {
         case DitherMethods.Atkinson_10.uniqueId:
         case DitherMethods.Atkinson_12.uniqueId:
         case DitherMethods.SierraFilterLite.uniqueId:
+        case DitherMethods.Fan.uniqueId:
+        case DitherMethods.ShiauFan.uniqueId:
+        case DitherMethods.ShiauFan2.uniqueId:
         case DitherMethods.JarvisJudiceNinke.uniqueId:
         case DitherMethods.Stucki.uniqueId:
         case DitherMethods.Burkes.uniqueId:
+        case DitherMethods.Sierra.uniqueId:
+        case DitherMethods.SierraTworow.uniqueId:
         {
           closestColourSetIdAndTone = findClosestColourSetIdAndToneAndRGBTo(oldPixel);
           const closestColour = colourSetIdAndToneToRGB(closestColourSetIdAndTone.colourSetId, closestColourSetIdAndTone.tone);
