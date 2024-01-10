@@ -101,9 +101,9 @@
       [6, 2, 9]
     ]
   },
-  "MinAvgErr": {
+  "JarvisJudiceNinke": {
     "uniqueId": 5,
-    "name": "MinAvgErr",
+    "name": "Jarvis-Judice-Ninke",
     "ditherMatrix": [
       [0, 0, 0, 7.0, 5.0],
       [3.0, 5.0, 7.0, 5.0, 3.0],
@@ -121,9 +121,9 @@
     ],
     "ditherDivisor": 32.0
   },
-  "SierraLite": {
+  "SierraFilterLite": {
     "uniqueId": 7,
-    "name": "Sierra-Lite",
+    "name": "Sierra (Filter Lite)",
     "ditherMatrix": [
       [0, 0, 0, 2.0, 0],
       [0, 1.0, 1.0, 0, 0],

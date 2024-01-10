@@ -426,9 +426,9 @@ function getMapartImageDataAndMaterials() {
       DitherMethods.FloydSteinberg.uniqueId,
       DitherMethods.FloydSteinberg_20.uniqueId,
       DitherMethods.FloydSteinberg_24.uniqueId,
-      DitherMethods.MinAvgErr.uniqueId,
+      DitherMethods.JarvisJudiceNinke.uniqueId,
       DitherMethods.Burkes.uniqueId,
-      DitherMethods.SierraLite.uniqueId,
+      DitherMethods.SierraFilterLite.uniqueId,
       DitherMethods.Stucki.uniqueId,
       DitherMethods.Atkinson.uniqueId,
       DitherMethods.Atkinson_6.uniqueId,
@@ -505,9 +505,9 @@ function getMapartImageDataAndMaterials() {
         case DitherMethods.FloydSteinberg.uniqueId:
         case DitherMethods.FloydSteinberg_20.uniqueId:
         case DitherMethods.FloydSteinberg_24.uniqueId:
-        case DitherMethods.MinAvgErr.uniqueId:
+        case DitherMethods.JarvisJudiceNinke.uniqueId:
         case DitherMethods.Burkes.uniqueId:
-        case DitherMethods.SierraLite.uniqueId:
+        case DitherMethods.SierraFilterLite.uniqueId:
         case DitherMethods.Stucki.uniqueId:
         case DitherMethods.Atkinson.uniqueId:
         case DitherMethods.Atkinson_6.uniqueId:
