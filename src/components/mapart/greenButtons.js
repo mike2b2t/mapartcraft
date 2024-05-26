@@ -7,7 +7,8 @@ import Tooltip from "../tooltip";
 import MapModes from "./json/mapModes.json";
 import WhereSupportBlocksModes from "./json/whereSupportBlocksModes.json";
 
-import NBTWorker from "./workers/nbt.jsworker";
+import WorkerBuilder from './workers/worker-builder';
+import NBTWorker from "./workers/nbt";
 
 import "./greenButtons.css";
 
@@ -21,7 +22,7 @@ class GreenButtons extends Component {
     mapPreviewWorker_onFinishCallback: null,
   };
 
-  nbtWorker = new Worker(NBTWorker);
+  nbtWorker = new WorkerBuilder(NBTWorker);
 
   resetButtonWidths() {
     this.setState({
@@ -63,7 +64,7 @@ class GreenButtons extends Component {
     let numberOfSplitsCalculated = 0;
     let zipFile = new JSZip();
     const t0 = performance.now();
-    this.nbtWorker = new Worker(NBTWorker);
+    this.nbtWorker = new WorkerBuilder(NBTWorker);
     this.nbtWorker.onmessage = (e) => {
       switch (e.data.head) {
         case "PROGRESS_REPORT_CREATE_NBT_JOINED_FOR_VIEW_ONLINE": {

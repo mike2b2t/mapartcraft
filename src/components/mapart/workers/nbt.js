@@ -1,3 +1,8 @@
+// eslint-disable-next-line import/no-anonymous-default-export
+// eslint-disable-next-line no-restricted-globals
+
+export default function NBTWorker (args) {
+
 // begin variables passed in onmessage
 var coloursJSON;
 var MapModes;
@@ -885,4 +890,6 @@ onmessage = (e) => {
       throw new Error("Unknown header message");
     }
   }
+};
+
 };

@@ -1,7 +1,8 @@
 import React, { Component, createRef } from "react";
 
 import Tooltip from "../tooltip";
-import MapCanvasWorker from "./workers/mapCanvas.jsworker"; // FINALLY got this to work; .js gets imported as code, anything else as URL
+import WorkerBuilder from './workers/worker-builder';
+import MapCanvasWorker from "./workers/mapCanvas";
 
 import BackgroundColourModes from "./json/backgroundColourModes.json";
 import CropModes from "./json/cropModes.json";
@@ -21,7 +22,7 @@ class MapPreview extends Component {
     workerProgress: 0,
   };
 
-  mapCanvasWorker = new Worker(MapCanvasWorker);
+  mapCanvasWorker = new WorkerBuilder(MapCanvasWorker);
 
   constructor(props) {
     super(props);
@@ -285,7 +286,7 @@ class MapPreview extends Component {
     const ctx_source = canvasRef_source.current.getContext("2d");
     const canvasImageData = ctx_source.getImageData(0, 0, ctx_source.canvas.width, ctx_source.canvas.height);
     const t0 = performance.now();
-    this.mapCanvasWorker = new Worker(MapCanvasWorker);
+    this.mapCanvasWorker = new WorkerBuilder(MapCanvasWorker);
     this.mapCanvasWorker.onmessage = (e) => {
       if (e.data.head === "PIXELS_MATERIALS_CURRENTSELECTEDBLOCKS") {
         const t1 = performance.now();
