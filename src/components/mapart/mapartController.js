@@ -11,6 +11,7 @@ import ViewOnline2D from "./viewOnline2D/viewOnline2D";
 import ViewOnline3D from "./viewOnline3D/viewOnline3D";
 
 import BackgroundColourModes from "./json/backgroundColourModes.json";
+import ColourMethods from "./json/colourMethods.json";
 import CropModes from "./json/cropModes.json";
 import DefaultPresets from "./json/defaultPresets.json";
 import DitherMethods from "./json/ditherMethods.json";
@@ -42,7 +43,7 @@ class MapartController extends Component {
     optionValue_transparencyTolerance: 128,
     optionValue_mapdatFilenameUseId: true,
     optionValue_mapdatFilenameIdStart: 0,
-    optionValue_betterColour: true,
+    optionValue_betterColour: ColourMethods.MapartCraftDefault.uniqueId,
     optionValue_dithering: DitherMethods.FloydSteinberg.uniqueId,
     optionValue_dithering_propagation_red: 100,
     optionValue_dithering_propagation_green: 100,
@@ -323,10 +324,9 @@ class MapartController extends Component {
     });
   };
 
-  onOptionChange_BetterColour = () => {
-    this.setState({
-      optionValue_betterColour: !this.state.optionValue_betterColour,
-    });
+  onOptionChange_BetterColour = (e) => {
+    const colourValue = parseInt(e.target.value);
+    this.setState({ optionValue_betterColour: colourValue });
   };
 
   onOptionChange_dithering = (e) => {

@@ -1,0 +1,26 @@
+{
+  "MapartCraftDefault": {
+    "uniqueId": 0,
+    "name": "MapartCraft Default (\"Better Colour\" on, close to CIE76 D50)"
+  },
+  "Euclidian": {
+    "uniqueId": 1,
+    "name": "Euclidian (\"Better Colour\" off)"
+  },
+  "Cie76_Lab65": {
+    "uniqueId": 2,
+    "name": "CIE76 D65 (L*a*b* space)"
+  },
+  "Cie76_Lab50": {
+    "uniqueId": 3,
+    "name": "CIE76 D50 (L*a*b* space)"
+  },
+  "Ciede2000_Lab65": {
+    "uniqueId": 4,
+    "name": "CIEDE2000 D65 (L*a*b* space)"
+  },
+  "Ciede2000_Lab50": {
+    "uniqueId": 5,
+    "name": "CIEDE2000 D50 (L*a*b* space)"
+  }
+}

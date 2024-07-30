@@ -6,6 +6,7 @@ export default function MapWorker (args) {
 var coloursJSON;
 var MapModes;
 var WhereSupportBlocksModes;
+var ColourMethods;
 var DitherMethods;
 var canvasImageData;
 var selectedBlocks;
@@ -26,6 +27,8 @@ var colourSetsToUse = []; // colourSetIds and shades to use in map
 var exactColourCache = new Map(); // for mapping RGB that exactly matches in coloursJSON to colourSetId and tone
 var colourCache = new Map(); // cache for reusing colours in identical pixels
 var labCache = new Map();
+var lab50Cache = new Map();
+var lab65Cache = new Map();
 
 var maps = [];
 
@@ -59,16 +62,200 @@ function rgb2lab(rgb) {
   return rgb;
 }
 
+//Code based on culori.js - https://culorijs.org/
+function rgb2lab50(rgb) {
+  let val = (rgb[0] << 16) + (rgb[1] << 8) + rgb[2];
+  if (lab50Cache.has(val)) return lab50Cache.get(val);
+
+  let r1 = rgb[0] / 255.0;
+  let g1 = rgb[1] / 255.0;
+  let b1 = rgb[2] / 255.0;
+
+  let x = (0.436065742824811 * r1 + 0.3851514688337912 * g1 + 0.14307845442264197 * b1) / 0.96429567642956764295676429567643,
+    y = 0.22249319175623702 * r1 + 0.7168870538238823 * g1 + 0.06061979053616537 * b1,
+    z = (0.013923904500943465 * r1 + 0.09708128566574634 * g1 + 0.7140993584005155 * b1) / 0.82510460251046025104602510460251;
+  let f1 = (0.00885645167903563081717167575546 < y ? Math.cbrt(y) : (903.2962962962962962962962962963 * y + 16) / 116);
+
+  let l = 116 * f1 - 16;
+  let a = 0;
+  let b = 0;
+
+  if (r1 !== g1 || g1 !== b1) {
+    let f0 = (0.00885645167903563081717167575546 < x ? Math.cbrt(x) : (903.2962962962962962962962962963 * x + 16) / 116);
+    let f2 = (0.00885645167903563081717167575546 < z ? Math.cbrt(z) : (903.2962962962962962962962962963 * z + 16) / 116);
+    a = 500 * (f0 - f1);
+    b = 200 * (f1 - f2);
+  }
+
+  let lab50 = [l, a, b];
+  lab50Cache.set(val, lab50);
+  return lab50;
+}
+
+//Code based on culori.js - https://culorijs.org/
+function rgb2lab65(rgb) {
+  let val = (rgb[0] << 16) + (rgb[1] << 8) + rgb[2];
+  if (lab65Cache.has(val)) return lab65Cache.get(val);
+
+  let r1 = rgb[0] / 255.0;
+  let g1 = rgb[1] / 255.0;
+  let b1 = rgb[2] / 255.0;
+
+  let x = (0.4123907992659593 * r1 + 0.357584339383878 * g1 + 0.1804807884018343 * b1) / 0.95045592705167173252279635258359,
+    y = 0.2126390058715102 * r1 + 0.715168678767756 * g1 + 0.0721923153607337 * b1,
+    z = (0.0193308187155918 * r1 + 0.119194779794626 * g1 + 0.9505321522496607 * b1) / 1.0890577507598784194528875379939;
+  let f1 = (0.00885645167903563081717167575546 < y ? Math.cbrt(y) : (903.2962962962962962962962962963 * y + 16) / 116);
+
+  let l = 116 * f1 - 16;
+  let a = 0;
+  let b = 0;
+
+  if (r1 !== g1 || g1 !== b1) {
+    let f0 = (0.00885645167903563081717167575546 < x ? Math.cbrt(x) : (903.2962962962962962962962962963 * x + 16) / 116);
+    let f2 = (0.00885645167903563081717167575546 < z ? Math.cbrt(z) : (903.2962962962962962962962962963 * z + 16) / 116);
+    a = 500 * (f0 - f1);
+    b = 200 * (f1 - f2);
+  }
+
+  let lab65 = [l, a, b];
+  lab65Cache.set(val, lab65);
+  return lab65;
+}
+
 function squaredEuclideanMetricColours(pixel1, pixel2) {
-  if (optionValue_betterColour) {
+  const chosenColourMethod =
+    ColourMethods[Object.keys(ColourMethods).find((colourMethodKey) => ColourMethods[colourMethodKey].uniqueId === optionValue_betterColour)];
+
+  if (chosenColourMethod.uniqueId === ColourMethods.MapartCraftDefault.uniqueId) {
     //return deltaE(rgb2lab(pixel1),rgb2lab(pixel2))
     pixel1 = rgb2lab(pixel1);
     pixel2 = rgb2lab(pixel2);
+    const L = pixel1[0] - pixel2[0];
+    const a = pixel1[1] - pixel2[1];
+    const b = pixel1[2] - pixel2[2];
+    return L * L + a * a + b * b;
   }
-  const r = pixel1[0] - pixel2[0];
-  const g = pixel1[1] - pixel2[1];
-  const b = pixel1[2] - pixel2[2];
-  return r * r + g * g + b * b; // actually L*a*b* if optionValue_betterColour but metric is calculated the same
+  else if (chosenColourMethod.uniqueId === ColourMethods.Cie76_Lab50.uniqueId ||
+    chosenColourMethod.uniqueId === ColourMethods.Cie76_Lab65.uniqueId) {
+    if (chosenColourMethod.uniqueId === ColourMethods.Cie76_Lab50.uniqueId) {
+      pixel1 = rgb2lab50(pixel1);
+      pixel2 = rgb2lab50(pixel2);
+    }
+    else {
+      pixel1 = rgb2lab65(pixel1);
+      pixel2 = rgb2lab65(pixel2);
+    }
+    const L = pixel1[0] - pixel2[0];
+    const a = pixel1[1] - pixel2[1];
+    const b = pixel1[2] - pixel2[2];
+    return L * L + a * a + b * b;
+  }
+  else if (chosenColourMethod.uniqueId === ColourMethods.Ciede2000_Lab50.uniqueId ||
+      chosenColourMethod.uniqueId === ColourMethods.Ciede2000_Lab65.uniqueId) {
+    //Code based on culori.js - https://culorijs.org/
+
+    if (chosenColourMethod.uniqueId === ColourMethods.Ciede2000_Lab50.uniqueId) {
+      pixel1 = rgb2lab50(pixel1);
+      pixel2 = rgb2lab50(pixel2);
+    }
+    else {
+      pixel1 = rgb2lab65(pixel1);
+      pixel2 = rgb2lab65(pixel2);
+    }
+
+    let lStd = pixel1[0];
+    let aStd = pixel1[1];
+    let bStd = pixel1[2];
+    let cStd = Math.sqrt(aStd * aStd + bStd * bStd);
+
+    let lSmp = pixel2[0];
+    let aSmp = pixel2[1];
+    let bSmp = pixel2[2];
+    let cSmp = Math.sqrt(aSmp * aSmp + bSmp * bSmp);
+    let cAvg = (cStd + cSmp) / 2;
+
+    let cAvgPow7 = Math.pow(cAvg, 7);
+		let G =
+			0.5 *
+			(1 -
+				Math.sqrt(
+					cAvgPow7 / (cAvgPow7 + Math.pow(25, 7))
+				));
+
+		let apStd = aStd * (1 + G);
+		let apSmp = aSmp * (1 + G);
+
+		let cpStd = Math.sqrt(apStd * apStd + bStd * bStd);
+		let cpSmp = Math.sqrt(apSmp * apSmp + bSmp * bSmp);
+
+		let hpStd =
+			Math.abs(apStd) + Math.abs(bStd) === 0
+				? 0
+				: Math.atan2(bStd, apStd);
+		hpStd += (hpStd < 0) * 2 * Math.PI;
+
+		let hpSmp =
+			Math.abs(apSmp) + Math.abs(bSmp) === 0
+				? 0
+				: Math.atan2(bSmp, apSmp);
+		hpSmp += (hpSmp < 0) * 2 * Math.PI;
+
+		let dL = lSmp - lStd;
+		let dC = cpSmp - cpStd;
+
+    let cpStdtimescpSmpZero = (cpStd === 0 && cpSmp === 0);
+		let dhp = cpStdtimescpSmpZero ? 0 : hpSmp - hpStd;
+		dhp -= (dhp > Math.PI) * 2 * Math.PI;
+		dhp += (dhp < -Math.PI) * 2 * Math.PI;
+
+		let dH = 2 * Math.sqrt(cpStd * cpSmp) * Math.sin(dhp / 2);
+
+		let Lp = (lStd + lSmp) / 2;
+		let Cp = (cpStd + cpSmp) / 2;
+
+		let hp;
+		if (cpStdtimescpSmpZero) {
+			hp = hpStd + hpSmp;
+		} else {
+			hp = (hpStd + hpSmp) / 2;
+			hp -= (Math.abs(hpStd - hpSmp) > Math.PI) * Math.PI;
+			hp += (hp < 0) * 2 * Math.PI;
+		}
+
+    let Lpminus50 = Lp - 50;
+		let Lpm50 = Lpminus50 * Lpminus50;
+		let T =
+			1 -
+			0.17 * Math.cos(hp - Math.PI / 6) +
+			0.24 * Math.cos(2 * hp) +
+			0.32 * Math.cos(3 * hp + Math.PI / 30) -
+			0.2 * Math.cos(4 * hp - (63 * Math.PI) / 180);
+
+		let Sl = 1 + (0.015 * Lpm50) / Math.sqrt(20 + Lpm50);
+		let Sc = 1 + 0.045 * Cp;
+		let Sh = 1 + 0.015 * Cp * T;
+
+		let deltaTheta =
+			((30 * Math.PI) / 180) *
+			Math.exp(-1 * Math.pow(((180 / Math.PI) * hp - 275) / 25, 2));
+		let Rc =
+			2 *
+			Math.sqrt(Math.pow(Cp, 7) / (Math.pow(Cp, 7) + Math.pow(25, 7)));
+
+		let Rt = -1 * Math.sin(2 * deltaTheta) * Rc;
+
+    let dLdivSl = dL / Sl;
+    let dCdivSc = dC / Sc;
+    let dHdivSh = dH / Sh;
+		return dLdivSl * dLdivSl + dCdivSc * dCdivSc + dHdivSh * dHdivSh +
+				(((Rt * dC) / Sc) * dH) / Sh;
+  }
+  else {
+    const r = pixel1[0] - pixel2[0];
+    const g = pixel1[1] - pixel2[1];
+    const b = pixel1[2] - pixel2[2];
+    return r * r + g * g + b * b;
+  }
 }
 
 function findClosestColourSetIdAndToneAndRGBTo(pixelRGB) {
@@ -588,6 +775,7 @@ onmessage = (e) => {
   coloursJSON = e.data.body.coloursJSON;
   MapModes = e.data.body.MapModes;
   WhereSupportBlocksModes = e.data.body.WhereSupportBlocksModes;
+  ColourMethods = e.data.body.ColourMethods;
   DitherMethods = e.data.body.DitherMethods;
   canvasImageData = e.data.body.canvasImageData;
   selectedBlocks = e.data.body.selectedBlocks;
