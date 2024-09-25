@@ -36,6 +36,7 @@ class MapPreview extends Component {
     const propChanges = [
       prevProps.coloursJSON === newProps.coloursJSON,
       prevProps.selectedBlocks === newProps.selectedBlocks,
+      prevProps.disabledTones === newProps.disabledTones,
       prevProps.optionValue_mapSize_x === newProps.optionValue_mapSize_x,
       prevProps.optionValue_mapSize_y === newProps.optionValue_mapSize_y,
       prevProps.optionValue_cropImage === newProps.optionValue_cropImage,
@@ -65,6 +66,7 @@ class MapPreview extends Component {
     const propChanges = [
       prevProps.coloursJSON === newProps.coloursJSON,
       prevProps.selectedBlocks === newProps.selectedBlocks,
+      prevProps.disabledTones === newProps.disabledTones,
       prevProps.optionValue_modeNBTOrMapdat === newProps.optionValue_modeNBTOrMapdat,
       prevProps.optionValue_mapSize_x === newProps.optionValue_mapSize_x,
       prevProps.optionValue_mapSize_y === newProps.optionValue_mapSize_y,
@@ -108,7 +110,7 @@ class MapPreview extends Component {
   }
 
   closestSmoothColourTo(colourHex) {
-    const { coloursJSON, selectedBlocks, optionValue_staircasing } = this.props;
+    const { coloursJSON, selectedBlocks, disabledTones, optionValue_staircasing } = this.props;
     const rgbGroups_input = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(colourHex);
     const colourRGB_input = [parseInt(rgbGroups_input[1], 16), parseInt(rgbGroups_input[2], 16), parseInt(rgbGroups_input[3], 16)];
     let smallestDistance = 9999999;
@@ -117,35 +119,51 @@ class MapPreview extends Component {
       if (selectedBlocks[colourSetId] === "-1") {
         continue;
       }
-      let coloursRGB_colourSet;
+      let coloursRGB_colourSet = [];
       switch (optionValue_staircasing) {
         case MapModes.SCHEMATIC_NBT.staircaseModes.OFF.uniqueId:
         case MapModes.SCHEMATIC_NBT.staircaseModes.CLASSIC.uniqueId:
         case MapModes.SCHEMATIC_NBT.staircaseModes.VALLEY.uniqueId:
         case MapModes.MAPDAT.staircaseModes.OFF.uniqueId: {
-          coloursRGB_colourSet = [colourSet.tonesRGB.normal];
+          if (!disabledTones[colourSetId].has("normal"))
+            coloursRGB_colourSet.push(colourSet.tonesRGB.normal);
           break;
         }
         case MapModes.SCHEMATIC_NBT.staircaseModes.FULL_DARK.uniqueId:
         case MapModes.MAPDAT.staircaseModes.FULL_DARK.uniqueId: {
-          coloursRGB_colourSet = [colourSet.tonesRGB.dark];
+          if (!disabledTones[colourSetId].has("dark"))
+            coloursRGB_colourSet.push(colourSet.tonesRGB.dark);
           break;
         }
         case MapModes.SCHEMATIC_NBT.staircaseModes.FULL_LIGHT.uniqueId:
         case MapModes.MAPDAT.staircaseModes.FULL_LIGHT.uniqueId: {
-          coloursRGB_colourSet = [colourSet.tonesRGB.light];
+          if (!disabledTones[colourSetId].has("light"))
+            coloursRGB_colourSet.push(colourSet.tonesRGB.light);
           break;
         }
         case MapModes.MAPDAT.staircaseModes.FULL_UNOBTAINABLE.uniqueId: {
-          coloursRGB_colourSet = [colourSet.tonesRGB.unobtainable];
+          if (!disabledTones[colourSetId].has("unobtainable"))
+            coloursRGB_colourSet.push(colourSet.tonesRGB.unobtainable);
           break;
         }
         case MapModes.MAPDAT.staircaseModes.ON.uniqueId: {
-          coloursRGB_colourSet = [colourSet.tonesRGB.dark, colourSet.tonesRGB.normal, colourSet.tonesRGB.light];
+          if (!disabledTones[colourSetId].has("dark"))
+            coloursRGB_colourSet.push(colourSet.tonesRGB.dark);
+          if (!disabledTones[colourSetId].has("normal"))
+            coloursRGB_colourSet.push(colourSet.tonesRGB.normal);
+          if (!disabledTones[colourSetId].has("light"))
+            coloursRGB_colourSet.push(colourSet.tonesRGB.light);
           break;
         }
         case MapModes.MAPDAT.staircaseModes.ON_UNOBTAINABLE.uniqueId: {
-          coloursRGB_colourSet = [colourSet.tonesRGB.dark, colourSet.tonesRGB.normal, colourSet.tonesRGB.light, colourSet.tonesRGB.unobtainable];
+          if (!disabledTones[colourSetId].has("dark"))
+            coloursRGB_colourSet.push(colourSet.tonesRGB.dark);
+          if (!disabledTones[colourSetId].has("normal"))
+            coloursRGB_colourSet.push(colourSet.tonesRGB.normal);
+          if (!disabledTones[colourSetId].has("light"))
+            coloursRGB_colourSet.push(colourSet.tonesRGB.light);
+          if (!disabledTones[colourSetId].has("unobtainable"))
+            coloursRGB_colourSet.push(colourSet.tonesRGB.unobtainable);
           break;
         }
         default: {
@@ -269,6 +287,7 @@ class MapPreview extends Component {
     const {
       coloursJSON,
       selectedBlocks,
+      disabledTones,
       optionValue_modeNBTOrMapdat,
       optionValue_mapSize_x,
       optionValue_mapSize_y,
@@ -315,6 +334,7 @@ class MapPreview extends Component {
         DitherMethods: DitherMethods,
         canvasImageData: canvasImageData,
         selectedBlocks: selectedBlocks,
+        disabledTones: disabledTones,
         optionValue_modeNBTOrMapdat: optionValue_modeNBTOrMapdat,
         optionValue_mapSize_x: optionValue_mapSize_x,
         optionValue_mapSize_y: optionValue_mapSize_y,

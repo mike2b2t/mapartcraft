@@ -70,13 +70,68 @@ class BlockSelection extends Component {
     );
   };
 
+  getColourSetTones = (colourSetId, colourSet, disabledTones, onToggleColourTone) => {
+    const { optionValue_staircasing } = this.props;
+    switch (optionValue_staircasing) {
+      case MapModes.SCHEMATIC_NBT.staircaseModes.CLASSIC.uniqueId:
+      case MapModes.SCHEMATIC_NBT.staircaseModes.VALLEY.uniqueId:
+        return (
+          <React.Fragment>
+            <Tooltip tooltipText="DARK SHADE">
+              <div
+                className="colourSetBox"
+                onClick={() => onToggleColourTone(colourSetId, "dark")}
+                style={{
+                  background: this.cssRGB(colourSet.tonesRGB.dark),
+                  cursor: "pointer",
+                  ...(!disabledTones[colourSetId].has("dark") && {
+                    filter: "drop-shadow(0 0 4px #658968)"
+                  })
+                }}
+              />
+            </Tooltip>
+            <Tooltip tooltipText="NORMAL SHADE">
+              <div
+                className="colourSetBox"
+                onClick={() => onToggleColourTone(colourSetId, "normal")}
+                style={{
+                  background: this.cssRGB(colourSet.tonesRGB.normal),
+                  cursor: "pointer",
+                  ...(!disabledTones[colourSetId].has("normal") && {
+                    filter: "drop-shadow(0 0 4px #658968)"
+                  })
+                }}
+              />
+            </Tooltip>
+            <Tooltip tooltipText="BRIGHT SHADE">
+              <div
+                className="colourSetBox"
+                onClick={() => onToggleColourTone(colourSetId, "light")}
+                style={{
+                  background: this.cssRGB(colourSet.tonesRGB.light),
+                  cursor: "pointer",
+                  ...(!disabledTones[colourSetId].has("light") && {
+                    filter: "drop-shadow(0 0 4px #658968)"
+                  })
+                }}
+              />
+            </Tooltip>
+          </React.Fragment>
+        );
+      default:
+        return "";
+    }
+  };
+
   render() {
     const {
       coloursJSON,
       getLocaleString,
       onChangeColourSetBlock,
+      onToggleColourTone,
       optionValue_version,
       selectedBlocks,
+      disabledTones,
       presets,
       selectedPresetName,
       canDeletePreset,
@@ -129,6 +184,7 @@ class BlockSelection extends Component {
           .map(([colourSetId, colourSet]) => (
             <div key={colourSetId} className="colourSet">
               {this.getColourSetBox(colourSet)}
+              {this.getColourSetTones(colourSetId, colourSet, disabledTones, onToggleColourTone)}
               <label>
                 <Tooltip tooltipText={getLocaleString("NONE")}>
                   <BlockImage
