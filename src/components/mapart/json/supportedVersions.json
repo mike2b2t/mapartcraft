@@ -46,5 +46,9 @@
   "1_21_4": {
     "MCVersion": "1.21.4",
     "NBTVersion": 4189
+  },
+  "1_21_5": {
+    "MCVersion": "1.21.5",
+    "NBTVersion": 4325
   }
 }
