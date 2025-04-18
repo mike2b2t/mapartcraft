@@ -62,7 +62,7 @@
       [0, 1, 1, 1, 0],
       [0, 0, 1, 0, 0]
     ],
-    "ditherDivisor": 12.0
+    "ditherDivisor": 10.0
   },
   "Atkinson_12": {
     "uniqueId": 11,
