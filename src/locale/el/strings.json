@@ -1,0 +1,199 @@
+{
+  "TRANSLATION": {
+    "NAME": "Greek",
+    "CREDITS": "Μετάφραση από: mike2b2t"
+  },
+  "HEAD-META-TAGS": {
+    "DESCRIPTION": "Ένα πρόγραμμα δημιουργίας Minecraft mapart schematic και map.dat"
+  },
+  "FAQ": {
+    "FAQ": "Συχνές Ερωτήσεις",
+    "PLEASE-READ-1": "Παρακαλούμε ελέγξτε τις ",
+    "PLEASE-READ-2": " πριν κάνετε οποιαδήποτε ερώτηση οπουδήποτε!",
+    "VIDEO-TUTORIAL": "Βίντεο-οδηγός"
+  },
+  "DESCRIPTION": {
+    "1": "Ένα πρόγραμμα δημιουργίας Minecraft mapart schematic και map.dat, σχεδιασμένο τόσο για διαχειριστές server όσο και για survival παίκτες σε server όπως ο ",
+    "2": ", που τρέχει στον περιηγητή σας.",
+    "3": "Εμπνευσμένο από το ",
+    "4": "πρόγραμμα mapart του Redstonehelper",
+    "5": ", με στόχο την προσθήκη επιπλέον λειτουργιών χωρίς να χρειάζεται η λήψη ενός προγράμματος στον υπολογιστή σας.",
+    "6": "Αυτό είναι ένα fork του αρχικού ",
+    "7": " από τον rebane2001. Αιτήματα για επιπλέον χαρακτηριστικά και αναφορές σφαλμάτων πηγαίνουν στο "
+  },
+  "BLOCK-SELECTION": {
+    "TITLE": "Επιλογή block",
+    "PRESETS": {
+      "TITLE": "Προεπιλογές",
+      "DELETE": "Διαγραφή",
+      "DELETE-CONFIRM": "Θέλετε να διαγράψετε αυτή την προεπιλογή:",
+      "DELETE-ERROR-DEFAULT": "Αυτή είναι μια προεπιλεγμένη ρύθμιση και δεν μπορεί να επεξεργαστεί/διαγραφεί.",
+      "SAVE": "Αποθήκευση",
+      "SAVE-PROMPT-ENTER-NAME": "Εισαγάγετε ένα όνομα για την προεπιλογή σας:",
+      "SHARE": "Κοινή χρήση",
+      "SHARE-TT": "Κοινοποιεί τα blocks που έχετε επιλέξει αυτή τη στιγμή ως σύνδεσμο",
+      "SHARE-WARNING-NONE-SELECTED": "Επιλέξτε blocks πριν τα μοιραστείτε!",
+      "SHARE-LINK": "Αντιγράψτε αυτόν τον σύνδεσμο για να μοιραστείτε τα blocks που έχετε επιλέξει",
+      "DOWNLOAD": "Εξαγωγή παλέτας",
+      "DOWNLOAD-TT": "Κατεβάζει την παλέτα χρωμάτων για χρήση στο Paint.NET",
+      "DOWNLOAD-WARNING-NONE-SELECTED": "Επιλέξτε blocks πριν κατεβάσετε την παλέτα!",
+      "DOWNLOAD-WARNING-MAX-COLOURS-1": "Προσοχή, η παλέτα σας έχει ",
+      "DOWNLOAD-WARNING-MAX-COLOURS-2": " χρώματα, ενώ το μέγιστο στο Paint.NET είναι 96. Ορισμένα χρώματα δεν θα είναι διαθέσιμα στο Paint.NET",
+      "IMPORT-ERROR-CORRUPTED": "Ο σύνδεσμος προεπιλογής είναι κατεστραμμένος!",
+      "NONE": "Κανένα",
+      "EVERYTHING": "Όλα",
+      "CARPETS": "Χαλιά",
+      "GREYSCALE": "Αποχρώσεις του γκρι"
+    },
+    "UNSUPPORTED-PAST": "Δεν υποστηρίζεται μετά από",
+    "ADD-CUSTOM": {
+      "TITLE": "Προσθήκη προσαρμοσμένου",
+      "BLOCK-NAME": "Όνομα block",
+      "NEEDS-SUPPORT": "Χρειάζεται υποστήριξη",
+      "FLAMMABLE": "Εύφλεκτο",
+      "VERSIONS": "Εκδόσεις",
+      "COLOUR-SET": "Σετ χρωμάτων",
+      "NBT-TAGS": "Ετικέτες NBT",
+      "ADD": "Προσθήκη",
+      "ERROR-NONE-SELECTED": "Επιλέξτε έκδοση(εις) πριν την προσθήκη",
+      "ERROR-NO-NAME": "Εισαγάγετε όνομα block πριν την προσθήκη",
+      "EXAMPLES": "Παραδείγματα",
+      "DELETE": "Διαγραφή",
+      "NO-EXPORT": "Σημείωση: Τα προσαρμοσμένα blocks δεν θα εξαχθούν."
+    }
+  },
+  "MAP-PREVIEW": {
+    "TITLE": "Προεπισκόπηση χάρτη",
+    "BEST-RESOLUTION-TT": "Μια εικόνα πηγής με αυτή την ανάλυση θα λειτουργήσει καλύτερα",
+    "ASPECT-RATIO-MISMATCH-TT": "Η εικόνα δεν ταιριάζει με την αναλογία διαστάσεων του χάρτη",
+    "SCALE-MINUS-TT": "Σμίκρυνση προεπισκόπησης",
+    "SCALE-PLUS-TT": "Μεγέθυνση προεπισκόπησης"
+  },
+  "MAP-SETTINGS": {
+    "TITLE": "Ρυθμίσεις",
+    "MODE": "Λειτουργία",
+    "MODE-TT": "Επιλέξτε τη λειτουργία στην οποία θέλετε να λειτουργήσετε",
+    "MODE-VISUAL": "Οπτική",
+    "MODE-VISUAL-NA": "Οπτική (μη διαθέσιμη)",
+    "VERSION": "Έκδοση",
+    "VERSION-TT": "Επιλέξτε την έκδοση που είναι πιο κοντά σε αυτή που χρησιμοποιείτε",
+    "MAP-SIZE": "Μέγεθος χάρτη",
+    "CROP": {
+      "TITLE": "Περικοπή",
+      "TITLE-TT": "Περικόπτει την εικόνα σας αντί να την τεντώνει",
+      "OFF": "Απενεργοποίηση",
+      "CENTER": "Κέντρο",
+      "MANUAL": "Χειροκίνητη",
+      "ZOOM": "Ζουμ"
+    },
+    "GRID-OVERLAY": "Πλέγμα",
+    "GRID-OVERLAY-TT": "Εμφάνιση πλέγματος που δείχνει chunk 16x16 και διαχωρισμούς 1x1",
+    "3D": {
+      "TITLE": "Κλιμακωτή δόμηση",
+      "TITLE-TT": "Κάνει τον χάρτη 3D. Πιο δύσκολο στην κατασκευή, αλλά 3 φορές περισσότερα χρώματα!",
+      "OFF": "Απενεργοποίηση (2D)",
+      "CLASSIC": "Ενεργό (Κλασικό)",
+      "VALLEY": "Ενεργό (Κοιλάδα)",
+      "FULL-DARK": "Πλήρες-Σκοτεινό",
+      "FULL-LIGHT": "Πλήρες-Φωτεινό",
+      "ON": "Ενεργό",
+      "ON-UNOBTAINABLE": "Ενεργό (Ανεπίτευτο)",
+      "FULL-UNOBTAINABLE": "Πλήρες-Ανεπίτευτο"
+    },
+    "NBT-SPECIFIC": {
+      "WHERE-SUPPORT-BLOCKS": {
+        "TITLE": "Προσθήκη blocks κάτω από",
+        "NONE": "Χωρίς blocks",
+        "IMPORTANT": "Σημαντικά blocks",
+        "ALL": "Όλα τα blocks",
+        "ALL-OPTIMIZED": "Όλα τα blocks (βελτιστοποιημένα)",
+        "ALL-DOUBLE": "Όλα διπλά",
+        "ALL-DOUBLE-OPTIMIZED": "Όλα διπλά (βελτιστοποιημένα)"
+      },
+      "SUPPORT-BLOCK-TO-ADD": "Block προς προσθήκη",
+      "SUPPORT-BLOCK-TO-ADD-TT": "Σχετίζεται με την προηγούμενη επιλογή"
+    },
+    "MAPDAT-SPECIFIC": {
+      "UNOBTAINABLE-COLOURS": "Μη διαθέσιμα χρώματα",
+      "UNOBTAINABLE-COLOURS-TT": "Ενεργοποιεί τα χρώματα map.dat που δεν είναι διαθέσιμα στα schematics",
+      "TRANSPARENCY": "Διαφάνεια",
+      "TRANSPARENCY-TT": "Ενεργοποιεί τη διαφάνεια για το map.dat",
+      "TRANSPARENCY-TOLERANCE": "Ανοχή",
+      "MAPDAT-FILENAME-USE-ID": "Αριθμητική ονομασία αρχείου",
+      "MAPDAT-FILENAME-USE-ID-TT": "Αποθήκευση mapdats ως 'map_#.dat'",
+      "MAPDAT-FILENAME-ID-RANGE": "Εύρος"
+    },
+    "BETTER-COLOUR": "Καλύτερο χρώμα",
+    "BETTER-COLOUR-TT": "Σας δίνει καλύτερη ακρίβεια χρωμάτων",
+    "DITHERING": {
+      "TITLE": "Dithering",
+      "TITLE-TT": "Προσθέτει φαινομενικά τυχαία pixels για την ψευδαίσθηση περισσότερων χρωμάτων",
+      "NONE": "Κανένα",
+      "PROPAGATION-RED": "Διάδοση κόκκινου",
+      "PROPAGATION-GREEN": "Διάδοση πράσινου",
+      "PROPAGATION-BLUE": "Διάδοση μπλε"
+    },
+    "PREPROCESSING": {
+      "TITLE": "Προεπεξεργασία εικόνας",
+      "ENABLE": "Ενεργοποίηση",
+      "BRIGHTNESS": "Φωτεινότητα",
+      "CONTRAST": "Αντίθεση",
+      "SATURATION": "Κορεσμός",
+      "BACKGROUND": {
+        "TITLE": "Φόντο",
+        "TITLE-TT": "Για εικόνες με διαφάνεια",
+        "OFF": "Απενεργοποίηση",
+        "DITHERED": "Ενεργό (dithered)",
+        "SMOOTH": "Ενεργό (ομαλό)"
+      },
+      "BACKGROUND-COLOUR": "Χρώμα"
+    },
+    "EXTRAS": {
+      "TITLE": "Έξτρα",
+      "MORE-STAIRCASING-OPTIONS": "Περισσότερες επιλογές κλιμακωτής δόμησης",
+      "MORE-STAIRCASING-OPTIONS-TT": "Επιλογές Πλήρες-Σκοτεινό, Πλήρες-Φωτεινό και Πλήρες-Ανεπίτευτο"
+    }
+  },
+  "DOWNLOAD": {
+    "ERROR-NONE-SELECTED": "Επιλέξτε blocks πριν την λήψη!",
+    "NBT-SPECIFIC": {
+      "DOWNLOAD": "ΛΗΨΗ NBT",
+      "DOWNLOAD-TT": "Λήψη του nbt",
+      "DOWNLOAD-SPLIT": "ΛΗΨΗ ΩΣ ΧΩΡΙΣΜΕΝΟ 1x1",
+      "DOWNLOAD-SPLIT-TT": "Λήψη του nbt χωρισμένο σε 1x1 κομμάτια"
+    },
+    "MAPDAT-SPECIFIC": {
+      "DOWNLOAD": "ΛΗΨΗ MAPDAT",
+      "DOWNLOAD-TT": "Λήψη του map.dat χωρισμένο σε 1x1 κομμάτια"
+    },
+    "ZIPPING": "Συμπίεση"
+  },
+  "MATERIALS": {
+    "TITLE": "Υλικά",
+    "BLOCK": "Block",
+    "AMOUNT": "Ποσότητα",
+    "PLACEHOLDER-BLOCK-TT": "Block υποστήριξης",
+    "SHOW-PER-SPLIT": "Εμφάνιση μόνο μέγιστων υλικών ανά διαχωρισμό",
+    "SHOW-PER-SPLIT-TT": "Για επαναχρησιμοποίηση υλικών με κλειδωμένους χάρτες",
+    "REFRESH-MATERIALS": "ΑΝΑΝΕΩΣΗ ΥΛΙΚΩΝ",
+    "REFRESH-MATERIALS-TT": "Ανανέωση λίστας υλικών",
+    "COPY-CLIPBOARD": "Αντιγραφή στο πρόχειρο"
+  },
+  "VIEW-ONLINE": {
+    "TITLE": "ΠΡΟΒΟΛΗ ONLINE",
+    "TITLE-TT": "Προβολή του schematic online χωρίς λήψη",
+    "TOO-BIG-FOR-SINGLE": "Πολύ μεγάλο για ένα μόνο schematic. Κατεβάστε 1x1 split",
+    "CONTROLS": "Χειρισμός",
+    "TO-EXIT": "Για έξοδο",
+    "SIZE": "Μέγεθος"
+  },
+  "LITEMATICA-WARNING": "Προσοχή, το Litematica δεν υποστηρίζει πολύ καλά την έκδοση 1.15.2. Σας συνιστούμε να ενημερώσετε στην έκδοση 1.16.5",
+  "EDGE-WARNING": "Σημείωση: η χρήση του Microsoft Edge δεν υποστηρίζεται.\\nΠαρακαλούμε χρησιμοποιήστε Chrome (προτιμότερο) ή Firefox για το MapartCraft",
+  "NONE": "Κανένα",
+  "UNUSED": {
+    "SECOND": "δευτερόλεπτο",
+    "SECONDS": "δευτερόλεπτα",
+    "REMAINING": "απομένουν",
+    "SETTINGS-3D-OPTIMIZED": "Ενεργό (βελτιστοποιημένο)"
+  }
+}
