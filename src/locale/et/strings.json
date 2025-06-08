@@ -183,10 +183,6 @@
     "TO-EXIT": null,
     "SIZE": "Suurus"
   },
-  "DONATE": {
-    "TITLE": "PÄÄSTA MIND JÄRJEKORRAST",
-    "TITLE-TT": "Vaata toetajaid ja anneta"
-  },
   "LITEMATICA-WARNING": null,
   "EDGE-WARNING": "Märkus: Microsoft Edge kasutamine ei ole toetatud.\\nPalun kasutage Chrome (soovitatud) või Tulirebane MapartCrafti jaoks",
   "NONE": "Puudub",

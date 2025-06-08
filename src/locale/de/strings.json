@@ -183,10 +183,6 @@
     "TO-EXIT": null,
     "SIZE": "Maße"
   },
-  "DONATE": {
-    "TITLE": "KLEINE SPENDE BITTE",
-    "TITLE-TT": "Spendenlink und Liste aller Unterstützer"
-  },
   "LITEMATICA-WARNING": null,
   "EDGE-WARNING": "Hinweis: Microsoft Edge wird nicht unterstützt.\\nBitte verwende Google Chrome (bevorzugt) oder Mozilla Firefox für MapartCraft",
   "NONE": "None",

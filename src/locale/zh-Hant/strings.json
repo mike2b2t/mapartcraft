@@ -183,10 +183,6 @@
     "TO-EXIT": "以退出",
     "SIZE": "大小"
   },
-  "DONATE": {
-    "TITLE": "幫我跳過佇列",
-    "TITLE-TT": "查看贊助者並捐贈"
-  },
   "LITEMATICA-WARNING": "警告：Litematica 不完全支援 1.15.2；建議升級至 1.16.5",
   "EDGE-WARNING": "提醒：不支援 Microsoft Edge。\\n建議使用 Google Chrome 或是 Firefox.",
   "NONE": "無",

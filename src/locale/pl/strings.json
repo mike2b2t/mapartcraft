@@ -183,10 +183,6 @@
     "TO-EXIT": "By wyjść",
     "SIZE": "Rozmiar"
   },
-  "DONATE": {
-    "TITLE": "POMÓŻ MI SKIPNĄĆ KOLEJKE",
-    "TITLE-TT": "Pokaż wspierających oraz donejtorów"
-  },
   "LITEMATICA-WARNING": "Warning, Litematica does not support 1.15.2 very well; recommended action is to update to 1.16.5",
   "EDGE-WARNING": "Note: using Microsoft Edge is unsupported.\\nPlease use Chrome (preferred) or Firefox for MapartCraft",
   "NONE": "None",

@@ -183,10 +183,6 @@
     "TO-EXIT": "で終了",
     "SIZE": "サイズ"
   },
-  "DONATE": {
-    "TITLE": "プロジェクトの支援",
-    "TITLE-TT": "支援者を見る/寄付する"
-  },
   "LITEMATICA-WARNING": "警告：Litematica のサポートは1.15.2では十分ではありません; 1.16.5以上へのアップデートをお勧めします",
   "EDGE-WARNING": "注意：Microsoft Edge はサポートされていません．\\nGoogle Chrome (推奨) または Firefox をお使いください．",
   "NONE": "なし",

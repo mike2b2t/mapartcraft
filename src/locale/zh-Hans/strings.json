@@ -183,10 +183,6 @@
     "TO-EXIT": "前往退出",
     "SIZE": "地图尺寸"
   },
-  "DONATE": {
-    "TITLE": "帮助我跳过队列",
-    "TITLE-TT": "查看支持者并捐赠"
-  },
   "LITEMATICA-WARNING": "警告，Litematica 对 1.15.2 的支援不是很好； 建议更新到 1.16.5",
   "EDGE-WARNING": "注意：不支持使用 Microsoft Edge。\\ n请使用 Chrome（首选）或 Firefox 来登上 MapartCraft",
   "NONE": "没有",

@@ -183,10 +183,6 @@
     "TO-EXIT": null,
     "SIZE": "Tamanho"
   },
-  "DONATE": {
-    "TITLE": "AJUDA-ME A PASSAR A FILA À FRENTE",
-    "TITLE-TT": "Ver apoiadores ou doar"
-  },
   "LITEMATICA-WARNING": null,
   "EDGE-WARNING": "Note: Microsoft Edge não é suportado\\nPor Favor utilize Chrome (preferido) ou Firefox para MapartCraft",
   "NONE": "Nada",

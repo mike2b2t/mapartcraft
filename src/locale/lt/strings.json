@@ -185,10 +185,6 @@
     "TO-EXIT": "Norėdami išeiti",
     "SIZE": "Dydis"
   },
-  "DONATE": {
-    "TITLE": "PADĖKITE MAN IŠVENGTI EILĖS",
-    "TITLE-TT": "Peržiūrėti rėmėjus ir paaukoti"
-  },
   "LITEMATICA-WARNING": "Įspėjimas, Litematica ne taip gerai palaiko 1.15.2; rekomenduojama atsinaujinti į 1.16.5",
   "EDGE-WARNING": "Pastaba: naudojant MapartCraft su Microsoft Edge naršykle nepalaikoma.\\nPrašome naudoti Chrome (rekomenduojama) arba Firefox",
   "NONE": "Nėra",

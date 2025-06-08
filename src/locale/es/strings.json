@@ -183,10 +183,6 @@
     "TO-EXIT": "Volver",
     "SIZE": "Tamaño"
   },
-  "DONATE": {
-    "TITLE": "COLA DE 2B2T",
-    "TITLE-TT": "Mira los partidarios, y dóname para ayudarme a tener prioridad"
-  },
   "LITEMATICA-WARNING": "Cuidado, Litematica no soporta 1.15.2 muy bien; se recomienda actualizar a la 1.16.5",
   "EDGE-WARNING": "Nota: Sin soporte para Microsoft Edge.\\nPor favor utiliza Chrome o Firefox para MapartCraft",
   "NONE": "Vacío",

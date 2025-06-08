@@ -183,10 +183,6 @@
     "TO-EXIT": "Para a saída",
     "SIZE": "Tamanho"
   },
-  "DONATE": {
-    "TITLE": "ME AJUDE A PULAR A FILA",
-    "TITLE-TT": "Veja os apoiadores e faça uma doação"
-  },
   "LITEMATICA-WARNING": "Aviso, O Litematica não funciona bem na versão 1.15.2; A ação recomendada é atualizar para a versão 1.16.5",
   "EDGE-WARNING": "Nota: o uso do Microsoft Edge não é suportado.\\nPor-favor use o Chrome (preferível) ou o Firefox para usar o MapartCraft",
   "NONE": "Nenhum",

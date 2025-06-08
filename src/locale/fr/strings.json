@@ -183,10 +183,6 @@
     "TO-EXIT": "Quitter",
     "SIZE": "Taille"
   },
-  "DONATE": {
-    "TITLE": "DONS POUR LA PRIO Q",
-    "TITLE-TT": "Voir les donateurs et soutenir"
-  },
   "LITEMATICA-WARNING": "Attention, Litematica n'est pas optimisé pour la version 1.15.2; une mise à niveau vers la version 1.16.5 est recommandée",
   "EDGE-WARNING": "Note: Microsoft Edge n’est pas compatible.\\nMerci d’utiliser Chrome (de préférence) ou Firefox pour utiliser MapartCraft",
   "NONE": "Aucun",
