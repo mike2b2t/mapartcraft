@@ -10,8 +10,6 @@
     "FAQ": "Preguntas frecuentes",
     "PLEASE-READ-1": "Por favor, ¡Echa un vistazo a ",
     "PLEASE-READ-2": " antes de realizar cualquier pregunta!",
-    "HAVE-YOU-READ": "¿Has leido el FAQ (Preguntas frecuentes)?",
-    "HELP-IN-ENGLISH": "Nota: el soporte solo está disponible en inglés",
     "VIDEO-TUTORIAL": "Video tutorial"
   },
   "DESCRIPTION": {
@@ -20,11 +18,8 @@
     "3": "Inspirado por el ",
     "4": "programa para map art de Redstonehelper",
     "5": ", con el objetivo de añadir nuevas caraterísticas y para eliminar la necesidad de descargar un programa.",
-    "6": "Siéntete libre de mensajearme en Discord ",
-    "7": " o Reddit ",
-    "8": ". Las solicitudes de nuevas características y los reportes de fallos se pueden realizar en ",
-    "9": "Nota: MapartCraft se ha actualizado a una nueva y flamante versión. Si algo no funciona, puedes utilizar la ",
-    "10": "versión clásica"
+    "6": null,
+    "7": null
   },
   "BLOCK-SELECTION": {
     "TITLE": "Selección de bloques",

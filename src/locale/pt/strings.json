@@ -10,8 +10,6 @@
     "FAQ": "FAQ",
     "PLEASE-READ-1": "Por Favor verifique o ",
     "PLEASE-READ-2": " antes de fazer perguntas em qualquer lado",
-    "HAVE-YOU-READ": "Ja leste o FAQ",
-    "HELP-IN-ENGLISH": "Note: Ajuda será apenas feita em inglês",
     "VIDEO-TUTORIAL": "Video tutorial"
   },
   "DESCRIPTION": {
@@ -20,11 +18,8 @@
     "3": "Inspirado pelo ",
     "4": "programa de map art de Redstonehelper",
     "5": ", com o objetivo de adicionar recursos muito pedidos e remover a necessidade de descarregar o programa",
-    "6": "Sinta-se livre para me enviar uma mensagem no Discord ",
-    "7": " ou Reddit ",
-    "8": ", solicitações de recursos e relatórios de bugs vão no ",
-    "9": null,
-    "10": null
+    "6": null,
+    "7": null
   },
   "BLOCK-SELECTION": {
     "TITLE": "Seleção de blocos",

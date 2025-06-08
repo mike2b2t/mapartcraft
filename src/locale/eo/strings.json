@@ -10,8 +10,6 @@
     "FAQ": "OD",
     "PLEASE-READ-1": "Bonvolu vidi la ",
     "PLEASE-READ-2": "-n antaŭ ol demandi iun ie!",
-    "HAVE-YOU-READ": "Ĉu vi legis la OD-n?",
-    "HELP-IN-ENGLISH": "Atentu: Helpo estos provizita nur en la Angla",
     "VIDEO-TUTORIAL": "Videa instrukcio"
   },
   "DESCRIPTION": {
@@ -20,11 +18,8 @@
     "3": "Inspirita de ",
     "4": "Redstonehelper's map art programo",
     "5": ", kun la celo por aldoni ofte petatajn apartaĵojn kaj forigi la neceson por enŝuti programon",
-    "6": "Vi povas libere mesaĝi al mi per Discord ",
-    "7": " aŭ Reddit ",
-    "8": ", apartaĵajn petojn kaj cimraportojn sendu al ",
-    "9": null,
-    "10": null
+    "6": null,
+    "7": null
   },
   "BLOCK-SELECTION": {
     "TITLE": "Blokelektejo",

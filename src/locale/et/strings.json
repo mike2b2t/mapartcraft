@@ -10,8 +10,6 @@
     "FAQ": "KKK",
     "PLEASE-READ-1": "Palun lugege ",
     "PLEASE-READ-2": " enne küsimuste küsimist!",
-    "HAVE-YOU-READ": "Kas sa oled lugenud KKK?",
-    "HELP-IN-ENGLISH": "Märkus: Abi pakutakse vaid inglise ja eesti keeles",
     "VIDEO-TUTORIAL": "Videoõpetus"
   },
   "DESCRIPTION": {
@@ -20,11 +18,8 @@
     "3": "Inspireeritud ",
     "4": "Redstonehelperi kaardikunsti programmi",
     "5": " põhjal, eesmärgiga lisada paljunõutud lisavõimalusi ning eemaldada vajadus programmi alla laadida",
-    "6": "Võite minuga ühedust võtta Discordi ",
-    "7": " või Redditi ",
-    "8": " kaudu, lisavõimaluste taotlused ning putukad lähevad ",
-    "9": null,
-    "10": null
+    "6": null,
+    "7": null
   },
   "BLOCK-SELECTION": {
     "TITLE": "Plokkide valik",

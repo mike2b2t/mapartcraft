@@ -10,8 +10,6 @@
     "FAQ": "常見問題",
     "PLEASE-READ-1": "在詢問任何問題前，請先閱讀",
     "PLEASE-READ-2": "！",
-    "HAVE-YOU-READ": "您讀過常見問題了嗎?",
-    "HELP-IN-ENGLISH": "提醒：將以英文提供協助",
     "VIDEO-TUTORIAL": "影片教學"
   },
   "DESCRIPTION": {
@@ -20,11 +18,8 @@
     "3": "啟發自 ",
     "4": "Redstonehelper 製作的地圖畫產生器",
     "5": "，目標為新增其他功能，且不再需要下載程式。",
-    "6": "歡迎在 Discord ",
-    "7": " 或 Reddit 私訊我 ",
-    "8": "。如要回報 Bug 或是建議功能，請至 ",
-    "9": "提醒：MapartCraft 已更新到新版本。如果在使用上有任何問題，您仍可使用 ",
-    "10": "舊版"
+    "6": null,
+    "7": null
   },
   "BLOCK-SELECTION": {
     "TITLE": "選擇方塊",

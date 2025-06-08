@@ -10,8 +10,6 @@
     "FAQ": "FAQ",
     "PLEASE-READ-1": "Please check the ",
     "PLEASE-READ-2": " before asking any questions anywhere!",
-    "HAVE-YOU-READ": "Have you read the FAQ?",
-    "HELP-IN-ENGLISH": "Note: Help will only be provided in English",
     "VIDEO-TUTORIAL": "Video tutorial"
   },
   "DESCRIPTION": {
@@ -20,11 +18,8 @@
     "3": "Inspired by ",
     "4": "Redstonehelper's map art program",
     "5": ", with the goal to add much-requested features and removing the need to download a program.",
-    "6": "Feel free to message me on Discord ",
-    "7": " or Reddit ",
-    "8": ". Feature requests and bug reports go on ",
-    "9": "Note: MapartCraft has been updated to a shiny new version. If anything is broken, you can still use the ",
-    "10": "classic version"
+    "6": "This is a fork of the original ",
+    "7": " by rebane2001. Feature requests and bug reports go on "
   },
   "BLOCK-SELECTION": {
     "TITLE": "Block selection",

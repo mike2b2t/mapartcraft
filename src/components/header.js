@@ -4,20 +4,7 @@ import { Link } from "react-router-dom";
 import "./header.css";
 
 class Header extends Component {
-  state = { contactInfoClassname: "contactInfoBlurred" };
-
-  // Reveal contact info
-  onContactInfoClick = (event) => {
-    const { getLocaleString } = this.props;
-    event.preventDefault();
-    if (window.confirm(getLocaleString("FAQ/HAVE-YOU-READ"))) {
-      alert(getLocaleString("FAQ/HELP-IN-ENGLISH"));
-      this.setState({ contactInfoClassname: "contactInfo" });
-    }
-  };
-
   render() {
-    const { contactInfoClassname } = this.state;
     const { getLocaleString } = this.props;
     return (
       <div className="header">
@@ -30,16 +17,12 @@ class Header extends Component {
             {getLocaleString("FAQ/VIDEO-TUTORIAL")}
           </a>
           <span> | </span>
-          <a href="https://github.com/rebane2001/mapartcraft" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/mike2b2t/mapartcraft" target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
           <span> | </span>
           <a href="https://discord.gg/r7Tuerq" target="_blank" rel="noopener noreferrer">
             2b2t Mapart Discord
-          </a>
-          <span> | </span>
-          <a href="https://area51.selfadjointoperator.com/mapartcraft/" target="_blank" rel="noopener noreferrer">
-            Beta
           </a>
         </h3>
         <p>
@@ -56,30 +39,14 @@ class Header extends Component {
           {getLocaleString("DESCRIPTION/5")}
           <br></br>
           {getLocaleString("DESCRIPTION/6")}
-          <span className={contactInfoClassname} onClick={this.onContactInfoClick}>
-            (rebane2001#3716)
-          </span>
+          <a href="https://rebane2001.com/mapartcraft" target="_blank" rel="noopener noreferrer">
+            MapartCraft
+          </a>
           {getLocaleString("DESCRIPTION/7")}
-          <span className={contactInfoClassname} onClick={this.onContactInfoClick}>
-            (
-            <a href="https://www.reddit.com/message/compose/?to=rebane2001" target="_blank" rel="noopener noreferrer">
-              /u/rebane2001
-            </a>
-            )
-          </span>
-          {getLocaleString("DESCRIPTION/8")}
-          <a href="https://github.com/rebane2001/mapartcraft/issues" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/mike2b2t/mapartcraft/issues" target="_blank" rel="noopener noreferrer">
             GitHub
           </a>
           {"."}
-          <br></br>
-          <em>
-            {getLocaleString("DESCRIPTION/9")}
-            <a href="/mapartcraft/classic" target="_blank" rel="noopener noreferrer">
-              {getLocaleString("DESCRIPTION/10")}
-            </a>
-            {"."}
-          </em>
           <br></br>
           <b>
             {getLocaleString("FAQ/PLEASE-READ-1")}

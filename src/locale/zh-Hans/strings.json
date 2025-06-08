@@ -10,8 +10,6 @@
     "FAQ": "常见问题",
     "PLEASE-READ-1": "在询问任何问题前，请先阅读",
     "PLEASE-READ-2": "!",
-    "HAVE-YOU-READ": "你读过'常见问题'了吗?",
-    "HELP-IN-ENGLISH": "注意：常见问题将仅以英语提供",
     "VIDEO-TUTORIAL": "影片教学"
   },
   "DESCRIPTION": {
@@ -20,11 +18,8 @@
     "3": "启发自",
     "4": "Redstonehelper 地图画生成程序",
     "5": ", 其目标是添加需求量大的功能并消除下载程序的需要",
-    "6": "可以随时在 Discord ",
-    "7": " 或 Reddit 上向我发送消息 ",
-    "8": ", 功能请求和错误报告可发布于",
-    "9": "注意：MapartCraft 已更新为新版本。 如果有任何损坏，您仍然可以使用 ",
-    "10": "旧版本"
+    "6": null,
+    "7": null
   },
   "BLOCK-SELECTION": {
     "TITLE": "方块选择",

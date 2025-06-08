@@ -20,7 +20,9 @@ The default build settings assume the app is being hosted at https://YOUR-SITE-H
 
 # Usage
 
-Visit [MapartCraft](https://rebane2001.com/mapartcraft) on [rebane2001.com](https://rebane2001.com) or use a mirror on [web.archive.org](https://web.archive.org/web/*/https://rebane2001.com/mapartcraft). However, it is recommended to use the [rebane2001.com](https://rebane2001.com/mapartcraft) site as it is always up to date with new features and bugfixes.
+Visit [MapartCraft](https://mike2b2t.github.io/mapartcraft). This is a fork of the original tool with newer version support.
+
+You can find the original MapartCraft tool on [rebane2001.com](https://rebane2001.com/mapartcraft) or use a mirror on [web.archive.org](https://web.archive.org/web/*/https://rebane2001.com/mapartcraft).
 
 # Credits/Thanks
 
@@ -31,4 +33,4 @@ Visit [MapartCraft](https://rebane2001.com/mapartcraft) on [rebane2001.com](http
 - [OpenMoji](https://github.com/hfg-gmuend/openmoji) for flags
 - Translation credits can be seen on the translated pages
 - [SelfAdjointOperator](https://github.com/SelfAdjointOperator) for some extra features
-- Code contributors can be seen on the [contributions page](https://github.com/rebane2001/mapartcraft/graphs/contributors)
+- Code contributors can be seen on the [contributions page](https://github.com/mike2b2t/mapartcraft/graphs/contributors)

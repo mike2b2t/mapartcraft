@@ -10,8 +10,6 @@
     "FAQ": "FAQ",
     "PLEASE-READ-1": "Bitte lies das ",
     "PLEASE-READ-2": " bevor Du mich kontaktierst!",
-    "HAVE-YOU-READ": "Hast Du das FAQ gelesen?",
-    "HELP-IN-ENGLISH": "Hinweis: Hilfe kann ausschließlich auf Englisch bereitgestellt werden",
     "VIDEO-TUTORIAL": "Erklärvideo"
   },
   "DESCRIPTION": {
@@ -20,11 +18,8 @@
     "3": "Inspiriert durch ",
     "4": "Redstonehelpers Mapart-Programm",
     "5": ", mit dem Ziel verschiedenste gewünschte Funktionen zu implementieren und das Programm online verfügbar zu machen.",
-    "6": "Bei Rückfragen kannst Du mich auf Discord ",
-    "7": " oder Reddit ",
-    "8": " erreichen. Bug-Reports und Featurewünsche können auf GitHub eingereicht werden: ",
-    "9": null,
-    "10": null
+    "6": null,
+    "7": null
   },
   "BLOCK-SELECTION": {
     "TITLE": "Blockauswahl",

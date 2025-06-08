@@ -542,7 +542,7 @@ class MapartController extends Component {
           });
       }
     }
-    return "https://rebane2001.com/mapartcraft/?preset=" + presetQueryString;
+    return "https://mike2b2t.github.io/mapartcraft/?preset=" + presetQueryString;
   };
 
   handleSharePreset = () => {

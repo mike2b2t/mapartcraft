@@ -10,8 +10,6 @@
     "FAQ": "FAQ",
     "PLEASE-READ-1": "Per favore controlla la  ",
     "PLEASE-READ-2": "  prima di contattarmi!",
-    "HAVE-YOU-READ": "Hai letto la FAQ?",
-    "HELP-IN-ENGLISH": "Nota: Il supporto verrà fornito solo in inlgese",
     "VIDEO-TUTORIAL": "Video tutorial"
   },
   "DESCRIPTION": {
@@ -20,11 +18,8 @@
     "3": "Ispirato dal ",
     "4": "generatore di mapart di Redstonehelper",
     "5": ", ha l'obbiettivo di implementare funzionalità molto richieste e di eliminare il bisogno di scaricare un programma",
-    "6": "Puoi contattarmi su Discord ",
-    "7": " oppure su Reddit ",
-    "8": ". Le richieste di funzionalità e le segnalazioni di bug possono essere inviate su ",
-    "9": null,
-    "10": null
+    "6": null,
+    "7": null
   },
   "BLOCK-SELECTION": {
     "TITLE": "Selezione di blocchi",
