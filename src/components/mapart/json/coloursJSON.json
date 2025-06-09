@@ -8767,7 +8767,9 @@
                 "validVersions": {
                     "1.21.4": {
                         "NBTName": "resin_clump",
-                        "NBTArgs": {}
+                        "NBTArgs": {
+                            "down": "true"
+                        }
                     },
                     "1.21.5": "&1.21.4"
                 },
