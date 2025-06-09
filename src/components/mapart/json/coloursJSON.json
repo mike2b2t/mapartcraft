@@ -273,6 +273,29 @@
                 "presetIndex": 4
             },
             "6": {
+                "displayName": "Birch Pressure Plate",
+                "validVersions": {
+                    "1.13.2": {
+                        "NBTName": "birch_pressure_plate",
+                        "NBTArgs": {}
+                    },
+                    "1.14.4": "&1.13.2",
+                    "1.15.2": "&1.13.2",
+                    "1.16.5": "&1.13.2",
+                    "1.17.1": "&1.13.2",
+                    "1.18.2": "&1.13.2",
+                    "1.19": "&1.13.2",
+                    "1.20": "&1.13.2",
+                    "1.21": "&1.13.2",
+                    "1.21.2": "&1.13.2",
+                    "1.21.4": "&1.13.2",
+                    "1.21.5": "&1.13.2"
+                },
+                "supportBlockMandatory": true,
+                "flammable": false,
+                "presetIndex": 11
+            },
+            "7": {
                 "displayName": "Glowstone",
                 "validVersions": {
                     "1.12.2": {
@@ -296,7 +319,7 @@
                 "flammable": false,
                 "presetIndex": 5
             },
-            "7": {
+            "8": {
                 "displayName": "End Stone",
                 "validVersions": {
                     "1.12.2": {
@@ -320,7 +343,7 @@
                 "flammable": false,
                 "presetIndex": 6
             },
-            "8": {
+            "9": {
                 "displayName": "End Stone Bricks",
                 "validVersions": {
                     "1.12.2": {
@@ -347,7 +370,7 @@
                 "flammable": false,
                 "presetIndex": 8
             },
-            "9": {
+            "10": {
                 "displayName": "End Stone Brick Slab",
                 "validVersions": {
                     "1.14.4": {
@@ -369,7 +392,7 @@
                 "flammable": false,
                 "presetIndex": 9
             },
-            "10": {
+            "11": {
                 "displayName": "Bone Block",
                 "validVersions": {
                     "1.12.2": {
@@ -392,29 +415,6 @@
                 "supportBlockMandatory": false,
                 "flammable": false,
                 "presetIndex": 10
-            },
-            "11": {
-                "displayName": "Birch Pressure Plate",
-                "validVersions": {
-                    "1.13.2": {
-                        "NBTName": "birch_pressure_plate",
-                        "NBTArgs": {}
-                    },
-                    "1.14.4": "&1.13.2",
-                    "1.15.2": "&1.13.2",
-                    "1.16.5": "&1.13.2",
-                    "1.17.1": "&1.13.2",
-                    "1.18.2": "&1.13.2",
-                    "1.19": "&1.13.2",
-                    "1.20": "&1.13.2",
-                    "1.21": "&1.13.2",
-                    "1.21.2": "&1.13.2",
-                    "1.21.4": "&1.13.2",
-                    "1.21.5": "&1.13.2"
-                },
-                "supportBlockMandatory": true,
-                "flammable": false,
-                "presetIndex": 11
             },
             "12": {
                 "displayName": "Ochre Froglight",
@@ -806,6 +806,30 @@
                 "presetIndex": 0
             },
             "1": {
+                "displayName": "Heavy Weighted Pressure Plate",
+                "validVersions": {
+                    "1.12.2": {
+                        "NBTName": "heavy_weighted_pressure_plate",
+                        "NBTArgs": {}
+                    },
+                    "1.13.2": "&1.12.2",
+                    "1.14.4": "&1.12.2",
+                    "1.15.2": "&1.12.2",
+                    "1.16.5": "&1.12.2",
+                    "1.17.1": "&1.12.2",
+                    "1.18.2": "&1.12.2",
+                    "1.19": "&1.12.2",
+                    "1.20": "&1.12.2",
+                    "1.21": "&1.12.2",
+                    "1.21.2": "&1.12.2",
+                    "1.21.4": "&1.12.2",
+                    "1.21.5": "&1.12.2"
+                },
+                "supportBlockMandatory": true,
+                "flammable": false,
+                "presetIndex": 2
+            },
+            "2": {
                 "displayName": "Iron Trapdoor",
                 "validVersions": {
                     "1.12.2": {
@@ -831,7 +855,7 @@
                 "flammable": false,
                 "presetIndex": 1
             },
-            "2": {
+            "3": {
                 "displayName": "Iron Bars",
                 "validVersions": {
                     "1.12.2": {
@@ -842,30 +866,6 @@
                 "supportBlockMandatory": true,
                 "flammable": false,
                 "presetIndex": 3
-            },
-            "3": {
-                "displayName": "Weighted Pressure Plate (Heavy)",
-                "validVersions": {
-                    "1.12.2": {
-                        "NBTName": "heavy_weighted_pressure_plate",
-                        "NBTArgs": {}
-                    },
-                    "1.13.2": "&1.12.2",
-                    "1.14.4": "&1.12.2",
-                    "1.15.2": "&1.12.2",
-                    "1.16.5": "&1.12.2",
-                    "1.17.1": "&1.12.2",
-                    "1.18.2": "&1.12.2",
-                    "1.19": "&1.12.2",
-                    "1.20": "&1.12.2",
-                    "1.21": "&1.12.2",
-                    "1.21.2": "&1.12.2",
-                    "1.21.4": "&1.12.2",
-                    "1.21.5": "&1.12.2"
-                },
-                "supportBlockMandatory": true,
-                "flammable": false,
-                "presetIndex": 2
             },
             "4": {
                 "displayName": "Brewing Stand",
@@ -1392,6 +1392,29 @@
                 "presetIndex": 2
             },
             "3": {
+                "displayName": "Jungle Pressure Plate",
+                "validVersions": {
+                    "1.13.2": {
+                        "NBTName": "jungle_pressure_plate",
+                        "NBTArgs": {}
+                    },
+                    "1.14.4": "&1.13.2",
+                    "1.15.2": "&1.13.2",
+                    "1.16.5": "&1.13.2",
+                    "1.17.1": "&1.13.2",
+                    "1.18.2": "&1.13.2",
+                    "1.19": "&1.13.2",
+                    "1.20": "&1.13.2",
+                    "1.21": "&1.13.2",
+                    "1.21.2": "&1.13.2",
+                    "1.21.4": "&1.13.2",
+                    "1.21.5": "&1.13.2"
+                },
+                "supportBlockMandatory": true,
+                "flammable": false,
+                "presetIndex": 9
+            },
+            "4": {
                 "displayName": "Dirt",
                 "validVersions": {
                     "1.12.2": {
@@ -1415,7 +1438,7 @@
                 "flammable": false,
                 "presetIndex": 3
             },
-            "4": {
+            "5": {
                 "displayName": "Coarse Dirt",
                 "validVersions": {
                     "1.12.2": {
@@ -1444,7 +1467,7 @@
                 "flammable": false,
                 "presetIndex": 4
             },
-            "5": {
+            "6": {
                 "displayName": "Rooted Dirt",
                 "validVersions": {
                     "1.17.1": {
@@ -1463,7 +1486,7 @@
                 "flammable": false,
                 "presetIndex": 8
             },
-            "6": {
+            "7": {
                 "displayName": "Jukebox",
                 "validVersions": {
                     "1.12.2": {
@@ -1487,7 +1510,7 @@
                 "flammable": false,
                 "presetIndex": 5
             },
-            "7": {
+            "8": {
                 "displayName": "Granite",
                 "validVersions": {
                     "1.12.2": {
@@ -1516,7 +1539,7 @@
                 "flammable": false,
                 "presetIndex": 6
             },
-            "8": {
+            "9": {
                 "displayName": "Granite Slab",
                 "validVersions": {
                     "1.14.4": {
@@ -1537,29 +1560,6 @@
                 "supportBlockMandatory": true,
                 "flammable": false,
                 "presetIndex": 7
-            },
-            "9": {
-                "displayName": "Jungle Pressure Plate",
-                "validVersions": {
-                    "1.13.2": {
-                        "NBTName": "jungle_pressure_plate",
-                        "NBTArgs": {}
-                    },
-                    "1.14.4": "&1.13.2",
-                    "1.15.2": "&1.13.2",
-                    "1.16.5": "&1.13.2",
-                    "1.17.1": "&1.13.2",
-                    "1.18.2": "&1.13.2",
-                    "1.19": "&1.13.2",
-                    "1.20": "&1.13.2",
-                    "1.21": "&1.13.2",
-                    "1.21.2": "&1.13.2",
-                    "1.21.4": "&1.13.2",
-                    "1.21.5": "&1.13.2"
-                },
-                "supportBlockMandatory": true,
-                "flammable": false,
-                "presetIndex": 9
             },
             "10": {
                 "displayName": "Packed Mud",
@@ -1775,6 +1775,52 @@
                 "presetIndex": 2
             },
             "6": {
+                "displayName": "Stone Pressure Plate",
+                "validVersions": {
+                    "1.12.2": {
+                        "NBTName": "stone_pressure_plate",
+                        "NBTArgs": {}
+                    },
+                    "1.13.2": "&1.12.2",
+                    "1.14.4": "&1.12.2",
+                    "1.15.2": "&1.12.2",
+                    "1.16.5": "&1.12.2",
+                    "1.17.1": "&1.12.2",
+                    "1.18.2": "&1.12.2",
+                    "1.19": "&1.12.2",
+                    "1.20": "&1.12.2",
+                    "1.21": "&1.12.2",
+                    "1.21.2": "&1.12.2",
+                    "1.21.4": "&1.12.2",
+                    "1.21.5": "&1.12.2"
+                },
+                "supportBlockMandatory": true,
+                "flammable": false,
+                "presetIndex": 14
+            },
+            "7": {
+                "displayName": "Smooth Stone",
+                "validVersions": {
+                    "1.14.4": {
+                        "NBTName": "smooth_stone",
+                        "NBTArgs": {}
+                    },
+                    "1.15.2": "&1.14.4",
+                    "1.16.5": "&1.14.4",
+                    "1.17.1": "&1.14.4",
+                    "1.18.2": "&1.14.4",
+                    "1.19": "&1.14.4",
+                    "1.20": "&1.14.4",
+                    "1.21": "&1.14.4",
+                    "1.21.2": "&1.14.4",
+                    "1.21.4": "&1.14.4",
+                    "1.21.5": "&1.14.4"
+                },
+                "supportBlockMandatory": false,
+                "flammable": false,
+                "presetIndex": 16
+            },
+            "8": {
                 "displayName": "Smooth Stone Slab",
                 "validVersions": {
                     "1.12.2": {
@@ -1806,7 +1852,7 @@
                 "flammable": false,
                 "presetIndex": 10
             },
-            "7": {
+            "9": {
                 "displayName": "Stone Bricks",
                 "validVersions": {
                     "1.12.2": {
@@ -1835,7 +1881,7 @@
                 "flammable": false,
                 "presetIndex": 11
             },
-            "8": {
+            "10": {
                 "displayName": "Stone Brick Slab",
                 "validVersions": {
                     "1.12.2": {
@@ -1864,7 +1910,7 @@
                 "flammable": false,
                 "presetIndex": 12
             },
-            "9": {
+            "11": {
                 "displayName": "Andesite",
                 "validVersions": {
                     "1.12.2": {
@@ -1893,7 +1939,7 @@
                 "flammable": false,
                 "presetIndex": 4
             },
-            "10": {
+            "12": {
                 "displayName": "Andesite Slab",
                 "validVersions": {
                     "1.14.4": {
@@ -1915,7 +1961,7 @@
                 "flammable": false,
                 "presetIndex": 13
             },
-            "11": {
+            "13": {
                 "displayName": "Bedrock",
                 "validVersions": {
                     "1.12.2": {
@@ -1939,7 +1985,7 @@
                 "flammable": false,
                 "presetIndex": 5
             },
-            "12": {
+            "14": {
                 "displayName": "Acacia Log (horizontal)",
                 "validVersions": {
                     "1.12.2": {
@@ -1971,7 +2017,22 @@
                 "flammable": true,
                 "presetIndex": 6
             },
-            "13": {
+            "15": {
+                "displayName": "Pale Oak Log (Horizontal)",
+                "validVersions": {
+                    "1.21.4": {
+                        "NBTName": "pale_oak_log",
+                        "NBTArgs": {
+                            "axis": "x"
+                        }
+                    },
+                    "1.21.5": "&1.21.4"
+                },
+                "supportBlockMandatory": false,
+                "flammable": true,
+                "presetIndex": 15
+            },
+            "16": {
                 "displayName": "Gravel",
                 "validVersions": {
                     "1.12.2": {
@@ -1994,45 +2055,6 @@
                 "supportBlockMandatory": true,
                 "flammable": false,
                 "presetIndex": 7
-            },
-            "14": {
-                "displayName": "Stone Pressure Plate",
-                "validVersions": {
-                    "1.12.2": {
-                        "NBTName": "stone_pressure_plate",
-                        "NBTArgs": {}
-                    },
-                    "1.13.2": "&1.12.2",
-                    "1.14.4": "&1.12.2",
-                    "1.15.2": "&1.12.2",
-                    "1.16.5": "&1.12.2",
-                    "1.17.1": "&1.12.2",
-                    "1.18.2": "&1.12.2",
-                    "1.19": "&1.12.2",
-                    "1.20": "&1.12.2",
-                    "1.21": "&1.12.2",
-                    "1.21.2": "&1.12.2",
-                    "1.21.4": "&1.12.2",
-                    "1.21.5": "&1.12.2"
-                },
-                "supportBlockMandatory": true,
-                "flammable": false,
-                "presetIndex": 14
-            },
-            "15": {
-                "displayName": "Pale Oak Log (Horizontal)",
-                "validVersions": {
-                    "1.21.4": {
-                        "NBTName": "pale_oak_log",
-                        "NBTArgs": {
-                            "axis": "x"
-                        }
-                    },
-                    "1.21.5": "&1.21.4"
-                },
-                "supportBlockMandatory": false,
-                "flammable": true,
-                "presetIndex": 15
             }
         },
         "mapdatId": 11,
@@ -2224,30 +2246,6 @@
                 "presetIndex": 2
             },
             "3": {
-                "displayName": "Crafting Table",
-                "validVersions": {
-                    "1.12.2": {
-                        "NBTName": "crafting_table",
-                        "NBTArgs": {}
-                    },
-                    "1.13.2": "&1.12.2",
-                    "1.14.4": "&1.12.2",
-                    "1.15.2": "&1.12.2",
-                    "1.16.5": "&1.12.2",
-                    "1.17.1": "&1.12.2",
-                    "1.18.2": "&1.12.2",
-                    "1.19": "&1.12.2",
-                    "1.20": "&1.12.2",
-                    "1.21": "&1.12.2",
-                    "1.21.2": "&1.12.2",
-                    "1.21.4": "&1.12.2",
-                    "1.21.5": "&1.12.2"
-                },
-                "supportBlockMandatory": false,
-                "flammable": false,
-                "presetIndex": 3
-            },
-            "4": {
                 "displayName": "Oak Pressure Plate",
                 "validVersions": {
                     "1.12.2": {
@@ -2273,6 +2271,30 @@
                 "supportBlockMandatory": true,
                 "flammable": false,
                 "presetIndex": 4
+            },
+            "4": {
+                "displayName": "Crafting Table",
+                "validVersions": {
+                    "1.12.2": {
+                        "NBTName": "crafting_table",
+                        "NBTArgs": {}
+                    },
+                    "1.13.2": "&1.12.2",
+                    "1.14.4": "&1.12.2",
+                    "1.15.2": "&1.12.2",
+                    "1.16.5": "&1.12.2",
+                    "1.17.1": "&1.12.2",
+                    "1.18.2": "&1.12.2",
+                    "1.19": "&1.12.2",
+                    "1.20": "&1.12.2",
+                    "1.21": "&1.12.2",
+                    "1.21.2": "&1.12.2",
+                    "1.21.4": "&1.12.2",
+                    "1.21.5": "&1.12.2"
+                },
+                "supportBlockMandatory": false,
+                "flammable": false,
+                "presetIndex": 3
             },
             "5": {
                 "displayName": "Chiseled Bookshelf",
@@ -3117,6 +3139,29 @@
                 "presetIndex": 8
             },
             "10": {
+                "displayName": "Acacia Pressure Plate",
+                "validVersions": {
+                    "1.13.2": {
+                        "NBTName": "acacia_pressure_plate",
+                        "NBTArgs": {}
+                    },
+                    "1.14.4": "&1.13.2",
+                    "1.15.2": "&1.13.2",
+                    "1.16.5": "&1.13.2",
+                    "1.17.1": "&1.13.2",
+                    "1.18.2": "&1.13.2",
+                    "1.19": "&1.13.2",
+                    "1.20": "&1.13.2",
+                    "1.21": "&1.13.2",
+                    "1.21.2": "&1.13.2",
+                    "1.21.4": "&1.13.2",
+                    "1.21.5": "&1.13.2"
+                },
+                "supportBlockMandatory": true,
+                "flammable": false,
+                "presetIndex": 19
+            },
+            "11": {
                 "displayName": "Red Sand",
                 "validVersions": {
                     "1.12.2": {
@@ -3145,7 +3190,7 @@
                 "flammable": false,
                 "presetIndex": 9
             },
-            "11": {
+            "12": {
                 "displayName": "Red Sandstone",
                 "validVersions": {
                     "1.12.2": {
@@ -3174,7 +3219,7 @@
                 "flammable": false,
                 "presetIndex": 10
             },
-            "12": {
+            "13": {
                 "displayName": "Red Sandstone Slab",
                 "validVersions": {
                     "1.12.2": {
@@ -3203,7 +3248,7 @@
                 "flammable": false,
                 "presetIndex": 12
             },
-            "13": {
+            "14": {
                 "displayName": "Terracotta",
                 "validVersions": {
                     "1.12.2": {
@@ -3230,7 +3275,7 @@
                 "flammable": false,
                 "presetIndex": 11
             },
-            "14": {
+            "15": {
                 "displayName": "Honey Block",
                 "validVersions": {
                     "1.15.2": {
@@ -3251,7 +3296,7 @@
                 "flammable": false,
                 "presetIndex": 13
             },
-            "15": {
+            "16": {
                 "displayName": "Honeycomb Block",
                 "validVersions": {
                     "1.15.2": {
@@ -3272,7 +3317,7 @@
                 "flammable": false,
                 "presetIndex": 14
             },
-            "16": {
+            "17": {
                 "displayName": "Block Of Raw Copper",
                 "validVersions": {
                     "1.17.1": {
@@ -3291,7 +3336,7 @@
                 "flammable": false,
                 "presetIndex": 16
             },
-            "17": {
+            "18": {
                 "displayName": "Waxed Block Of Copper",
                 "validVersions": {
                     "1.17.1": {
@@ -3310,7 +3355,7 @@
                 "flammable": false,
                 "presetIndex": 17
             },
-            "18": {
+            "19": {
                 "displayName": "Waxed Cut Copper Slab",
                 "validVersions": {
                     "1.17.1": {
@@ -3328,29 +3373,6 @@
                 "supportBlockMandatory": true,
                 "flammable": false,
                 "presetIndex": 18
-            },
-            "19": {
-                "displayName": "Acacia Pressure Plate",
-                "validVersions": {
-                    "1.13.2": {
-                        "NBTName": "acacia_pressure_plate",
-                        "NBTArgs": {}
-                    },
-                    "1.14.4": "&1.13.2",
-                    "1.15.2": "&1.13.2",
-                    "1.16.5": "&1.13.2",
-                    "1.17.1": "&1.13.2",
-                    "1.18.2": "&1.13.2",
-                    "1.19": "&1.13.2",
-                    "1.20": "&1.13.2",
-                    "1.21": "&1.13.2",
-                    "1.21.2": "&1.13.2",
-                    "1.21.4": "&1.13.2",
-                    "1.21.5": "&1.13.2"
-                },
-                "supportBlockMandatory": true,
-                "flammable": false,
-                "presetIndex": 19
             }
         },
         "mapdatId": 15,
@@ -6162,6 +6184,29 @@
                 "presetIndex": 8
             },
             "9": {
+                "displayName": "Dark Oak Pressure Plate",
+                "validVersions": {
+                    "1.13.2": {
+                        "NBTName": "dark_oak_pressure_plate",
+                        "NBTArgs": {}
+                    },
+                    "1.14.4": "&1.13.2",
+                    "1.15.2": "&1.13.2",
+                    "1.16.5": "&1.13.2",
+                    "1.17.1": "&1.13.2",
+                    "1.18.2": "&1.13.2",
+                    "1.19": "&1.13.2",
+                    "1.20": "&1.13.2",
+                    "1.21": "&1.13.2",
+                    "1.21.2": "&1.13.2",
+                    "1.21.4": "&1.13.2",
+                    "1.21.5": "&1.13.2"
+                },
+                "supportBlockMandatory": true,
+                "flammable": false,
+                "presetIndex": 12
+            },
+            "10": {
                 "displayName": "Spruce Log (horizontal)",
                 "validVersions": {
                     "1.12.2": {
@@ -6193,7 +6238,7 @@
                 "flammable": true,
                 "presetIndex": 9
             },
-            "10": {
+            "11": {
                 "displayName": "Soul Sand",
                 "validVersions": {
                     "1.12.2": {
@@ -6217,7 +6262,7 @@
                 "flammable": false,
                 "presetIndex": 10
             },
-            "11": {
+            "12": {
                 "displayName": "Soul Soil",
                 "validVersions": {
                     "1.16.5": {
@@ -6236,29 +6281,6 @@
                 "supportBlockMandatory": false,
                 "flammable": false,
                 "presetIndex": 11
-            },
-            "12": {
-                "displayName": "Dark Oak Pressure Plate",
-                "validVersions": {
-                    "1.13.2": {
-                        "NBTName": "dark_oak_pressure_plate",
-                        "NBTArgs": {}
-                    },
-                    "1.14.4": "&1.13.2",
-                    "1.15.2": "&1.13.2",
-                    "1.16.5": "&1.13.2",
-                    "1.17.1": "&1.13.2",
-                    "1.18.2": "&1.13.2",
-                    "1.19": "&1.13.2",
-                    "1.20": "&1.13.2",
-                    "1.21": "&1.13.2",
-                    "1.21.2": "&1.13.2",
-                    "1.21.4": "&1.13.2",
-                    "1.21.5": "&1.13.2"
-                },
-                "supportBlockMandatory": true,
-                "flammable": false,
-                "presetIndex": 12
             },
             "13": {
                 "displayName": "Leaf Litter",
@@ -7225,6 +7247,26 @@
                 "presetIndex": 10
             },
             "11": {
+                "displayName": "Polished Blackstone Pressure Plate",
+                "validVersions": {
+                    "1.16.5": {
+                        "NBTName": "polished_blackstone_pressure_plate",
+                        "NBTArgs": {}
+                    },
+                    "1.17.1": "&1.16.5",
+                    "1.18.2": "&1.16.5",
+                    "1.19": "&1.16.5",
+                    "1.20": "&1.16.5",
+                    "1.21": "&1.16.5",
+                    "1.21.2": "&1.16.5",
+                    "1.21.4": "&1.16.5",
+                    "1.21.5": "&1.16.5"
+                },
+                "supportBlockMandatory": true,
+                "flammable": false,
+                "presetIndex": 13
+            },
+            "12": {
                 "displayName": "Basalt",
                 "validVersions": {
                     "1.16.5": {
@@ -7244,7 +7286,7 @@
                 "flammable": false,
                 "presetIndex": 12
             },
-            "12": {
+            "13": {
                 "displayName": "Block Of Netherite",
                 "validVersions": {
                     "1.16.5": {
@@ -7263,26 +7305,6 @@
                 "supportBlockMandatory": false,
                 "flammable": false,
                 "presetIndex": 11
-            },
-            "13": {
-                "displayName": "Polished Blackstone Pressure Plate",
-                "validVersions": {
-                    "1.16.5": {
-                        "NBTName": "polished_blackstone_pressure_plate",
-                        "NBTArgs": {}
-                    },
-                    "1.17.1": "&1.16.5",
-                    "1.18.2": "&1.16.5",
-                    "1.19": "&1.16.5",
-                    "1.20": "&1.16.5",
-                    "1.21": "&1.16.5",
-                    "1.21.2": "&1.16.5",
-                    "1.21.4": "&1.16.5",
-                    "1.21.5": "&1.16.5"
-                },
-                "supportBlockMandatory": true,
-                "flammable": false,
-                "presetIndex": 13
             },
             "14": {
                 "displayName": "Sculk",
@@ -7388,7 +7410,7 @@
                 "presetIndex": 0
             },
             "1": {
-                "displayName": "Weighted Pressure Plate (Light)",
+                "displayName": "Light Weighted Pressure Plate",
                 "validVersions": {
                     "1.12.2": {
                         "NBTName": "light_weighted_pressure_plate",
@@ -7833,6 +7855,29 @@
                 "presetIndex": 2
             },
             "3": {
+                "displayName": "Spruce Pressure Plate",
+                "validVersions": {
+                    "1.13.2": {
+                        "NBTName": "spruce_pressure_plate",
+                        "NBTArgs": {}
+                    },
+                    "1.14.4": "&1.13.2",
+                    "1.15.2": "&1.13.2",
+                    "1.16.5": "&1.13.2",
+                    "1.17.1": "&1.13.2",
+                    "1.18.2": "&1.13.2",
+                    "1.19": "&1.13.2",
+                    "1.20": "&1.13.2",
+                    "1.21": "&1.13.2",
+                    "1.21.2": "&1.13.2",
+                    "1.21.4": "&1.13.2",
+                    "1.21.5": "&1.13.2"
+                },
+                "supportBlockMandatory": true,
+                "flammable": false,
+                "presetIndex": 6
+            },
+            "4": {
                 "displayName": "Oak Log (horizontal)",
                 "validVersions": {
                     "1.12.2": {
@@ -7864,7 +7909,7 @@
                 "flammable": true,
                 "presetIndex": 3
             },
-            "4": {
+            "5": {
                 "displayName": "Jungle Log (horizontal)",
                 "validVersions": {
                     "1.12.2": {
@@ -7896,7 +7941,7 @@
                 "flammable": true,
                 "presetIndex": 4
             },
-            "5": {
+            "6": {
                 "displayName": "Podzol",
                 "validVersions": {
                     "1.12.2": {
@@ -7924,29 +7969,6 @@
                 "supportBlockMandatory": false,
                 "flammable": false,
                 "presetIndex": 5
-            },
-            "6": {
-                "displayName": "Spruce Pressure Plate",
-                "validVersions": {
-                    "1.13.2": {
-                        "NBTName": "spruce_pressure_plate",
-                        "NBTArgs": {}
-                    },
-                    "1.14.4": "&1.13.2",
-                    "1.15.2": "&1.13.2",
-                    "1.16.5": "&1.13.2",
-                    "1.17.1": "&1.13.2",
-                    "1.18.2": "&1.13.2",
-                    "1.19": "&1.13.2",
-                    "1.20": "&1.13.2",
-                    "1.21": "&1.13.2",
-                    "1.21.2": "&1.13.2",
-                    "1.21.4": "&1.13.2",
-                    "1.21.5": "&1.13.2"
-                },
-                "supportBlockMandatory": true,
-                "flammable": false,
-                "presetIndex": 6
             },
             "7": {
                 "displayName": "Mangrove Log (horizontal)",
@@ -8245,38 +8267,6 @@
                 "presetIndex": 1
             },
             "2": {
-                "displayName": "Cherry Planks",
-                "validVersions": {
-                    "1.20": {
-                        "NBTName": "cherry_planks",
-                        "NBTArgs": {}
-                    },
-                    "1.21": "&1.20",
-                    "1.21.2": "&1.20",
-                    "1.21.4": "&1.20",
-                    "1.21.5": "&1.20"
-                },
-                "supportBlockMandatory": false,
-                "flammable": true,
-                "presetIndex": 2
-            },
-            "3": {
-                "displayName": "Cherry Slab",
-                "validVersions": {
-                    "1.20": {
-                        "NBTName": "cherry_slab",
-                        "NBTArgs": {}
-                    },
-                    "1.21": "&1.20",
-                    "1.21.2": "&1.20",
-                    "1.21.4": "&1.20",
-                    "1.21.5": "&1.20"
-                },
-                "supportBlockMandatory": true,
-                "flammable": true,
-                "presetIndex": 3
-            },
-            "4": {
                 "displayName": "Cherry Log (vertical)",
                 "validVersions": {
                     "1.20": {
@@ -8294,7 +8284,7 @@
                 "flammable": true,
                 "presetIndex": 4
             },
-            "5": {
+            "3": {
                 "displayName": "Stripped Cherry Log (vertical)",
                 "validVersions": {
                     "1.20": {
@@ -8311,6 +8301,38 @@
                 "supportBlockMandatory": false,
                 "flammable": true,
                 "presetIndex": 5
+            },
+            "4": {
+                "displayName": "Cherry Planks",
+                "validVersions": {
+                    "1.20": {
+                        "NBTName": "cherry_planks",
+                        "NBTArgs": {}
+                    },
+                    "1.21": "&1.20",
+                    "1.21.2": "&1.20",
+                    "1.21.4": "&1.20",
+                    "1.21.5": "&1.20"
+                },
+                "supportBlockMandatory": false,
+                "flammable": true,
+                "presetIndex": 2
+            },
+            "5": {
+                "displayName": "Cherry Slab",
+                "validVersions": {
+                    "1.20": {
+                        "NBTName": "cherry_slab",
+                        "NBTArgs": {}
+                    },
+                    "1.21": "&1.20",
+                    "1.21.2": "&1.20",
+                    "1.21.4": "&1.20",
+                    "1.21.5": "&1.20"
+                },
+                "supportBlockMandatory": true,
+                "flammable": true,
+                "presetIndex": 3
             },
             "6": {
                 "displayName": "Cherry Pressure Plate",
@@ -8834,6 +8856,21 @@
                 "presetIndex": 1
             },
             "2": {
+                "displayName": "Tuff Slab",
+                "validVersions": {
+                    "1.21": {
+                        "NBTName": "tuff_slab",
+                        "NBTArgs": {}
+                    },
+                    "1.21.2": "&1.21",
+                    "1.21.4": "&1.21",
+                    "1.21.5": "&1.21"
+                },
+                "supportBlockMandatory": true,
+                "flammable": false,
+                "presetIndex": 4
+            },
+            "3": {
                 "displayName": "Cherry Log (horizontal)",
                 "validVersions": {
                     "1.20": {
@@ -8851,7 +8888,7 @@
                 "flammable": true,
                 "presetIndex": 2
             },
-            "3": {
+            "4": {
                 "displayName": "Cherry Wood",
                 "validVersions": {
                     "1.20": {
@@ -8866,21 +8903,6 @@
                 "supportBlockMandatory": false,
                 "flammable": true,
                 "presetIndex": 3
-            },
-            "4": {
-                "displayName": "Tuff Slab",
-                "validVersions": {
-                    "1.21": {
-                        "NBTName": "tuff_slab",
-                        "NBTArgs": {}
-                    },
-                    "1.21.2": "&1.21",
-                    "1.21.4": "&1.21",
-                    "1.21.5": "&1.21"
-                },
-                "supportBlockMandatory": true,
-                "flammable": false,
-                "presetIndex": 4
             }
         },
         "mapdatId": 43,
@@ -9920,44 +9942,6 @@
                 "presetIndex": 3
             },
             "4": {
-                "displayName": "Waxed Weathered Copper",
-                "validVersions": {
-                    "1.17.1": {
-                        "NBTName": "waxed_weathered_copper",
-                        "NBTArgs": {}
-                    },
-                    "1.18.2": "&1.17.1",
-                    "1.19": "&1.17.1",
-                    "1.20": "&1.17.1",
-                    "1.21": "&1.17.1",
-                    "1.21.2": "&1.17.1",
-                    "1.21.4": "&1.17.1",
-                    "1.21.5": "&1.17.1"
-                },
-                "supportBlockMandatory": false,
-                "flammable": false,
-                "presetIndex": 4
-            },
-            "5": {
-                "displayName": "Waxed Weathered Cut Copper Slab",
-                "validVersions": {
-                    "1.17.1": {
-                        "NBTName": "waxed_weathered_cut_copper_slab",
-                        "NBTArgs": {}
-                    },
-                    "1.18.2": "&1.17.1",
-                    "1.19": "&1.17.1",
-                    "1.20": "&1.17.1",
-                    "1.21": "&1.17.1",
-                    "1.21.2": "&1.17.1",
-                    "1.21.4": "&1.17.1",
-                    "1.21.5": "&1.17.1"
-                },
-                "supportBlockMandatory": true,
-                "flammable": false,
-                "presetIndex": 5
-            },
-            "6": {
                 "displayName": "Warped Pressure Plate",
                 "validVersions": {
                     "1.16.5": {
@@ -9976,6 +9960,44 @@
                 "supportBlockMandatory": true,
                 "flammable": false,
                 "presetIndex": 6
+            },
+            "5": {
+                "displayName": "Waxed Weathered Copper",
+                "validVersions": {
+                    "1.17.1": {
+                        "NBTName": "waxed_weathered_copper",
+                        "NBTArgs": {}
+                    },
+                    "1.18.2": "&1.17.1",
+                    "1.19": "&1.17.1",
+                    "1.20": "&1.17.1",
+                    "1.21": "&1.17.1",
+                    "1.21.2": "&1.17.1",
+                    "1.21.4": "&1.17.1",
+                    "1.21.5": "&1.17.1"
+                },
+                "supportBlockMandatory": false,
+                "flammable": false,
+                "presetIndex": 4
+            },
+            "6": {
+                "displayName": "Waxed Weathered Cut Copper Slab",
+                "validVersions": {
+                    "1.17.1": {
+                        "NBTName": "waxed_weathered_cut_copper_slab",
+                        "NBTArgs": {}
+                    },
+                    "1.18.2": "&1.17.1",
+                    "1.19": "&1.17.1",
+                    "1.20": "&1.17.1",
+                    "1.21": "&1.17.1",
+                    "1.21.2": "&1.17.1",
+                    "1.21.4": "&1.17.1",
+                    "1.21.5": "&1.17.1"
+                },
+                "supportBlockMandatory": true,
+                "flammable": false,
+                "presetIndex": 5
             }
         },
         "mapdatId": 56,
