@@ -26,6 +26,7 @@
     "PRESETS": {
       "TITLE": "Preset",
       "DELETE": "Elimina",
+      "DELETE-CONFIRM": null,
       "DELETE-ERROR-DEFAULT": null,
       "SAVE": "Salva",
       "SAVE-PROMPT-ENTER-NAME": "Inserisci un nome per il tuo preset:",
@@ -43,8 +44,7 @@
       "EVERYTHING": "Tutto",
       "CARPETS": "Carpet",
       "GREYSCALE": null,
-      "PISTON-CLEARABLE": null,
-      "DELETE-CONFIRM": null
+      "PISTON-CLEARABLE": null
     },
     "UNSUPPORTED-PAST": null,
     "ADD-CUSTOM": {
@@ -129,7 +129,10 @@
     "DITHERING": {
       "TITLE": "Dithering",
       "TITLE-TT": "Aggiunge pixel con colori apparentemente casuali per rendere l'illusione di una gamma di colori più ampia",
-      "NONE": "Nulla"
+      "NONE": "Nulla",
+      "PROPAGATION-RED": null,
+      "PROPAGATION-GREEN": null,
+      "PROPAGATION-BLUE": null
     },
     "PREPROCESSING": {
       "TITLE": null,
@@ -174,7 +177,8 @@
     "SHOW-PER-SPLIT": null,
     "SHOW-PER-SPLIT-TT": null,
     "REFRESH-MATERIALS": "AGGIORNA MATERIALI",
-    "REFRESH-MATERIALS-TT": "Aggiorna la lista di materiali"
+    "REFRESH-MATERIALS-TT": "Aggiorna la lista di materiali",
+    "COPY-CLIPBOARD": null
   },
   "VIEW-ONLINE": {
     "TITLE": null,
@@ -186,11 +190,5 @@
   },
   "LITEMATICA-WARNING": null,
   "EDGE-WARNING": "Nota: usare Microsoft Edge non è supportato.\\nPer favore usa Chrome (consigliato) o Firefox per MapartCraft",
-  "NONE": "Nulla",
-  "UNUSED": {
-    "SECOND": "secondo",
-    "SECONDS": "secondi",
-    "REMAINING": "rimanente/i",
-    "SETTINGS-3D-OPTIMIZED": "On (ottimizzato)"
-  }
+  "NONE": "Nulla"
 }

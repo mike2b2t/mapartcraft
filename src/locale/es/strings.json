@@ -26,6 +26,7 @@
     "PRESETS": {
       "TITLE": "Plantillas",
       "DELETE": "Borrar",
+      "DELETE-CONFIRM": "¿Quieres borrar esta plantilla? ",
       "DELETE-ERROR-DEFAULT": "Esta es una platilla por defecto y no se puede editar/borrar.",
       "SAVE": "Guardar",
       "SAVE-PROMPT-ENTER-NAME": "Inserta un nombre para la plantilla:",
@@ -43,8 +44,7 @@
       "EVERYTHING": "Todo",
       "CARPETS": "Alfombras",
       "GREYSCALE": "Grises",
-      "PISTON-CLEARABLE": null,
-      "DELETE-CONFIRM": "¿Quieres borrar esta plantilla? "
+      "PISTON-CLEARABLE": null
     },
     "UNSUPPORTED-PAST": "Sin soporte a partir de",
     "ADD-CUSTOM": {
@@ -129,7 +129,10 @@
     "DITHERING": {
       "TITLE": "Gradiente (dithering)",
       "TITLE-TT": "Añade píxeles aleatorios para dar mayor sensación de color",
-      "NONE": "Sin gradiente (dithering)"
+      "NONE": "Sin gradiente (dithering)",
+      "PROPAGATION-RED": null,
+      "PROPAGATION-GREEN": null,
+      "PROPAGATION-BLUE": null
     },
     "PREPROCESSING": {
       "TITLE": "Preprocesamiento de imagen",
@@ -174,7 +177,8 @@
     "SHOW-PER-SPLIT": "Muestra el máximo de materiales por sección",
     "SHOW-PER-SPLIT-TT": "Para reutilizar materiales con mapas bloqueados de 128x128 bloques",
     "REFRESH-MATERIALS": "RECARGA",
-    "REFRESH-MATERIALS-TT": "Recarga la lista de materiales"
+    "REFRESH-MATERIALS-TT": "Recarga la lista de materiales",
+    "COPY-CLIPBOARD": null
   },
   "VIEW-ONLINE": {
     "TITLE": "Mirar online",
@@ -186,11 +190,5 @@
   },
   "LITEMATICA-WARNING": "Cuidado, Litematica no soporta 1.15.2 muy bien; se recomienda actualizar a la 1.16.5",
   "EDGE-WARNING": "Nota: Sin soporte para Microsoft Edge.\\nPor favor utiliza Chrome o Firefox para MapartCraft",
-  "NONE": "Vacío",
-  "UNUSED": {
-    "SECOND": "segundo",
-    "SECONDS": "segundos",
-    "REMAINING": "restante",
-    "SETTINGS-3D-OPTIMIZED": "Encendido (óptimo)"
-  }
+  "NONE": "Vacío"
 }

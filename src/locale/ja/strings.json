@@ -129,7 +129,10 @@
     "DITHERING": {
       "TITLE": "ディザリング",
       "TITLE-TT": "見かけ上ランダムなピクセルを追加し，より多くの色を錯覚させます",
-      "NONE": "なし"
+      "NONE": "なし",
+      "PROPAGATION-RED": null,
+      "PROPAGATION-GREEN": null,
+      "PROPAGATION-BLUE": null
     },
     "PREPROCESSING": {
       "TITLE": "画像の前処理",
@@ -174,7 +177,8 @@
     "SHOW-PER-SPLIT": "各地図で最大の必要数のみ表示",
     "SHOW-PER-SPLIT-TT": "地図をロックして材料を使いまわす場合",
     "REFRESH-MATERIALS": "材料を更新",
-    "REFRESH-MATERIALS-TT": "材料のリストを更新します"
+    "REFRESH-MATERIALS-TT": "材料のリストを更新します",
+    "COPY-CLIPBOARD": null
   },
   "VIEW-ONLINE": {
     "TITLE": "オンラインで表示",
@@ -186,11 +190,5 @@
   },
   "LITEMATICA-WARNING": "警告：Litematica のサポートは1.15.2では十分ではありません; 1.16.5以上へのアップデートをお勧めします",
   "EDGE-WARNING": "注意：Microsoft Edge はサポートされていません．\\nGoogle Chrome (推奨) または Firefox をお使いください．",
-  "NONE": "なし",
-  "UNUSED": {
-    "SECOND": "秒",
-    "SECONDS": "秒",
-    "REMAINING": "残り",
-    "SETTINGS-3D-OPTIMIZED": "オン (最適化)"
-  }
+  "NONE": "なし"
 }

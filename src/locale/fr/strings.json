@@ -26,6 +26,7 @@
     "PRESETS": {
       "TITLE": "Préconfiguration",
       "DELETE": "Supprimer",
+      "DELETE-CONFIRM": null,
       "DELETE-ERROR-DEFAULT": "Vous ne pouvez pas supprimer le réglage par defaut",
       "SAVE": "Sauvegarder",
       "SAVE-PROMPT-ENTER-NAME": "Entrer un nom pour votre préconfiguration:",
@@ -43,8 +44,7 @@
       "EVERYTHING": "Tout",
       "CARPETS": "Carpets",
       "GREYSCALE": "Nuance de gris",
-      "PISTON-CLEARABLE": null,
-      "DELETE-CONFIRM": null
+      "PISTON-CLEARABLE": null
     },
     "UNSUPPORTED-PAST": "Non supporté",
     "ADD-CUSTOM": {
@@ -129,7 +129,10 @@
     "DITHERING": {
       "TITLE": "Dithering",
       "TITLE-TT": "Ajoute des pixels aléatoires pour une illusion de couleurs",
-      "NONE": "Rien"
+      "NONE": "Rien",
+      "PROPAGATION-RED": null,
+      "PROPAGATION-GREEN": null,
+      "PROPAGATION-BLUE": null
     },
     "PREPROCESSING": {
       "TITLE": "Image en cours de traitement",
@@ -174,7 +177,8 @@
     "SHOW-PER-SPLIT": "Afficher le nombres max de matériaux par section",
     "SHOW-PER-SPLIT-TT": "Pour réutiliser les blocs une fois la carte verrouillée",
     "REFRESH-MATERIALS": "ACTUALISER LES MATÉRIAUX",
-    "REFRESH-MATERIALS-TT": "Actualiser la liste des matériaux"
+    "REFRESH-MATERIALS-TT": "Actualiser la liste des matériaux",
+    "COPY-CLIPBOARD": null
   },
   "VIEW-ONLINE": {
     "TITLE": "Voir en ligne",
@@ -186,11 +190,5 @@
   },
   "LITEMATICA-WARNING": "Attention, Litematica n'est pas optimisé pour la version 1.15.2; une mise à niveau vers la version 1.16.5 est recommandée",
   "EDGE-WARNING": "Note: Microsoft Edge n’est pas compatible.\\nMerci d’utiliser Chrome (de préférence) ou Firefox pour utiliser MapartCraft",
-  "NONE": "Aucun",
-  "UNUSED": {
-    "SECOND": "seconde",
-    "SECONDS": "secondes",
-    "REMAINING": "restante",
-    "SETTINGS-3D-OPTIMIZED": "On (optimisé)"
-  }
+  "NONE": "Aucun"
 }

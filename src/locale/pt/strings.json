@@ -26,6 +26,7 @@
     "PRESETS": {
       "TITLE": "Predefenições",
       "DELETE": "Apagar",
+      "DELETE-CONFIRM": null,
       "DELETE-ERROR-DEFAULT": null,
       "SAVE": "Salvar",
       "SAVE-PROMPT-ENTER-NAME": "Digite um nome para sua predefinição:",
@@ -43,8 +44,7 @@
       "EVERYTHING": "Tudo",
       "CARPETS": "Carpete",
       "GREYSCALE": null,
-      "PISTON-CLEARABLE": null,
-      "DELETE-CONFIRM": null
+      "PISTON-CLEARABLE": null
     },
     "UNSUPPORTED-PAST": null,
     "ADD-CUSTOM": {
@@ -129,7 +129,10 @@
     "DITHERING": {
       "TITLE": "Dithering",
       "TITLE-TT": "Adiciona pixeis aleatórios para dar uma preceção de mais cor",
-      "NONE": "Nenhuma"
+      "NONE": "Nenhuma",
+      "PROPAGATION-RED": null,
+      "PROPAGATION-GREEN": null,
+      "PROPAGATION-BLUE": null
     },
     "PREPROCESSING": {
       "TITLE": null,
@@ -174,7 +177,8 @@
     "SHOW-PER-SPLIT": null,
     "SHOW-PER-SPLIT-TT": null,
     "REFRESH-MATERIALS": "REFRESCAR MATERIAIS",
-    "REFRESH-MATERIALS-TT": "Refrescar a lista de materiais"
+    "REFRESH-MATERIALS-TT": "Refrescar a lista de materiais",
+    "COPY-CLIPBOARD": null
   },
   "VIEW-ONLINE": {
     "TITLE": null,
@@ -186,11 +190,5 @@
   },
   "LITEMATICA-WARNING": null,
   "EDGE-WARNING": "Note: Microsoft Edge não é suportado\\nPor Favor utilize Chrome (preferido) ou Firefox para MapartCraft",
-  "NONE": "Nada",
-  "UNUSED": {
-    "SECOND": "segundo",
-    "SECONDS": "segundos",
-    "REMAINING": "faltando",
-    "SETTINGS-3D-OPTIMIZED": "Ligado (optimizado)"
-  }
+  "NONE": "Nada"
 }

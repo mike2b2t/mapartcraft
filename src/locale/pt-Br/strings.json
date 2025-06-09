@@ -129,7 +129,10 @@
     "DITHERING": {
       "TITLE": "Pontilhado",
       "TITLE-TT": "Adiciona pixeis aparentemente aleatórios para criar a ilusão de mais cores",
-      "NONE": "Nenhum"
+      "NONE": "Nenhum",
+      "PROPAGATION-RED": null,
+      "PROPAGATION-GREEN": null,
+      "PROPAGATION-BLUE": null
     },
     "PREPROCESSING": {
       "TITLE": "Pré-processamento da imagem",
@@ -174,7 +177,8 @@
     "SHOW-PER-SPLIT": "Mostrar apenas o máximo de materiais por pedaço",
     "SHOW-PER-SPLIT-TT": "Para o reuso de materiais com mapas trancados",
     "REFRESH-MATERIALS": "REFRESH MATERIALS",
-    "REFRESH-MATERIALS-TT": "Atualiza a lista de materiais"
+    "REFRESH-MATERIALS-TT": "Atualiza a lista de materiais",
+    "COPY-CLIPBOARD": null
   },
   "VIEW-ONLINE": {
     "TITLE": "VEJA ONLINE",
@@ -186,11 +190,5 @@
   },
   "LITEMATICA-WARNING": "Aviso, O Litematica não funciona bem na versão 1.15.2; A ação recomendada é atualizar para a versão 1.16.5",
   "EDGE-WARNING": "Nota: o uso do Microsoft Edge não é suportado.\\nPor-favor use o Chrome (preferível) ou o Firefox para usar o MapartCraft",
-  "NONE": "Nenhum",
-  "UNUSED": {
-    "SECOND": "segundo",
-    "SECONDS": "segundos",
-    "REMAINING": "faltando",
-    "SETTINGS-3D-OPTIMIZED": "Ligado (otimizado)"
-  }
+  "NONE": "Nenhum"
 }

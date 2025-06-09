@@ -10,8 +10,6 @@
     "FAQ": "DUK",
     "PLEASE-READ-1": "Prašome perskaityti ",
     "PLEASE-READ-2": " prieš užduodami bet kokius klausimus!",
-    "HAVE-YOU-READ": "Ar perskaitėte DUK?",
-    "HELP-IN-ENGLISH": "Pastaba: pagalba bus teikiama tik anglų kalba.",
     "VIDEO-TUTORIAL": "Vaizdo pamoka"
   },
   "DESCRIPTION": {
@@ -131,7 +129,10 @@
     "DITHERING": {
       "TITLE": "Diteris",
       "TITLE-TT": "Prideda atsitiktinius taškus, kad sukurtų daugiau spalvų iliuziją",
-      "NONE": "Nėra"
+      "NONE": "Nėra",
+      "PROPAGATION-RED": null,
+      "PROPAGATION-GREEN": null,
+      "PROPAGATION-BLUE": null
     },
     "PREPROCESSING": {
       "TITLE": "Vaizdo paruošimas",
@@ -176,7 +177,8 @@
     "SHOW-PER-SPLIT": "Rodyti tik maksimalias medžiagas per dalį",
     "SHOW-PER-SPLIT-TT": "Medžiagų pakartotiniam naudojimui su užrakintais žemėlapiais",
     "REFRESH-MATERIALS": "ATNAUJINTI MEDŽIAGAS",
-    "REFRESH-MATERIALS-TT": "Atnaujinti medžiagų sąrašą"
+    "REFRESH-MATERIALS-TT": "Atnaujinti medžiagų sąrašą",
+    "COPY-CLIPBOARD": null
   },
   "VIEW-ONLINE": {
     "TITLE": "PERŽIŪRĖTI INTERNETU",
@@ -188,11 +190,5 @@
   },
   "LITEMATICA-WARNING": "Įspėjimas, Litematica ne taip gerai palaiko 1.15.2; rekomenduojama atsinaujinti į 1.16.5",
   "EDGE-WARNING": "Pastaba: naudojant MapartCraft su Microsoft Edge naršykle nepalaikoma.\\nPrašome naudoti Chrome (rekomenduojama) arba Firefox",
-  "NONE": "Nėra",
-  "UNUSED": {
-    "SECOND": "sekundė",
-    "SECONDS": "sekundės",
-    "REMAINING": "liko",
-    "SETTINGS-3D-OPTIMIZED": "Įjungta (optimizuota)"
-  }
+  "NONE": "Nėra"
 }

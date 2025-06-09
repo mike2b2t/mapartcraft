@@ -26,6 +26,7 @@
     "PRESETS": {
       "TITLE": "Vorlagen",
       "DELETE": "Entfernen",
+      "DELETE-CONFIRM": null,
       "DELETE-ERROR-DEFAULT": null,
       "SAVE": "Speichern",
       "SAVE-PROMPT-ENTER-NAME": "Gib einen Namen für Deine Vorlage ein:",
@@ -43,8 +44,7 @@
       "EVERYTHING": "Alles",
       "CARPETS": "Teppiche",
       "GREYSCALE": null,
-      "PISTON-CLEARABLE": null,
-      "DELETE-CONFIRM": null
+      "PISTON-CLEARABLE": null
     },
     "UNSUPPORTED-PAST": null,
     "ADD-CUSTOM": {
@@ -129,7 +129,10 @@
     "DITHERING": {
       "TITLE": "Dithering",
       "TITLE-TT": "Schafft die Illusion von mehr Farben durch das Hinzufügen scheinbar zufälliger Pixel",
-      "NONE": "Aus"
+      "NONE": "Aus",
+      "PROPAGATION-RED": null,
+      "PROPAGATION-GREEN": null,
+      "PROPAGATION-BLUE": null
     },
     "PREPROCESSING": {
       "TITLE": null,
@@ -174,7 +177,8 @@
     "SHOW-PER-SPLIT": "Nur maximale Materialienveränderung zeigen:",
     "SHOW-PER-SPLIT-TT": "Für Materialwiderverwertung bei feststellbaren Karten",
     "REFRESH-MATERIALS": "MATERIALIEN AKTUALISIEREN",
-    "REFRESH-MATERIALS-TT": "Materialliste aktualisieren"
+    "REFRESH-MATERIALS-TT": "Materialliste aktualisieren",
+    "COPY-CLIPBOARD": null
   },
   "VIEW-ONLINE": {
     "TITLE": null,
@@ -186,11 +190,5 @@
   },
   "LITEMATICA-WARNING": null,
   "EDGE-WARNING": "Hinweis: Microsoft Edge wird nicht unterstützt.\\nBitte verwende Google Chrome (bevorzugt) oder Mozilla Firefox für MapartCraft",
-  "NONE": "None",
-  "UNUSED": {
-    "SECOND": "Sekunde",
-    "SECONDS": "Sekunden",
-    "REMAINING": "verbleibend",
-    "SETTINGS-3D-OPTIMIZED": "An (optimiert)"
-  }
+  "NONE": "None"
 }

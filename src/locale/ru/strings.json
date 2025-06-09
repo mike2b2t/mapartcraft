@@ -129,7 +129,10 @@
     "DITHERING": {
       "TITLE": "Смешивание",
       "TITLE-TT": "Добавляет случайные пиксели для иллюзии большего количества цветов",
-      "NONE": "Без смешения"
+      "NONE": "Без смешения",
+      "PROPAGATION-RED": null,
+      "PROPAGATION-GREEN": null,
+      "PROPAGATION-BLUE": null
     },
     "PREPROCESSING": {
       "TITLE": "Предварительная обработка изображения",
@@ -174,7 +177,8 @@
     "SHOW-PER-SPLIT": "Показывать макс. количество материалов только на 1 карту",
     "SHOW-PER-SPLIT-TT": "Для повторного использования материалов с заблокированными картами",
     "REFRESH-MATERIALS": "ОБНОВИТЬ МАТЕРИАЛЫ",
-    "REFRESH-MATERIALS-TT": "Обновить список материалов"
+    "REFRESH-MATERIALS-TT": "Обновить список материалов",
+    "COPY-CLIPBOARD": null
   },
   "VIEW-ONLINE": {
     "TITLE": "ПОСМОТРЕТЬ ОНЛАЙН",
@@ -186,11 +190,5 @@
   },
   "LITEMATICA-WARNING": "Предупреждение, Litematica не очень хорошо поддерживает 1.15.2; рекомендуется обновить до последней версии",
   "EDGE-WARNING": "Примечание: Microsoft Edge не поддерживается.\\nПожалуйста, используйте Chrome (предпочтительно) или Firefox ",
-  "NONE": "Нет",
-  "UNUSED": {
-    "SECOND": "сек.",
-    "SECONDS": "сек.",
-    "REMAINING": "осталось",
-    "SETTINGS-3D-OPTIMIZED": "Вкл. (оптимизировано)"
-  }
+  "NONE": "Нет"
 }

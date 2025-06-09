@@ -26,6 +26,7 @@
     "PRESETS": {
       "TITLE": "調色盤",
       "DELETE": "刪除",
+      "DELETE-CONFIRM": null,
       "DELETE-ERROR-DEFAULT": "此為預設調色盤，故無法編輯或刪除",
       "SAVE": "儲存",
       "SAVE-PROMPT-ENTER-NAME": "請為您的調色盤取名字：",
@@ -43,8 +44,7 @@
       "EVERYTHING": "所有方塊",
       "CARPETS": "地毯",
       "GREYSCALE": "灰階",
-      "PISTON-CLEARABLE": null,
-      "DELETE-CONFIRM": null
+      "PISTON-CLEARABLE": null
     },
     "UNSUPPORTED-PAST": "不支援的過往",
     "ADD-CUSTOM": {
@@ -129,7 +129,10 @@
     "DITHERING": {
       "TITLE": "抖動",
       "TITLE-TT": "添加看似隨機的像素，以產生更多顏色的錯覺",
-      "NONE": "無"
+      "NONE": "無",
+      "PROPAGATION-RED": null,
+      "PROPAGATION-GREEN": null,
+      "PROPAGATION-BLUE": null
     },
     "PREPROCESSING": {
       "TITLE": "預處理",
@@ -174,7 +177,8 @@
     "SHOW-PER-SPLIT": "只顯示每個分割區塊所需的最大材料",
     "SHOW-PER-SPLIT-TT": "用於鎖定地圖後材料重複使用",
     "REFRESH-MATERIALS": "重新載入材料",
-    "REFRESH-MATERIALS-TT": "重新載入材料列表"
+    "REFRESH-MATERIALS-TT": "重新載入材料列表",
+    "COPY-CLIPBOARD": null
   },
   "VIEW-ONLINE": {
     "TITLE": "線上檢視",
@@ -186,11 +190,5 @@
   },
   "LITEMATICA-WARNING": "警告：Litematica 不完全支援 1.15.2；建議升級至 1.16.5",
   "EDGE-WARNING": "提醒：不支援 Microsoft Edge。\\n建議使用 Google Chrome 或是 Firefox.",
-  "NONE": "無",
-  "UNUSED": {
-    "SECOND": "秒",
-    "SECONDS": "秒",
-    "REMAINING": "剩餘",
-    "SETTINGS-3D-OPTIMIZED": "啟用 (最佳化)"
-  }
+  "NONE": "無"
 }

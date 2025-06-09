@@ -26,6 +26,7 @@
     "PRESETS": {
       "TITLE": "Ŝablonoj",
       "DELETE": "Forigi",
+      "DELETE-CONFIRM": null,
       "DELETE-ERROR-DEFAULT": null,
       "SAVE": "Konservi",
       "SAVE-PROMPT-ENTER-NAME": "Entajpu la nomon por la ŝablono:",
@@ -43,8 +44,7 @@
       "EVERYTHING": "Ĉio",
       "CARPETS": "Tapiŝoj",
       "GREYSCALE": null,
-      "PISTON-CLEARABLE": null,
-      "DELETE-CONFIRM": null
+      "PISTON-CLEARABLE": null
     },
     "UNSUPPORTED-PAST": null,
     "ADD-CUSTOM": {
@@ -129,7 +129,10 @@
     "DITHERING": {
       "TITLE": "Konfuzado",
       "TITLE-TT": "Tio aldonas ŝajne hazardajn rastrumerojn por iluzio de pli multe da koloroj",
-      "NONE": "Nula"
+      "NONE": "Nula",
+      "PROPAGATION-RED": null,
+      "PROPAGATION-GREEN": null,
+      "PROPAGATION-BLUE": null
     },
     "PREPROCESSING": {
       "TITLE": null,
@@ -174,7 +177,8 @@
     "SHOW-PER-SPLIT": null,
     "SHOW-PER-SPLIT-TT": null,
     "REFRESH-MATERIALS": "ĜISDATIGI MATERIALOJN",
-    "REFRESH-MATERIALS-TT": "Ĝisdatigi materialan liston"
+    "REFRESH-MATERIALS-TT": "Ĝisdatigi materialan liston",
+    "COPY-CLIPBOARD": null
   },
   "VIEW-ONLINE": {
     "TITLE": null,
@@ -186,11 +190,5 @@
   },
   "LITEMATICA-WARNING": "Atentu: Se vi uzas Litematica-n 1.15.2, bonvolu uzi la 1.15 version\\nLitematica ŝajnas iel havi cimon se vi elektas alian version",
   "EDGE-WARNING": "Atentu: uzado de Microsoft Edge estas malsubtenata.\\nBonvolu uzi Chrome-n (prefere) aŭ Firefox-n por MapartCraft",
-  "NONE": "Nula",
-  "UNUSED": {
-    "SECOND": "sekundo",
-    "SECONDS": "sekundoj",
-    "REMAINING": "restas",
-    "SETTINGS-3D-OPTIMIZED": "Ŝaltita (optimumigita)"
-  }
+  "NONE": "Nula"
 }

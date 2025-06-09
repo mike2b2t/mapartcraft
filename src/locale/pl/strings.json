@@ -26,6 +26,7 @@
     "PRESETS": {
       "TITLE": "Presety",
       "DELETE": "Usuń",
+      "DELETE-CONFIRM": null,
       "DELETE-ERROR-DEFAULT": "To jest podstawowym preset i nie może on być edytowany/usunięty.",
       "SAVE": "Zapisz",
       "SAVE-PROMPT-ENTER-NAME": "Wpisz nazwe dla twojego presetu:",
@@ -43,8 +44,7 @@
       "EVERYTHING": "Wszystko",
       "CARPETS": "Dywany",
       "GREYSCALE": "Szare bloki",
-      "PISTON-CLEARABLE": null,
-      "DELETE-CONFIRM": null
+      "PISTON-CLEARABLE": null
     },
     "UNSUPPORTED-PAST": null,
     "ADD-CUSTOM": {
@@ -129,7 +129,10 @@
     "DITHERING": {
       "TITLE": "Tryb towrzenia",
       "TITLE-TT": "Dodaje pozornie losowe pixele dające iluzje większej ilości kolorów",
-      "NONE": "Nic"
+      "NONE": "Nic",
+      "PROPAGATION-RED": null,
+      "PROPAGATION-GREEN": null,
+      "PROPAGATION-BLUE": null
     },
     "PREPROCESSING": {
       "TITLE": "Wstępne przetwarzanie obrazu",
@@ -174,7 +177,8 @@
     "SHOW-PER-SPLIT": null,
     "SHOW-PER-SPLIT-TT": null,
     "REFRESH-MATERIALS": "odśwież materiały",
-    "REFRESH-MATERIALS-TT": "odśwież liczbe materiałów"
+    "REFRESH-MATERIALS-TT": "odśwież liczbe materiałów",
+    "COPY-CLIPBOARD": null
   },
   "VIEW-ONLINE": {
     "TITLE": "POKAŻ ONLINE",
@@ -186,11 +190,5 @@
   },
   "LITEMATICA-WARNING": "Warning, Litematica does not support 1.15.2 very well; recommended action is to update to 1.16.5",
   "EDGE-WARNING": "Note: using Microsoft Edge is unsupported.\\nPlease use Chrome (preferred) or Firefox for MapartCraft",
-  "NONE": "None",
-  "UNUSED": {
-    "SECOND": "Drugi",
-    "SECONDS": "Drugie",
-    "REMAINING": "pozostałe",
-    "SETTINGS-3D-OPTIMIZED": "Wł. (zoptymalizowane)"
-  }
+  "NONE": "None"
 }

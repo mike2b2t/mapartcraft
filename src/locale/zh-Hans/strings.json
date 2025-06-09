@@ -26,6 +26,7 @@
     "PRESETS": {
       "TITLE": "预设调色",
       "DELETE": "删除",
+      "DELETE-CONFIRM": null,
       "DELETE-ERROR-DEFAULT": "这是默认预设调色，无法被编辑/删除",
       "SAVE": "保存",
       "SAVE-PROMPT-ENTER-NAME": "输入预设调色的名称：",
@@ -43,8 +44,7 @@
       "EVERYTHING": "全部东西",
       "CARPETS": "地毯",
       "GREYSCALE": "灰阶",
-      "PISTON-CLEARABLE": null,
-      "DELETE-CONFIRM": null
+      "PISTON-CLEARABLE": null
     },
     "UNSUPPORTED-PAST": "不受支援的过去",
     "ADD-CUSTOM": {
@@ -129,7 +129,10 @@
     "DITHERING": {
       "TITLE": "抖动像素化",
       "TITLE-TT": "添加看似随机的像素以产生更多颜色的错觉",
-      "NONE": "没有"
+      "NONE": "没有",
+      "PROPAGATION-RED": null,
+      "PROPAGATION-GREEN": null,
+      "PROPAGATION-BLUE": null
     },
     "PREPROCESSING": {
       "TITLE": "图像预处理",
@@ -174,7 +177,8 @@
     "SHOW-PER-SPLIT": "只显示每个分割区块需要的最大材料",
     "SHOW-PER-SPLIT-TT": "用于锁定地图的材料重用",
     "REFRESH-MATERIALS": "刷新材料",
-    "REFRESH-MATERIALS-TT": "刷新材料清单"
+    "REFRESH-MATERIALS-TT": "刷新材料清单",
+    "COPY-CLIPBOARD": null
   },
   "VIEW-ONLINE": {
     "TITLE": "线上检视",
@@ -186,11 +190,5 @@
   },
   "LITEMATICA-WARNING": "警告，Litematica 对 1.15.2 的支援不是很好； 建议更新到 1.16.5",
   "EDGE-WARNING": "注意：不支持使用 Microsoft Edge。\\ n请使用 Chrome（首选）或 Firefox 来登上 MapartCraft",
-  "NONE": "没有",
-  "UNUSED": {
-    "SECOND": "秒",
-    "SECONDS": "秒",
-    "REMAINING": "剩余",
-    "SETTINGS-3D-OPTIMIZED": "开（优化版）"
-  }
+  "NONE": "没有"
 }

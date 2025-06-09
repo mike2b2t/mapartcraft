@@ -26,6 +26,7 @@
     "PRESETS": {
       "TITLE": "Eelseadistused",
       "DELETE": "Kustuta",
+      "DELETE-CONFIRM": null,
       "DELETE-ERROR-DEFAULT": "See on tehaseseadistus mida ei anna muuta/kustutada.",
       "SAVE": "Salvesta",
       "SAVE-PROMPT-ENTER-NAME": "Vali nimi oma eelseadistustele:",
@@ -43,8 +44,7 @@
       "EVERYTHING": "Kõik",
       "CARPETS": "Vaibad",
       "GREYSCALE": "Mustvalge",
-      "PISTON-CLEARABLE": null,
-      "DELETE-CONFIRM": null
+      "PISTON-CLEARABLE": null
     },
     "UNSUPPORTED-PAST": null,
     "ADD-CUSTOM": {
@@ -129,7 +129,10 @@
     "DITHERING": {
       "TITLE": "Värelemine",
       "TITLE-TT": "Lisab näiliselt suvalisi piksleid, tekitades illusiooni rohkematest värvidest",
-      "NONE": "Puudub"
+      "NONE": "Puudub",
+      "PROPAGATION-RED": null,
+      "PROPAGATION-GREEN": null,
+      "PROPAGATION-BLUE": null
     },
     "PREPROCESSING": {
       "TITLE": "Pilditöötlus",
@@ -174,7 +177,8 @@
     "SHOW-PER-SPLIT": "Näita maksimaalseid materjale ühe lõhestuse kohta",
     "SHOW-PER-SPLIT-TT": "Materjalide taaskasutamiseks lukustatud kaartidega",
     "REFRESH-MATERIALS": "VÄRSKENDA MATERJALE",
-    "REFRESH-MATERIALS-TT": "Värskenda materjalide listi"
+    "REFRESH-MATERIALS-TT": "Värskenda materjalide listi",
+    "COPY-CLIPBOARD": null
   },
   "VIEW-ONLINE": {
     "TITLE": null,
@@ -186,11 +190,5 @@
   },
   "LITEMATICA-WARNING": null,
   "EDGE-WARNING": "Märkus: Microsoft Edge kasutamine ei ole toetatud.\\nPalun kasutage Chrome (soovitatud) või Tulirebane MapartCrafti jaoks",
-  "NONE": "Puudub",
-  "UNUSED": {
-    "SECOND": "sekund",
-    "SECONDS": "sekundit",
-    "REMAINING": "jäänud",
-    "SETTINGS-3D-OPTIMIZED": "Sees (optimiseeritud)"
-  }
+  "NONE": "Puudub"
 }
