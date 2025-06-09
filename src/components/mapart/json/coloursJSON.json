@@ -5662,6 +5662,46 @@
                 "supportBlockMandatory": true,
                 "flammable": false,
                 "presetIndex": 7
+            },
+            "8": {
+                "displayName": "Warped Roots",
+                "validVersions": {
+                    "1.16.5": {
+                        "NBTName": "warped_roots",
+                        "NBTArgs": {}
+                    },
+                    "1.17.1": "&1.16.5",
+                    "1.18.2": "&1.16.5",
+                    "1.19": "&1.16.5",
+                    "1.20": "&1.16.5",
+                    "1.21": "&1.16.5",
+                    "1.21.2": "&1.16.5",
+                    "1.21.4": "&1.16.5",
+                    "1.21.5": "&1.16.5"
+                },
+                "supportBlockMandatory": true,
+                "flammable": false,
+                "presetIndex": 8
+            },
+            "9": {
+                "displayName": "Warped Fungus",
+                "validVersions": {
+                    "1.16.5": {
+                        "NBTName": "warped_fungus",
+                        "NBTArgs": {}
+                    },
+                    "1.17.1": "&1.16.5",
+                    "1.18.2": "&1.16.5",
+                    "1.19": "&1.16.5",
+                    "1.20": "&1.16.5",
+                    "1.21": "&1.16.5",
+                    "1.21.2": "&1.16.5",
+                    "1.21.4": "&1.16.5",
+                    "1.21.5": "&1.16.5"
+                },
+                "supportBlockMandatory": true,
+                "flammable": false,
+                "presetIndex": 9
             }
         },
         "mapdatId": 23,
@@ -8411,6 +8451,46 @@
                 "supportBlockMandatory": true,
                 "flammable": false,
                 "presetIndex": 5
+            },
+            "6": {
+                "displayName": "Crimson Roots",
+                "validVersions": {
+                    "1.16.5": {
+                        "NBTName": "crimson_roots",
+                        "NBTArgs": {}
+                    },
+                    "1.17.1": "&1.16.5",
+                    "1.18.2": "&1.16.5",
+                    "1.19": "&1.16.5",
+                    "1.20": "&1.16.5",
+                    "1.21": "&1.16.5",
+                    "1.21.2": "&1.16.5",
+                    "1.21.4": "&1.16.5",
+                    "1.21.5": "&1.16.5"
+                },
+                "supportBlockMandatory": true,
+                "flammable": false,
+                "presetIndex": 6
+            },
+            "7": {
+                "displayName": "Crimson Fungus",
+                "validVersions": {
+                    "1.16.5": {
+                        "NBTName": "crimson_fungus",
+                        "NBTArgs": {}
+                    },
+                    "1.17.1": "&1.16.5",
+                    "1.18.2": "&1.16.5",
+                    "1.19": "&1.16.5",
+                    "1.20": "&1.16.5",
+                    "1.21": "&1.16.5",
+                    "1.21.2": "&1.16.5",
+                    "1.21.4": "&1.16.5",
+                    "1.21.5": "&1.16.5"
+                },
+                "supportBlockMandatory": true,
+                "flammable": false,
+                "presetIndex": 7
             }
         },
         "mapdatId": 35,
@@ -9607,6 +9687,19 @@
                 "supportBlockMandatory": false,
                 "flammable": false,
                 "presetIndex": 0
+            },
+            "1": {
+                "displayName": "Closed Eyeblossom",
+                "validVersions": {
+                    "1.21.4": {
+                        "NBTName": "closed_eyeblossom",
+                        "NBTArgs": {}
+                    },
+                    "1.21.5": "&1.21.4"
+                },
+                "supportBlockMandatory": true,
+                "flammable": true,
+                "presetIndex": 1
             }
         },
         "mapdatId": 49,
