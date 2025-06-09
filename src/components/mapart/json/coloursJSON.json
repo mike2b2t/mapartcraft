@@ -2457,6 +2457,30 @@
                 "presetIndex": 3
             },
             "5": {
+                "displayName": "Bookshelf",
+                "validVersions": {
+                    "1.12.2": {
+                        "NBTName": "bookshelf",
+                        "NBTArgs": {}
+                    },
+                    "1.13.2": "&1.12.2",
+                    "1.14.4": "&1.12.2",
+                    "1.15.2": "&1.12.2",
+                    "1.16.5": "&1.12.2",
+                    "1.17.1": "&1.12.2",
+                    "1.18.2": "&1.12.2",
+                    "1.19": "&1.12.2",
+                    "1.20": "&1.12.2",
+                    "1.21": "&1.12.2",
+                    "1.21.2": "&1.12.2",
+                    "1.21.4": "&1.12.2",
+                    "1.21.5": "&1.12.2"
+                },
+                "supportBlockMandatory": false,
+                "flammable": true,
+                "presetIndex": 7
+            },
+            "6": {
                 "displayName": "Chiseled Bookshelf",
                 "validVersions": {
                     "1.20": {
@@ -2472,7 +2496,7 @@
                 "flammable": true,
                 "presetIndex": 5
             },
-            "6": {
+            "7": {
                 "displayName": "Composter",
                 "validVersions": {
                     "1.14.4": {
@@ -2735,6 +2759,26 @@
                 "supportBlockMandatory": true,
                 "flammable": false,
                 "presetIndex": 9
+            },
+            "10": {
+                "displayName": "Target Block",
+                "validVersions": {
+                    "1.16.5": {
+                        "NBTName": "target",
+                        "NBTArgs": {}
+                    },
+                    "1.17.1": "&1.16.5",
+                    "1.18.2": "&1.16.5",
+                    "1.19": "&1.16.5",
+                    "1.20": "&1.16.5",
+                    "1.21": "&1.16.5",
+                    "1.21.2": "&1.16.5",
+                    "1.21.4": "&1.16.5",
+                    "1.21.5": "&1.16.5"
+                },
+                "supportBlockMandatory": true,
+                "flammable": false,
+                "presetIndex": 10
             }
         },
         "mapdatId": 14,
@@ -7447,6 +7491,24 @@
                 "presetIndex": 12
             },
             "13": {
+                "displayName": "Smooth Basalt",
+                "validVersions": {
+                    "1.17.1": {
+                        "NBTName": "smooth_basalt",
+                        "NBTArgs": {}
+                    },
+                    "1.19": "&1.17.1",
+                    "1.20": "&1.17.1",
+                    "1.21": "&1.17.1",
+                    "1.21.2": "&1.17.1",
+                    "1.21.4": "&1.17.1",
+                    "1.21.5": "&1.17.1"
+                },
+                "supportBlockMandatory": false,
+                "flammable": false,
+                "presetIndex": 17
+            },
+            "14": {
                 "displayName": "Block Of Netherite",
                 "validVersions": {
                     "1.16.5": {
@@ -7466,7 +7528,7 @@
                 "flammable": false,
                 "presetIndex": 11
             },
-            "14": {
+            "15": {
                 "displayName": "Sculk",
                 "validVersions": {
                     "1.19": {
@@ -7483,7 +7545,7 @@
                 "flammable": false,
                 "presetIndex": 14
             },
-            "15": {
+            "16": {
                 "displayName": "Sculk Catalyst",
                 "validVersions": {
                     "1.19": {
@@ -7500,7 +7562,7 @@
                 "flammable": false,
                 "presetIndex": 15
             },
-            "16": {
+            "17": {
                 "displayName": "Sculk Shrieker",
                 "validVersions": {
                     "1.19": {
