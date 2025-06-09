@@ -957,7 +957,7 @@
         },
         "blocks": {
             "0": {
-                "displayName": "Leaves (Oak)",
+                "displayName": "Oak Leaves",
                 "validVersions": {
                     "1.12.2": {
                         "NBTName": "leaves",
@@ -990,7 +990,7 @@
                 "presetIndex": 0
             },
             "1": {
-                "displayName": "Leaves (Spruce)",
+                "displayName": "Spruce Leaves",
                 "validVersions": {
                     "1.12.2": {
                         "NBTName": "leaves",
@@ -1023,7 +1023,7 @@
                 "presetIndex": 1
             },
             "2": {
-                "displayName": "Leaves (Birch)",
+                "displayName": "Birch Leaves",
                 "validVersions": {
                     "1.12.2": {
                         "NBTName": "leaves",
@@ -1056,7 +1056,7 @@
                 "presetIndex": 2
             },
             "3": {
-                "displayName": "Leaves (Jungle)",
+                "displayName": "Jungle Leaves",
                 "validVersions": {
                     "1.12.2": {
                         "NBTName": "leaves",
@@ -1089,7 +1089,7 @@
                 "presetIndex": 3
             },
             "4": {
-                "displayName": "Leaves (Acacia)",
+                "displayName": "Acacia Leaves",
                 "validVersions": {
                     "1.12.2": {
                         "NBTName": "leaves2",
@@ -1122,7 +1122,7 @@
                 "presetIndex": 4
             },
             "5": {
-                "displayName": "Leaves (Dark Oak)",
+                "displayName": "Dark Oak Leaves",
                 "validVersions": {
                     "1.12.2": {
                         "NBTName": "leaves2",
@@ -1155,7 +1155,7 @@
                 "presetIndex": 5
             },
             "6": {
-                "displayName": "Leaves (Azalea)",
+                "displayName": "Azalea Leaves",
                 "validVersions": {
                     "1.17.1": {
                         "NBTName": "azalea_leaves",
@@ -1176,6 +1176,25 @@
                 "presetIndex": 6
             },
             "7": {
+                "displayName": "Mangrove Leaves",
+                "validVersions": {
+                    "1.19": {
+                        "NBTName": "mangrove_leaves",
+                        "NBTArgs": {
+                            "persistent": "true"
+                        }
+                    },
+                    "1.20": "&1.19",
+                    "1.21": "&1.19",
+                    "1.21.2": "&1.19",
+                    "1.21.4": "&1.19",
+                    "1.21.5": "&1.19"
+                },
+                "supportBlockMandatory": false,
+                "flammable": true,
+                "presetIndex": 10
+            },
+            "8": {
                 "displayName": "Block of Bamboo (horizontal)",
                 "validVersions": {
                     "1.20": {
@@ -1193,7 +1212,7 @@
                 "flammable": true,
                 "presetIndex": 7
             },
-            "8": {
+            "9": {
                 "displayName": "Pink Petals",
                 "validVersions": {
                     "1.20": {
@@ -1209,7 +1228,7 @@
                 "flammable": true,
                 "presetIndex": 8
             },
-            "9": {
+            "10": {
                 "displayName": "Wildflowers",
                 "validVersions": {
                     "1.21.5": {
@@ -2109,11 +2128,12 @@
                 "presetIndex": 0
             },
             "1": {
-                "displayName": "Waterlogged Oak Leaves (Unsupported!)",
+                "displayName": "Waterlogged Oak Leaves",
                 "validVersions": {
                     "1.19": {
                         "NBTName": "oak_leaves",
                         "NBTArgs": {
+                            "persistent": "true",
                             "waterlogged": "true"
                         }
                     },
@@ -2123,9 +2143,149 @@
                     "1.21.4": "&1.19",
                     "1.21.5": "&1.19"
                 },
-                "supportBlockMandatory": true,
+                "supportBlockMandatory": false,
                 "flammable": false,
                 "presetIndex": 1
+            },
+            "2": {
+                "displayName": "Waterlogged Spruce Leaves",
+                "validVersions": {
+                    "1.19": {
+                        "NBTName": "spruce_leaves",
+                        "NBTArgs": {
+                            "persistent": "true",
+                            "waterlogged": "true"
+                        }
+                    },
+                    "1.20": "&1.19",
+                    "1.21": "&1.19",
+                    "1.21.2": "&1.19",
+                    "1.21.4": "&1.19",
+                    "1.21.5": "&1.19"
+                },
+                "supportBlockMandatory": false,
+                "flammable": false,
+                "presetIndex": 2
+            },
+            "3": {
+                "displayName": "Waterlogged Birch Leaves",
+                "validVersions": {
+                    "1.19": {
+                        "NBTName": "birch_leaves",
+                        "NBTArgs": {
+                            "persistent": "true",
+                            "waterlogged": "true"
+                        }
+                    },
+                    "1.20": "&1.19",
+                    "1.21": "&1.19",
+                    "1.21.2": "&1.19",
+                    "1.21.4": "&1.19",
+                    "1.21.5": "&1.19"
+                },
+                "supportBlockMandatory": false,
+                "flammable": false,
+                "presetIndex": 3
+            },
+            "4": {
+                "displayName": "Waterlogged Jungle Leaves",
+                "validVersions": {
+                    "1.19": {
+                        "NBTName": "jungle_leaves",
+                        "NBTArgs": {
+                            "persistent": "true",
+                            "waterlogged": "true"
+                        }
+                    },
+                    "1.20": "&1.19",
+                    "1.21": "&1.19",
+                    "1.21.2": "&1.19",
+                    "1.21.4": "&1.19",
+                    "1.21.5": "&1.19"
+                },
+                "supportBlockMandatory": false,
+                "flammable": false,
+                "presetIndex": 4
+            },
+            "5": {
+                "displayName": "Waterlogged Acacia Leaves",
+                "validVersions": {
+                    "1.19": {
+                        "NBTName": "acacia_leaves",
+                        "NBTArgs": {
+                            "persistent": "true",
+                            "waterlogged": "true"
+                        }
+                    },
+                    "1.20": "&1.19",
+                    "1.21": "&1.19",
+                    "1.21.2": "&1.19",
+                    "1.21.4": "&1.19",
+                    "1.21.5": "&1.19"
+                },
+                "supportBlockMandatory": false,
+                "flammable": false,
+                "presetIndex": 5
+            },
+            "6": {
+                "displayName": "Waterlogged Dark Oak Leaves",
+                "validVersions": {
+                    "1.19": {
+                        "NBTName": "dark_oak_leaves",
+                        "NBTArgs": {
+                            "persistent": "true",
+                            "waterlogged": "true"
+                        }
+                    },
+                    "1.20": "&1.19",
+                    "1.21": "&1.19",
+                    "1.21.2": "&1.19",
+                    "1.21.4": "&1.19",
+                    "1.21.5": "&1.19"
+                },
+                "supportBlockMandatory": false,
+                "flammable": false,
+                "presetIndex": 6
+            },
+            "7": {
+                "displayName": "Waterlogged Azalea Leaves",
+                "validVersions": {
+                    "1.19": {
+                        "NBTName": "azalea_leaves",
+                        "NBTArgs": {
+                            "persistent": "true",
+                            "waterlogged": "true"
+                        }
+                    },
+                    "1.20": "&1.19",
+                    "1.21": "&1.19",
+                    "1.21.2": "&1.19",
+                    "1.21.4": "&1.19",
+                    "1.21.5": "&1.19"
+                },
+                "supportBlockMandatory": false,
+                "flammable": false,
+                "presetIndex": 7
+            },
+            "8": {
+                "displayName": "Waterlogged Mangrove Leaves",
+                "validVersions": {
+                    "1.19": {
+                        "NBTName": "mangrove_leaves",
+                        "NBTArgs": {
+                            "persistent": "true",
+                            "waterlogged": "true"
+                        }
+                    },
+                    "1.20": "&1.19",
+                    "1.21": "&1.19",
+                    "1.21.2": "&1.19",
+                    "1.21.4": "&1.19",
+                    "1.21.5": "&1.19"
+                },
+                "supportBlockMandatory": false,
+                "flammable": false,
+                "presetIndex": 8
             }
         },
         "mapdatId": 12,
