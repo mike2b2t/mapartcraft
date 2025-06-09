@@ -43,6 +43,7 @@
       "EVERYTHING": "Todo",
       "CARPETS": "Alfombras",
       "GREYSCALE": "Grises",
+      "PISTON-CLEARABLE": null,
       "DELETE-CONFIRM": "¿Quieres borrar esta plantilla? "
     },
     "UNSUPPORTED-PAST": "Sin soporte a partir de",

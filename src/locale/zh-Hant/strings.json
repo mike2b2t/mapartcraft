@@ -43,6 +43,7 @@
       "EVERYTHING": "所有方塊",
       "CARPETS": "地毯",
       "GREYSCALE": "灰階",
+      "PISTON-CLEARABLE": null,
       "DELETE-CONFIRM": null
     },
     "UNSUPPORTED-PAST": "不支援的過往",

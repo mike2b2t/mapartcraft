@@ -43,7 +43,8 @@
       "NONE": "Nenhum",
       "EVERYTHING": "Tudo",
       "CARPETS": "Carpetes",
-      "GREYSCALE": "Cinzento"
+      "GREYSCALE": "Cinzento",
+      "PISTON-CLEARABLE": null
     },
     "UNSUPPORTED-PAST": "Sem suporte",
     "ADD-CUSTOM": {

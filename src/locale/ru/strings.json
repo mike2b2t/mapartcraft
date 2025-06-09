@@ -43,7 +43,8 @@
       "NONE": "Ничего",
       "EVERYTHING": "Всё",
       "CARPETS": "Коврики",
-      "GREYSCALE": "Чёрно-белые"
+      "GREYSCALE": "Чёрно-белые",
+      "PISTON-CLEARABLE": null
     },
     "UNSUPPORTED-PAST": "Не позднее версии",
     "ADD-CUSTOM": {

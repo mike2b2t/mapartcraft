@@ -43,7 +43,8 @@
       "NONE": "None",
       "EVERYTHING": "Everything",
       "CARPETS": "Carpets",
-      "GREYSCALE": "Greyscale"
+      "GREYSCALE": "Greyscale",
+      "PISTON-CLEARABLE": "Piston clearable"
     },
     "UNSUPPORTED-PAST": "Unsupported past",
     "ADD-CUSTOM": {

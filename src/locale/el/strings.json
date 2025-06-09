@@ -43,7 +43,8 @@
       "NONE": "Κανένα",
       "EVERYTHING": "Όλα",
       "CARPETS": "Χαλιά",
-      "GREYSCALE": "Αποχρώσεις του γκρι"
+      "GREYSCALE": "Αποχρώσεις του γκρι",
+      "PISTON-CLEARABLE": "Εκκαθαριζόμενα από πιστόνι"
     },
     "UNSUPPORTED-PAST": "Δεν υποστηρίζεται μετά από",
     "ADD-CUSTOM": {

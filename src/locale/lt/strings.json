@@ -45,7 +45,8 @@
       "NONE": "Nėra",
       "EVERYTHING": "Viskas",
       "CARPETS": "Kilimai",
-      "GREYSCALE": "Pilka skalė"
+      "GREYSCALE": "Pilka skalė",
+      "PISTON-CLEARABLE": null
     },
     "UNSUPPORTED-PAST": "Nepalaikoma praeitis",
     "ADD-CUSTOM": {

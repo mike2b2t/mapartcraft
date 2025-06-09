@@ -43,7 +43,8 @@
       "NONE": "なし",
       "EVERYTHING": "すべて",
       "CARPETS": "カーペット",
-      "GREYSCALE": "グレースケール"
+      "GREYSCALE": "グレースケール",
+      "PISTON-CLEARABLE": null
     },
     "UNSUPPORTED-PAST": null,
     "ADD-CUSTOM": {
