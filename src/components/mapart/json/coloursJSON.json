@@ -8459,6 +8459,19 @@
                 "supportBlockMandatory": true,
                 "flammable": false,
                 "presetIndex": 4
+            },
+            "5": {
+                "displayName": "Resin Clump",
+                "validVersions": {
+                    "1.21.4": {
+                        "NBTName": "resin_clump",
+                        "NBTArgs": {}
+                    },
+                    "1.21.5": "&1.21.4"
+                },
+                "supportBlockMandatory": true,
+                "flammable": false,
+                "presetIndex": 5
             }
         },
         "mapdatId": 37,
