@@ -2499,6 +2499,60 @@
                 "supportBlockMandatory": false,
                 "flammable": false,
                 "presetIndex": 4
+            },
+            "6": {
+                "displayName": "Pale Oak Log (Vertical)",
+                "validVersions": {
+                    "1.21.4": {
+                        "NBTName": "pale_oak_log",
+                        "NBTArgs": {
+                            "axis": "y"
+                        }
+                    },
+                    "1.21.5": "&1.21.4"
+                },
+                "supportBlockMandatory": false,
+                "flammable": true,
+                "presetIndex": 6
+            },
+            "7": {
+                "displayName": "Pale Oak Planks",
+                "validVersions": {
+                    "1.21.4": {
+                        "NBTName": "pale_oak_planks",
+                        "NBTArgs": {}
+                    },
+                    "1.21.5": "&1.21.4"
+                },
+                "supportBlockMandatory": false,
+                "flammable": true,
+                "presetIndex": 7
+            },
+            "8": {
+                "displayName": "Pale Oak Slab",
+                "validVersions": {
+                    "1.21.4": {
+                        "NBTName": "pale_oak_slab",
+                        "NBTArgs": {}
+                    },
+                    "1.21.5": "&1.21.4"
+                },
+                "supportBlockMandatory": true,
+                "flammable": true,
+                "presetIndex": 8
+            },
+            "9": {
+                "displayName": "Pale Oak Pressure Plate",
+                "validVersions": {
+                    "1.21.4": {
+                        "NBTName": "pale_oak_pressure_plate",
+                        "NBTArgs": {}
+                    },
+                    "1.21.5": "&1.21.4"
+                },
+                "supportBlockMandatory": true,
+                "flammable": false,
+                "presetIndex": 9
             }
         },
         "mapdatId": 14,
@@ -2750,60 +2804,6 @@
                 "supportBlockMandatory": true,
                 "flammable": false,
                 "presetIndex": 7
-            },
-            "8": {
-                "displayName": "Pale Oak Log (Vertical)",
-                "validVersions": {
-                    "1.21.4": {
-                        "NBTName": "pale_oak_log",
-                        "NBTArgs": {
-                            "axis": "y"
-                        }
-                    },
-                    "1.21.5": "&1.21.4"
-                },
-                "supportBlockMandatory": false,
-                "flammable": true,
-                "presetIndex": 8
-            },
-            "9": {
-                "displayName": "Pale Oak Planks",
-                "validVersions": {
-                    "1.21.4": {
-                        "NBTName": "pale_oak_planks",
-                        "NBTArgs": {}
-                    },
-                    "1.21.5": "&1.21.4"
-                },
-                "supportBlockMandatory": false,
-                "flammable": true,
-                "presetIndex": 9
-            },
-            "10": {
-                "displayName": "Pale Oak Slab",
-                "validVersions": {
-                    "1.21.4": {
-                        "NBTName": "pale_oak_slab",
-                        "NBTArgs": {}
-                    },
-                    "1.21.5": "&1.21.4"
-                },
-                "supportBlockMandatory": true,
-                "flammable": true,
-                "presetIndex": 10
-            },
-            "11": {
-                "displayName": "Pale Oak Pressure Plate",
-                "validVersions": {
-                    "1.21.4": {
-                        "NBTName": "pale_oak_pressure_plate",
-                        "NBTArgs": {}
-                    },
-                    "1.21.5": "&1.21.4"
-                },
-                "supportBlockMandatory": true,
-                "flammable": false,
-                "presetIndex": 11
             }
         },
         "mapdatId": 8,
