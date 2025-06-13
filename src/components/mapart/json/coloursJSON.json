@@ -916,13 +916,12 @@
             "6": {
                 "displayName": "Pale Oak Leaves",
                 "validVersions": {
-                    "1.21.4": {
+                    "1.21.5": {
                         "NBTName": "pale_oak_leaves",
                         "NBTArgs": {
                             "persistent": "true"
                         }
-                    },
-                    "1.21.5": "&1.21.4"
+                    }
                 },
                 "supportBlockMandatory": false,
                 "flammable": true,
