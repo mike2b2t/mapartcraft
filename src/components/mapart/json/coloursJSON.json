@@ -912,21 +912,6 @@
                 "supportBlockMandatory": true,
                 "flammable": false,
                 "presetIndex": 5
-            },
-            "6": {
-                "displayName": "Pale Oak Leaves",
-                "validVersions": {
-                    "1.21.4": {
-                        "NBTName": "pale_oak_leaves",
-                        "NBTArgs": {
-                            "persistent": "true"
-                        }
-                    },
-                    "1.21.5": "&1.21.4"
-                },
-                "supportBlockMandatory": false,
-                "flammable": true,
-                "presetIndex": 6
             }
         },
         "mapdatId": 6,
@@ -1195,6 +1180,21 @@
                 "presetIndex": 10
             },
             "8": {
+                "displayName": "Pale Oak Leaves",
+                "validVersions": {
+                    "1.21.4": {
+                        "NBTName": "pale_oak_leaves",
+                        "NBTArgs": {
+                            "persistent": "true"
+                        }
+                    },
+                    "1.21.5": "&1.21.4"
+                },
+                "supportBlockMandatory": false,
+                "flammable": true,
+                "presetIndex": 6
+            },
+            "9": {
                 "displayName": "Block of Bamboo (horizontal)",
                 "validVersions": {
                     "1.20": {
@@ -1212,7 +1212,7 @@
                 "flammable": true,
                 "presetIndex": 7
             },
-            "9": {
+            "10": {
                 "displayName": "Pink Petals",
                 "validVersions": {
                     "1.20": {
@@ -1228,7 +1228,7 @@
                 "flammable": true,
                 "presetIndex": 8
             },
-            "10": {
+            "11": {
                 "displayName": "Wildflowers",
                 "validVersions": {
                     "1.21.5": {
