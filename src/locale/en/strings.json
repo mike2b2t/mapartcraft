@@ -178,6 +178,8 @@
     "PLACEHOLDER-BLOCK-TT": "Placeholder Block",
     "SHOW-PER-SPLIT": "Only show max mats per split",
     "SHOW-PER-SPLIT-TT": "For material reuse with locked maps",
+    "SORTED": "Sort materials",
+    "SORTED-TT": "Disable to show materials in a predictable order",
     "REFRESH-MATERIALS": "REFRESH MATERIALS",
     "REFRESH-MATERIALS-TT": "Refresh materials list",
     "COPY-CLIPBOARD": "Copy to clipboard"

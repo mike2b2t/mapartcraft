@@ -7,7 +7,9 @@ import BlockImage from "./blockImage";
 import "./materials.css";
 
 class Materials extends Component {
-  state = { onlyMaxPerSplit: false };
+  state = { onlyMaxPerSplit: false,
+            sortMaterials: true,
+          };
 
   alphaColorIdx = 61;
 
@@ -18,9 +20,15 @@ class Materials extends Component {
     }));
   };
 
+  onDisplaySortChange = () => {
+    this.setState((currentState) => ({
+      sortMaterials: !currentState.sortMaterials,
+    }));
+  };
+
   getMaterialsCount_nonZeroMaterialsItems() {
     const { coloursJSON, currentMaterialsData } = this.props;
-    const { onlyMaxPerSplit } = this.state;
+    const { onlyMaxPerSplit, sortMaterials } = this.state;
     const materialsCount = {};
     for (const colourSetId of Object.keys(coloursJSON)) {
       materialsCount[colourSetId] = 0;
@@ -38,11 +46,16 @@ class Materials extends Component {
         }
       }
     }
-    return Object.entries(materialsCount)
-      .filter(([_, value]) => value !== 0)
-      .sort((first, second) => {
-        return second[1] - first[1];
-      });
+    if (sortMaterials) {
+      return Object.entries(materialsCount)
+        .filter(([_, value]) => value !== 0)
+        .sort((first, second) => {
+          return second[1] - first[1];
+        });
+    } else {
+      return Object.entries(materialsCount)
+        .filter(([_, value]) => value !== 0)
+    }
   }
 
   getMaterialsCount_supportBlock() {
@@ -163,7 +176,7 @@ class Materials extends Component {
 
   render() {
     const { getLocaleString, coloursJSON, optionValue_supportBlock, currentMaterialsData, onChangeColourSetBlock } = this.props;
-    const { onlyMaxPerSplit } = this.state;
+    const { onlyMaxPerSplit, sortMaterials } = this.state;
     const nonZeroMaterialsItems = this.getMaterialsCount_nonZeroMaterialsItems();
     const supportBlockCount = this.getMaterialsCount_supportBlock();
     const supportBlockIds = this.colourSetIdAndBlockIdFromNBTName(optionValue_supportBlock);
@@ -177,6 +190,14 @@ class Materials extends Component {
           </b>
         </Tooltip>{" "}
         <input type="checkbox" checked={onlyMaxPerSplit} onChange={this.onOnlyMaxPerSplitChange} />
+        <br />
+        <Tooltip tooltipText={getLocaleString("MATERIALS/SORTED-TT")}>
+          <b>
+            {getLocaleString("MATERIALS/SORTED")}
+            {":"}
+          </b>
+        </Tooltip>{" "}
+        <input type="checkbox" checked={sortMaterials} onChange={this.onDisplaySortChange} />
         <br />
         <button type="button" onClick={() => this.copyToClipboard(nonZeroMaterialsItems, supportBlockCount)}>{getLocaleString("MATERIALS/COPY-CLIPBOARD")}</button>
         <table id="materialtable">
