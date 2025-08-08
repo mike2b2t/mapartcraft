@@ -56,6 +56,18 @@ class BlockSelection extends Component {
         background = this.cssRGB(colourSet.tonesRGB.unobtainable);
         break;
       }
+      case MapModes.SCHEMATIC_NBT.staircaseModes.UPWARDS_ONLY.uniqueId: {
+        background = `linear-gradient(${this.cssRGB(colourSet.tonesRGB.normal)} 50%, ${this.cssRGB(
+          colourSet.tonesRGB.normal
+        )} 50%, ${this.cssRGB(colourSet.tonesRGB.light)} 50%)`;
+        break;
+      }
+      case MapModes.SCHEMATIC_NBT.staircaseModes.REVERSE_UPWARDS_ONLY.uniqueId: {
+        background = `linear-gradient(${this.cssRGB(colourSet.tonesRGB.dark)} 50%, ${this.cssRGB(colourSet.tonesRGB.normal)} 50%, ${this.cssRGB(
+          colourSet.tonesRGB.normal
+        )} 50%`;
+        break;
+      }
       default: {
         throw new Error("Unknown staircasing value");
       }
@@ -111,6 +123,68 @@ class BlockSelection extends Component {
                   background: this.cssRGB(colourSet.tonesRGB.light),
                   cursor: "pointer",
                   ...(!disabledTones[colourSetId].has("light") && {
+                    filter: "drop-shadow(0 0 4px #658968)"
+                  })
+                }}
+              />
+            </Tooltip>
+          </React.Fragment>
+        );
+      case MapModes.SCHEMATIC_NBT.staircaseModes.UPWARDS_ONLY.uniqueId:
+        return (
+          <React.Fragment>
+            <Tooltip tooltipText="NORMAL SHADE">
+              <div
+                className="colourSetBox"
+                onClick={() => onToggleColourTone(colourSetId, "normal")}
+                style={{
+                  background: this.cssRGB(colourSet.tonesRGB.normal),
+                  cursor: "pointer",
+                  ...(!disabledTones[colourSetId].has("normal") && {
+                    filter: "drop-shadow(0 0 4px #658968)"
+                  })
+                }}
+              />
+            </Tooltip>
+            <Tooltip tooltipText="BRIGHT SHADE">
+              <div
+                className="colourSetBox"
+                onClick={() => onToggleColourTone(colourSetId, "light")}
+                style={{
+                  background: this.cssRGB(colourSet.tonesRGB.light),
+                  cursor: "pointer",
+                  ...(!disabledTones[colourSetId].has("light") && {
+                    filter: "drop-shadow(0 0 4px #658968)"
+                  })
+                }}
+              />
+            </Tooltip>
+          </React.Fragment>
+        );
+      case MapModes.SCHEMATIC_NBT.staircaseModes.REVERSE_UPWARDS_ONLY.uniqueId:
+        return (
+          <React.Fragment>
+            <Tooltip tooltipText="DARK SHADE">
+              <div
+                className="colourSetBox"
+                onClick={() => onToggleColourTone(colourSetId, "dark")}
+                style={{
+                  background: this.cssRGB(colourSet.tonesRGB.dark),
+                  cursor: "pointer",
+                  ...(!disabledTones[colourSetId].has("dark") && {
+                    filter: "drop-shadow(0 0 4px #658968)"
+                  })
+                }}
+              />
+            </Tooltip>
+            <Tooltip tooltipText="NORMAL SHADE">
+              <div
+                className="colourSetBox"
+                onClick={() => onToggleColourTone(colourSetId, "normal")}
+                style={{
+                  background: this.cssRGB(colourSet.tonesRGB.normal),
+                  cursor: "pointer",
+                  ...(!disabledTones[colourSetId].has("normal") && {
                     filter: "drop-shadow(0 0 4px #658968)"
                   })
                 }}

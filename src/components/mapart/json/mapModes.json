@@ -32,6 +32,18 @@
         "localeKey": "MAP-SETTINGS/3D/FULL-LIGHT",
         "toneKeys": ["light"],
         "extra": true
+      },
+      "REVERSE_UPWARDS_ONLY": {
+        "uniqueId": 12,
+        "localeKey": "MAP-SETTINGS/3D/REVERSE-UPWARDS-ONLY",
+        "toneKeys": ["dark", "normal"],
+        "extra": true
+      },
+      "UPWARDS_ONLY": {
+        "uniqueId": 11,
+        "localeKey": "MAP-SETTINGS/3D/UPWARDS-ONLY",
+        "toneKeys": ["normal", "light"],
+        "extra": true
       }
     }
   },
@@ -73,6 +85,18 @@
         "uniqueId": 10,
         "localeKey": "MAP-SETTINGS/3D/FULL-UNOBTAINABLE",
         "toneKeys": ["unobtainable"],
+        "extra": true
+      },
+      "REVERSE_UPWARDS_ONLY": {
+        "uniqueId": 13,
+        "localeKey": "MAP-SETTINGS/3D/REVERSE-UPWARDS-ONLY",
+        "toneKeys": ["dark", "normal"],
+        "extra": true
+      },
+      "UPWARDS_ONLY": {
+        "uniqueId": 14,
+        "localeKey": "MAP-SETTINGS/3D/UPWARDS-ONLY",
+        "toneKeys": ["normal", "light"],
         "extra": true
       }
     }

@@ -373,7 +373,9 @@ class Map_NBT {
         break;
       }
       case MapModes.SCHEMATIC_NBT.staircaseModes.CLASSIC.uniqueId:
-      case MapModes.SCHEMATIC_NBT.staircaseModes.VALLEY.uniqueId: {
+      case MapModes.SCHEMATIC_NBT.staircaseModes.VALLEY.uniqueId:
+      case MapModes.SCHEMATIC_NBT.staircaseModes.UPWARDS_ONLY.uniqueId:
+      case MapModes.SCHEMATIC_NBT.staircaseModes.REVERSE_UPWARDS_ONLY.uniqueId: {
         // this doesn't matter
         // in the classic case each column is later adjusted to have its global minimum at y = 0 so the map has a common base / is as short as possible
         // in the valley case valleys are pulled down to y = 0
@@ -560,7 +562,9 @@ class Map_NBT {
     });
 
     switch (optionValue_staircasing) {
-      case MapModes.SCHEMATIC_NBT.staircaseModes.VALLEY.uniqueId: {
+      case MapModes.SCHEMATIC_NBT.staircaseModes.VALLEY.uniqueId:
+      case MapModes.SCHEMATIC_NBT.staircaseModes.UPWARDS_ONLY.uniqueId:
+      case MapModes.SCHEMATIC_NBT.staircaseModes.REVERSE_UPWARDS_ONLY.uniqueId: {
         let plateaus = [{ startIndex: 0, endIndex: 0 }];
         // initial 0 width plateau useful just so we don't have a special case for the first proper plateau later
         let ascending = false; // weakly ascending
