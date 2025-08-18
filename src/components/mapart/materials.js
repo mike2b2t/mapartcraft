@@ -65,9 +65,9 @@ class Materials extends Component {
     const numberOfStacks = Math.floor((count % 1728) / 64);
     const remainder = count % 64;
 
-    const sb = numberOfShulkers > 0 ? `${numberOfShulkers} B` : "";
-    const stacks = numberOfStacks > 0 ? `${numberOfStacks} S` : "";
-    const items = remainder > 0 ? `${remainder} I`: "";
+    const sb = numberOfShulkers > 0 ? `${numberOfShulkers} SB` : "";
+    const stacks = numberOfStacks > 0 ? `${numberOfStacks} ST` : "";
+    const items = remainder > 0 ? `${remainder}`: "";
 
     const split = [sb, stacks, items].filter(n => n).join(' + ');
 
