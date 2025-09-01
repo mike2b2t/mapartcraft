@@ -33,3 +33,32 @@
   image-rendering: pixelated; /* Awesome future-browsers */
   -ms-interpolation-mode: nearest-neighbor; /* IE */
 }
+
+@media (max-width: 768px) {
+  .viewOnline2DContainer .topBar {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 10%;
+    padding: 7px 3px;
+  }
+
+  .viewOnline2DContainer .topBar div:first-child  {
+    display: flex;
+    flex-direction: row;
+    order: -2;
+  }
+
+  .viewOnline_waila {
+    font-size: 1.2em;
+    padding: 0;
+    justify-self: center;
+    grid-column: 1 / 3;
+  }
+
+  .viewOnline2DContainer .topBar > h2 {
+    margin-right: 0.1em;
+    font-size: 1.2em;
+    text-align: right;
+    order: -2;
+  }
+}

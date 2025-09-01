@@ -21,7 +21,9 @@ class ViewOnline2D extends Component {
   };
 
   paletteIdToColourSetIdAndBlockId = [];
-  mouse = { x: 0, y: 0, down: false, movedSinceDown: null };
+  pointer = { x: 0, y: 0, down: false, movedSinceDown: null };
+  touch2 = { x: 0, y: 0 };
+  initialPinchDistance = null;
 
   getNBTDecompressed() {
     const { viewOnline_NBT } = this.props;
@@ -174,6 +176,41 @@ class ViewOnline2D extends Component {
     img_textures.src = IMG_Textures;
   }
 
+  getPointerCoords(e) {
+    if (e.touches && e.touches.length > 0) {
+      const clientX = e.touches[0].clientX;
+      const clientY = e.touches[0].clientY;
+      return { clientX, clientY };
+    } else if (e.changedTouches && e.changedTouches.length > 0) {
+      const clientX = e.changedTouches[0].clientX;
+      const clientY = e.changedTouches[0].clientY;
+      return { clientX, clientY };
+    }
+    return { clientX: e.clientX, clientY: e.clientY };
+  }
+
+  getOffsetRelativeToCanvas(e) {
+    const canvas = this.canvasRef_viewOnline.current;
+    if (!canvas) return { offsetX: 0, offsetY: 0 };
+
+    const rect = canvas.getBoundingClientRect();
+    const { clientX, clientY } = this.getPointerCoords(e);
+
+    return {
+      offsetX: clientX - rect.left,
+      offsetY: clientY - rect.top,
+    };
+  }
+
+  getTouchDistance(e) {
+    if (e.touches && e.touches.length === 2) {
+      const touch1 = e.touches[0];
+      const touch2 = e.touches[1];
+      return Math.hypot(touch1.pageX - touch2.pageX, touch1.pageY - touch2.pageY);
+    }
+    return null;
+  }
+
   handleScroll_document = function (e) {
     e.preventDefault();
   };
@@ -196,32 +233,42 @@ class ViewOnline2D extends Component {
     }
   }.bind(this);
 
-  handleMouseDown = function (e) {
+  handlePointerDown = function (e) {
     e.preventDefault();
-    this.mouse.x = parseInt(e.clientX);
-    this.mouse.y = parseInt(e.clientY);
-    this.mouse.down = true;
-    this.mouse.movedSinceDown = false;
-    document.addEventListener("mousemove", this.handleMouseMove, { passive: false });
+    const coords = this.getPointerCoords(e);
+    this.pointer.x = parseInt(coords.clientX);
+    this.pointer.y = parseInt(coords.clientY);
+    this.pointer.down = true;
+    this.pointer.movedSinceDown = false;
+
+    if (e.touches && e.touches.length === 2) {
+      this.initialPinchDistance = this.getTouchDistance(e);
+      this.touch2.x = e.touches[1].clientX;
+      this.touch2.y = e.touches[1].clientY;
+    }
+    document.addEventListener("mousemove", this.handlePointerMove, { passive: false });
+    document.addEventListener("touchmove", this.handlePointerMove, { passive: false });
   }.bind(this);
 
-  handleMouseUp = function (e) {
-    e.preventDefault();
-    this.mouse.down = false;
-    if (!this.mouse.movedSinceDown) {
-      if (e.target === this.canvasRef_viewOnline.current) {
-        const { optionValue_mapSize_x, optionValue_mapSize_y } = this.props;
-        const { viewOnline_NBT_decompressed } = this.state;
-        const { offsetX, offsetY } = e;
-        const canvas_width = e.target.clientWidth;
-        const canvas_height = e.target.clientHeight;
-        const block_x = Math.floor((offsetX * 128 * optionValue_mapSize_x) / canvas_width);
-        const block_z = Math.floor((offsetY * (128 * optionValue_mapSize_y + 1)) / canvas_height);
+  handleCanvasClick = function (e, currentOffsetX, currentOffsetY) {
+    if (e.target === this.canvasRef_viewOnline.current) {
+      const { optionValue_mapSize_x, optionValue_mapSize_y } = this.props;
+      const { viewOnline_NBT_decompressed } = this.state;
+      const canvas = this.canvasRef_viewOnline.current;
+
+      const canvas_width = canvas.clientWidth;
+      const canvas_height = canvas.clientHeight;
+
+      const block_x = Math.floor((currentOffsetX * 128 * optionValue_mapSize_x) / canvas_width);
+      const block_z = Math.floor((currentOffsetY * (128 * optionValue_mapSize_y + 1)) / canvas_height);
+
+      if (viewOnline_NBT_decompressed) {
         for (const block of viewOnline_NBT_decompressed.value.blocks.value.value) {
           const block_coords = block.pos.value.value;
           if (block_coords[0] === block_x && block_coords[2] === block_z) {
             const block_paletteId = block.state.value;
-            const [selectedBlock_colourSetId, selectedBlock_blockId] = this.paletteIdToColourSetIdAndBlockId[block_paletteId];
+            const [selectedBlock_colourSetId, selectedBlock_blockId] =
+              this.paletteIdToColourSetIdAndBlockId[block_paletteId];
             this.setState({
               selectedBlock: {
                 x: block_coords[0],
@@ -236,25 +283,84 @@ class ViewOnline2D extends Component {
         }
       }
     }
-    document.removeEventListener("mousemove", this.handleMouseMove, { passive: false });
   }.bind(this);
 
-  handleMouseMove = function (e) {
+  handlePointerUp = function (e) {
     e.preventDefault();
-    if (!this.mouse.down) {
+    this.pointer.down = false;
+    this.initialPinchDistance = null;
+
+    if (!this.pointer.movedSinceDown) {
+
+      const { offsetX, offsetY } = this.getOffsetRelativeToCanvas(e);
+      this.handleCanvasClick(e, offsetX, offsetY);
+    }
+    document.removeEventListener("touchmove", this.handlePointerMove, { passive: false });
+    document.removeEventListener("mousemove", this.handlePointerMove, { passive: false });
+  }.bind(this);
+
+  handlePointerMove = function (e) {
+    e.preventDefault();
+
+    if (e.touches && e.touches.length === 2) {
+      const currentPinchDistance = this.getTouchDistance(e);
+      if (this.initialPinchDistance === null) {
+        this.initialPinchDistance = currentPinchDistance;
+        this.pointer.movedSinceDown = true;
+        return;
+      }
+
+      const scaleFactor = currentPinchDistance / this.initialPinchDistance;
+      this.initialPinchDistance = currentPinchDistance;
+
+      this.setState((state) => {
+        const newZoomFactor = state.zoomFactor * scaleFactor;
+
+        const touch1 = e.touches[0];
+        const touch2 = e.touches[1];
+        const rect = this.canvasRef_viewOnline.current.getBoundingClientRect();
+        const centerClientX = (touch1.clientX + touch2.clientX) / 2;
+        const centerClientY = (touch1.clientY + touch2.clientY) / 2;
+        const centerOffsetX = centerClientX - rect.left;
+        const centerOffsetY = centerClientY - rect.top;
+
+        const newCanvasOffset_x =
+          state.canvasOffset_x - (centerOffsetX * (newZoomFactor - state.zoomFactor)) / state.zoomFactor;
+        const newCanvasOffset_y =
+          state.canvasOffset_y - (centerOffsetY * (newZoomFactor - state.zoomFactor)) / state.zoomFactor;
+
+        return {
+          zoomFactor: newZoomFactor,
+          canvasOffset_x: newCanvasOffset_x,
+          canvasOffset_y: newCanvasOffset_y,
+        };
+      });
+      this.pointer.movedSinceDown = true;
+      this.pointer.x = parseInt((e.touches[0].clientX + e.touches[1].clientX) / 2);
+      this.pointer.y = parseInt((e.touches[0].clientY + e.touches[1].clientY) / 2);
+
       return;
     }
-    const mouseMoved_x = parseInt(e.clientX - this.mouse.x);
-    const mouseMoved_y = parseInt(e.clientY - this.mouse.y);
 
-    if (Math.abs(mouseMoved_x) > 1 || Math.abs(mouseMoved_y) > 1) {
-      this.mouse.x = e.clientX;
-      this.mouse.y = e.clientY;
-      this.mouse.movedSinceDown = true;
+    if (!this.pointer.down || (e.touches && e.touches.length > 1)) {
+      return;
+    }
+
+    const coords = this.getPointerCoords(e);
+    const pointerMoved_x = parseInt(coords.clientX - this.pointer.x);
+    const pointerMoved_y = parseInt(coords.clientY - this.pointer.y);
+
+    if (Math.abs(pointerMoved_x) > 1 || Math.abs(pointerMoved_y) > 1) {
+      this.pointer.x = coords.clientX;
+      this.pointer.y = coords.clientY;
+      this.pointer.movedSinceDown = true;
     }
 
     this.setState((state) => {
-      return { canvasOffset_x: state.canvasOffset_x + mouseMoved_x, canvasOffset_y: state.canvasOffset_y + mouseMoved_y };
+      return {
+        canvasOffset_x: state.canvasOffset_x + pointerMoved_x,
+        canvasOffset_y: state.canvasOffset_y + pointerMoved_y,
+      };
     });
   }.bind(this);
 
@@ -271,8 +377,11 @@ class ViewOnline2D extends Component {
       document.addEventListener("DOMMouseScroll", this.handleScroll_canvas, { passive: false });
       this.canvasRef_viewOnline.current.addEventListener("mousewheel", this.handleScroll_canvas, { passive: false });
       document.addEventListener("mousewheel", this.handleScroll_document, { passive: false });
-      document.addEventListener("mousedown", this.handleMouseDown, { passive: false });
-      document.addEventListener("mouseup", this.handleMouseUp, { passive: false });
+      document.addEventListener("mousedown", this.handlePointerDown, { passive: false });
+      document.addEventListener("mouseup", this.handlePointerUp, { passive: false });
+      document.addEventListener("touchstart", this.handlePointerDown, { passive: false, });
+      document.addEventListener("touchend", this.handlePointerUp, { passive: false, });
+      document.addEventListener("touchcancel", this.handlePointerUp, { passive: false, });
     });
   }
 
@@ -280,8 +389,11 @@ class ViewOnline2D extends Component {
     document.removeEventListener("DOMMouseScroll", this.handleScroll_canvas, { passive: false });
     this.canvasRef_viewOnline.current.removeEventListener("mousewheel", this.handleScroll_canvas, { passive: false });
     document.removeEventListener("mousewheel", this.handleScroll_document, { passive: false });
-    document.removeEventListener("mousedown", this.handleMouseDown, { passive: false });
-    document.removeEventListener("mouseup", this.handleMouseUp, { passive: false });
+    document.removeEventListener("mousedown", this.handlePointerDown, { passive: false });
+    document.removeEventListener("mouseup", this.handlePointerUp, { passive: false });
+    document.removeEventListener("touchstart", this.handlePointerDown, { passive: false, });
+    document.removeEventListener("touchend", this.handlePointerUp, { passive: false, });
+    document.removeEventListener("touchcancel", this.handlePointerUp, { passive: false, });
   }
 
   render() {
@@ -291,10 +403,10 @@ class ViewOnline2D extends Component {
 
     const component_controls = (
       <div style={{ display: "flex", flexDirection: "row" }}>
-        <h1 style={{ cursor: "pointer" }} onClick={() => onGetViewOnlineNBT(null)}>
+        <h1 style={{ cursor: "pointer" }} onClick={() => onGetViewOnlineNBT(null)} onTouchStart={() => onGetViewOnlineNBT(null)}>
           ❌
         </h1>
-        <h1 style={{ cursor: "pointer" }} onClick={onChooseViewOnline3D}>
+        <h1 style={{ cursor: "pointer" }} onClick={onChooseViewOnline3D} onTouchStart={onChooseViewOnline3D}>
           3D
         </h1>
       </div>
