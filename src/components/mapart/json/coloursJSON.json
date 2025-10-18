@@ -2081,14 +2081,14 @@
     "10": {
         "tonesRGB": {
             "dark": [
-                45,
-                45,
-                180
+                64,
+                64,
+                255
             ],
             "normal": [
-                55,
-                55,
-                220
+                64,
+                64,
+                255
             ],
             "light": [
                 64,
@@ -2096,9 +2096,9 @@
                 255
             ],
             "unobtainable": [
-                33,
-                33,
-                135
+                64,
+                64,
+                255
             ]
         },
         "blocks": {
@@ -2288,7 +2288,7 @@
             }
         },
         "mapdatId": 12,
-        "colourName": "Water"
+        "colourName": "Water - Light"
     },
     "11": {
         "tonesRGB": {
