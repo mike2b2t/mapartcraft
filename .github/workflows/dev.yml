@@ -1,0 +1,39 @@
+# Simple workflow for building static content
+name: Build dev branch
+
+on:
+  # Runs on pushes targeting the 'dev' branch
+  push:
+    branches: ['dev']
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Add required permission for 'actions/checkout'
+permissions:
+  contents: read
+
+# Allow only one concurrent run, skipping runs queued between the run in-progress and latest queued.
+concurrency:
+  group: 'build'
+  cancel-in-progress: false
+
+env:
+  GH_REPO: '/mapartcraft/'
+
+jobs:
+  # Single build job
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+      - name: Install dependencies
+        run: bun install
+      - name: Build
+        run: bun run build
+      - name: Summary
+        run: echo "Build completed successfully."
