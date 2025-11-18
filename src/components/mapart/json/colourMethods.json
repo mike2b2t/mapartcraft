@@ -22,5 +22,9 @@
   "Ciede2000_Lab50": {
     "uniqueId": 5,
     "name": "CIEDE2000 D50 (L*a*b* space)"
+  },
+  "Hct": {
+    "uniqueId": 6,
+    "name": "HCT (Hue, Chroma, Tone)"
   }
 }

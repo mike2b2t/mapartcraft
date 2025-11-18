@@ -30,6 +30,7 @@ var colourCache = new Map(); // cache for reusing colours in identical pixels
 var labCache = new Map();
 var lab50Cache = new Map();
 var lab65Cache = new Map();
+var hctCache = new Map();
 
 var maps = [];
 
@@ -64,6 +65,11 @@ function rgb2lab(rgb) {
 }
 
 //Code based on culori.js - https://culorijs.org/
+
+function labF(y) {
+  return (0.00885645167903563081717167575546 < y ? Math.cbrt(y) : (903.2962962962962962962962962963 * y + 16) / 116);
+}
+
 function rgb2lab50(rgb) {
   let val = (rgb[0] << 16) + (rgb[1] << 8) + rgb[2];
   if (lab50Cache.has(val)) return lab50Cache.get(val);
@@ -75,7 +81,7 @@ function rgb2lab50(rgb) {
   let x = (0.436065742824811 * r1 + 0.3851514688337912 * g1 + 0.14307845442264197 * b1) / 0.96429567642956764295676429567643,
     y = 0.22249319175623702 * r1 + 0.7168870538238823 * g1 + 0.06061979053616537 * b1,
     z = (0.013923904500943465 * r1 + 0.09708128566574634 * g1 + 0.7140993584005155 * b1) / 0.82510460251046025104602510460251;
-  let f1 = (0.00885645167903563081717167575546 < y ? Math.cbrt(y) : (903.2962962962962962962962962963 * y + 16) / 116);
+  let f1 = labF(y);
 
   let l = 116 * f1 - 16;
   let a = 0;
@@ -105,7 +111,7 @@ function rgb2lab65(rgb) {
   let x = (0.4123907992659593 * r1 + 0.357584339383878 * g1 + 0.1804807884018343 * b1) / 0.95045592705167173252279635258359,
     y = 0.2126390058715102 * r1 + 0.715168678767756 * g1 + 0.0721923153607337 * b1,
     z = (0.0193308187155918 * r1 + 0.119194779794626 * g1 + 0.9505321522496607 * b1) / 1.0890577507598784194528875379939;
-  let f1 = (0.00885645167903563081717167575546 < y ? Math.cbrt(y) : (903.2962962962962962962962962963 * y + 16) / 116);
+  let f1 = labF(y);
 
   let l = 116 * f1 - 16;
   let a = 0;
@@ -123,6 +129,88 @@ function rgb2lab65(rgb) {
   return lab65;
 }
 
+//Code based on material-foundation - https://github.com/material-foundation/material-color-utilities
+function linearized(channel) {
+  const normalized = channel / 255.0;
+  if (normalized <= 0.040449936) {
+    return normalized / 12.92;
+  } else {
+    return Math.pow((normalized + 0.055) / 1.055, 2.4); //NOT multiplied by 100.0
+  }
+}
+
+function signum(num) {
+  if (num < 0) {
+    return -1;
+  } else if (num > 0) {
+    return 1;
+  } else {
+    return 0;
+  }
+}
+
+function rgb2xyz(rgb) {
+  const r1 = linearized(rgb[0]);
+  const g1 = linearized(rgb[1]);
+  const b1 = linearized(rgb[2]);
+
+  const x = 0.41233895 * r1 + 0.35762064 * g1 + 0.18051042 * b1;
+  const y = 0.2126 * r1 + 0.7152 * g1 + 0.0722 * b1;
+  const z = 0.01932141 * r1 + 0.11916382 * g1 + 0.95034478 * b1;
+
+  return [x, y, z]; // NOT multiplied by 100.0
+}
+
+function rgb2hct(rgb) {
+  const val = (rgb[0] << 16) + (rgb[1] << 8) + rgb[2];
+  if (hctCache.has(val)) return hctCache.get(val);
+
+  const xyz = rgb2xyz(rgb);
+  const x = xyz[0];
+  const y = xyz[1];
+  const z = xyz[2];
+
+  const rD = (0.401288 * x + 0.650173 * y - 0.051461 * z) * 1.0211777027575200;
+  const gD = (-0.250268 * x + 1.204414 * y + 0.045854 * z) * 0.98630772942801237;
+  const bD = (-0.002079 * x + 0.048952 * y + 0.953127 * z) * 0.93396050828022992;
+
+  const rAF = Math.pow((0.38848145378003529 * Math.abs(rD)) / 100.0, 0.42);
+  const gAF = Math.pow((0.38848145378003529 * Math.abs(gD)) / 100.0, 0.42);
+  const bAF = Math.pow((0.38848145378003529 * Math.abs(bD)) / 100.0, 0.42);
+
+  const rA = (signum(rD) * 400.0 * rAF) / (rAF + 27.13);
+  const gA = (signum(gD) * 400.0 * gAF) / (gAF + 27.13);
+  const bA = (signum(bD) * 400.0 * bAF) / (bAF + 27.13);
+
+  const a = (11.0 * rA + -12.0 * gA + bA) / 11.0;
+  const b = (rA + gA - 2.0 * bA) / 9.0;
+  const u = (20.0 * rA + 20.0 * gA + 21.0 * bA) / 20.0;
+  const p2 = (40.0 * rA + 20.0 * gA + bA) / 20.0;
+
+  const atan2 = Math.atan2(b, a);
+  const atanDegrees = (atan2 * 180.0) / Math.PI;
+  const hue = atanDegrees < 0 ? atanDegrees + 360.0 :
+      atanDegrees >= 360 ? atanDegrees - 360.0 : atanDegrees;
+  const hueRadians = (hue * Math.PI) / 180.0;
+
+  const j = 100.0 * Math.pow(p2 * 0.03391879108791669, 1.3173270022537198);
+  const huePrime = hue < 20.14 ? hue + 360 : hue;
+  const p1 = 3911.227617099521 * 0.25 * (Math.cos((huePrime * Math.PI) / 180.0 + 2.0) + 3.8);
+  const t = (p1 * Math.sqrt(a * a + b * b)) / (u + 0.305);
+  const alpha = Math.pow(t, 0.9) * 0.8834525670408592;
+
+  const m = alpha * Math.sqrt(j / 100.0) * 0.78948261793049368;
+  const mstar = 43.859649122807014 * Math.log(1.0 + 0.0228 * m);
+
+  const astar = mstar * Math.cos(hueRadians);
+  const bstar = mstar * Math.sin(hueRadians);
+  const Lstar = 116.0 * labF(y) - 16.0;
+
+  const hct = [Lstar, astar, bstar];
+  hctCache.set(val, hct);
+  return hct;
+}
+
 function squaredEuclideanMetricColours(pixel1, pixel2) {
   const chosenColourMethod =
     ColourMethods[Object.keys(ColourMethods).find((colourMethodKey) => ColourMethods[colourMethodKey].uniqueId === optionValue_betterColour)];
@@ -137,14 +225,19 @@ function squaredEuclideanMetricColours(pixel1, pixel2) {
     return L * L + a * a + b * b;
   }
   else if (chosenColourMethod.uniqueId === ColourMethods.Cie76_Lab50.uniqueId ||
-    chosenColourMethod.uniqueId === ColourMethods.Cie76_Lab65.uniqueId) {
+    chosenColourMethod.uniqueId === ColourMethods.Cie76_Lab65.uniqueId ||
+    chosenColourMethod.uniqueId === ColourMethods.Hct.uniqueId) {
     if (chosenColourMethod.uniqueId === ColourMethods.Cie76_Lab50.uniqueId) {
       pixel1 = rgb2lab50(pixel1);
       pixel2 = rgb2lab50(pixel2);
     }
-    else {
+    else if (chosenColourMethod.uniqueId === ColourMethods.Cie76_Lab65.uniqueId) {
       pixel1 = rgb2lab65(pixel1);
       pixel2 = rgb2lab65(pixel2);
+    }
+    else {
+      pixel1 = rgb2hct(pixel1);
+      pixel2 = rgb2hct(pixel2);
     }
     const L = pixel1[0] - pixel2[0];
     const a = pixel1[1] - pixel2[1];
