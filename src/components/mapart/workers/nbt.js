@@ -399,10 +399,10 @@ class Map_NBT {
     }
 
     // initialize noobline; if block after noobline is transparent, there is no need for the noobline block for shading
-    if (mapColoursLayoutColumn[0].colourSetId !== alphaColorIdx) {
+    if (mapColoursLayoutColumn[0].colourSetId !== alphaColorIdx.toString()) {
       physicalColumn.push(this.returnPhysicalBlock(columnNumber, currentHeight, 0, "NOOBLINE_SCAFFOLD"));
     } else {
-      physicalColumn.push(this.returnPhysicalBlock(columnNumber, currentHeight, 0, alphaColorIdx));
+      physicalColumn.push(this.returnPhysicalBlock(columnNumber, currentHeight, 0, alphaColorIdx.toString()));
     }
 
     for (let rowNumber = 0; rowNumber < mapColoursLayoutColumn.length; rowNumber++) {

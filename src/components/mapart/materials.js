@@ -36,7 +36,7 @@ class Materials extends Component {
     for (const row of currentMaterialsData.maps) {
       for (const map of row) {
         for (const [colourSetId, materialCount] of Object.entries(map.materials)) {
-          if (colourSetId !== this.alphaColorIdx) {
+          if (colourSetId !== this.alphaColorIdx.toString()) {
             if (onlyMaxPerSplit) {
               materialsCount[colourSetId] = Math.max(materialsCount[colourSetId], materialCount);
             } else {
