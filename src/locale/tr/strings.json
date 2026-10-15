@@ -16,7 +16,7 @@
     "1": "Minecraft mapart şematiği ve map.dat oluşturucusu, sunucu sahipleri hem de oyuncuları için ",
     "2": ", gibi sunucular için tasarlanmış, tarayıcında çalışır.",
     "3": "",
-    "4": "Redstonehelper's map art program",
+    "4": "Redstonehelper'ın map art programı",
     "5": "'dan esinlenilerek tavsiye edilen özelliklerin ve programı indirme zorunluğunun ortadan kalkması için yapılmıştır",
     "6": "Bu, rebane2001 tarafından yapılan",
     "7": "'ın forkudur. İstek, öneri ve şikayetler için; "
@@ -46,7 +46,7 @@
       "GREYSCALE": "Gri tonları",
       "PISTON-CLEARABLE": "Piston ile temizlenebilir"
     },
-    "UNSUPPORTED-PAST": "Unsupported past",
+    "UNSUPPORTED-PAST": "Desteklenmeyen geçmiş",
     "ADD-CUSTOM": {
       "TITLE": "Özel ekle",
       "BLOCK-NAME": "Blok adı",
@@ -74,8 +74,8 @@
     "TITLE": "Ayarlar",
     "MODE": "Mod",
     "MODE-TT": "Kullanacağın modu seç",
-    "MODE-VISUAL": "Visual",
-    "MODE-VISUAL-NA": "Visual (not available)",
+    "MODE-VISUAL": "Görsel",
+    "MODE-VISUAL-NA": "Görsel (mevcut değil)",
     "VERSION": "Sürüm",
     "VERSION-TT": "Kullandığın sürüme en yakın sürümü seç",
     "MAP-SIZE": "Harita büyüklüğü",
