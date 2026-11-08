@@ -164,6 +164,16 @@
     ],
     "ditherDivisor": 16.0
   },
+  "AnimeEdgeAware": {
+    "uniqueId": 25,
+    "name": "Anime Edge-Aware",
+    "ditherMatrix": [
+      [0, 0, 0, 7, 0],
+      [0, 3, 5, 1, 0],
+      [0, 0, 0, 0, 0]
+    ],
+    "ditherDivisor": 16.0
+  },
   "Bayer22": {
     "uniqueId": 3,
     "name": "Bayer (2x2)",

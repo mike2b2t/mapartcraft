@@ -509,6 +509,7 @@ function getMapartImageDataAndMaterials() {
     );
   }
 
+  const sourcePixels = new Uint8ClampedArray(canvasImageData.data);
   let ditherMatrix;
   let divisor;
   const chosenDitherMethod =
@@ -534,6 +535,7 @@ function getMapartImageDataAndMaterials() {
       DitherMethods.Burkes.uniqueId,
       DitherMethods.Sierra.uniqueId,
       DitherMethods.SierraTworow.uniqueId,
+      DitherMethods.AnimeEdgeAware.uniqueId,
     ].includes(chosenDitherMethod.uniqueId)
   ) {
     divisor = chosenDitherMethod.ditherDivisor;
@@ -582,6 +584,54 @@ function getMapartImageDataAndMaterials() {
           canvasImageData.data[indexR] = closestColour[0];
           canvasImageData.data[indexG] = closestColour[1];
           canvasImageData.data[indexB] = closestColour[2];
+          break;
+        }
+        case DitherMethods.AnimeEdgeAware.uniqueId: {
+          closestColourSetIdAndTone = findClosestColourSetIdAndToneAndRGBTo(oldPixel);
+          const closestColour = colourSetIdAndToneToRGB(closestColourSetIdAndTone.colourSetId, closestColourSetIdAndTone.tone);
+          canvasImageData.data[indexR] = closestColour[0];
+          canvasImageData.data[indexG] = closestColour[1];
+          canvasImageData.data[indexB] = closestColour[2];
+
+          const quant_error = [
+            (oldPixel[0] - closestColour[0]) * optionValue_dithering_propagation_red / 100.0,
+            (oldPixel[1] - closestColour[1]) * optionValue_dithering_propagation_green / 100.0,
+            (oldPixel[2] - closestColour[2]) * optionValue_dithering_propagation_blue / 100.0,
+          ];
+
+          const neighborOffsets = [
+            { dx: 1, dy: 0, weight: 7 },
+            { dx: -1, dy: 1, weight: 3 },
+            { dx: 0, dy: 1, weight: 5 },
+            { dx: 1, dy: 1, weight: 1 },
+          ];
+
+          for (const offset of neighborOffsets) {
+            const nx = multimap_x + offset.dx;
+            const ny = multimap_y + offset.dy;
+            if (nx < 0 || nx >= multimapWidth || ny < 0 || ny >= optionValue_mapSize_y * 128) {
+              continue;
+            }
+
+            const neighborIndex = (ny * multimapWidth + nx) * 4;
+            if (sourcePixels[neighborIndex + 3] === 0) {
+              continue;
+            }
+
+            const localDiff = Math.max(
+              Math.abs(sourcePixels[indexR] - sourcePixels[neighborIndex]),
+              Math.abs(sourcePixels[indexG] - sourcePixels[neighborIndex + 1]),
+              Math.abs(sourcePixels[indexB] - sourcePixels[neighborIndex + 2]),
+            );
+
+            // Large local differences = contour/outline; reduce the propagation so edges stay crisp.
+            const edgeFactor = 1.0 - Math.min(1.0, localDiff / 128.0);
+            const spreadFactor = Math.max(0.15, edgeFactor) * (offset.weight / 16.0);
+
+            canvasImageData.data[neighborIndex] += quant_error[0] * spreadFactor;
+            canvasImageData.data[neighborIndex + 1] += quant_error[1] * spreadFactor;
+            canvasImageData.data[neighborIndex + 2] += quant_error[2] * spreadFactor;
+          }
           break;
         }
         case DitherMethods.Bayer22.uniqueId:
